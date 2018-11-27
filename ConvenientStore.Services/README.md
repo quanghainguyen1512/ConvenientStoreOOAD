@@ -1,0 +1,3 @@
+﻿# Services
+Project này để kết nối với CSDL và implement các repository.  Các Repository chứa các hàm thực hiện các query tới CSDL.  
+Để dễ quản lý và theo dõi,  mỗi Repository đảm nhận đổ dữ liệu tới một class DAO , và mỗi Repo phải implement từ một interface. Mọi người chỉ cần tạo Interface và gọi code trên GUI, việc viết các hàm repo có liên quan tới dapper, tìm hiểu mất thời gian nên có thể để phần này cho tớ đảm nhận. (Hoặc cảm thấy tự tin thì tìm hiểu Dapper cũng được =]]])
