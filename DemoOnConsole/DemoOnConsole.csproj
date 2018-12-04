@@ -59,6 +59,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ConvenientStore.BUS\ConvenientStore.BUS.csproj">
+      <Project>{f4ce5172-6101-478d-a6b7-d71c77ee6729}</Project>
+      <Name>ConvenientStore.BUS</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ConvenientStore.DAO\ConvenientStore.DAO.csproj">
       <Project>{c546fcd7-5813-4509-8527-918823e1804c}</Project>
       <Name>ConvenientStore.DAO</Name>

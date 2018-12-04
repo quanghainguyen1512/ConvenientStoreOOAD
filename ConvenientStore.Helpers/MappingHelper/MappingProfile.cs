@@ -15,12 +15,18 @@ namespace ConvenientStore.Helpers.MappingHelper
                 .ForMember(dest => dest.FullName,
                     opt => opt.MapFrom(src => $"{src.FirstName} {src.LastName}"))
                 .ForMember(dest => dest.Gender,
-                    opt => opt.MapFrom(src => src.Gender == true ? "Nam" : "Nu"));
+                    opt => opt.MapFrom(src => src.Gender == true ? "Nam" : "Nu"))
+                .ForMember(dest => dest.CustomerType, 
+                    opt => opt.MapFrom(src => src.CustomerType.Name));
+
+            CreateMap<CustomerForOperationsDto, Customer>();
         }
 
         private int DateOfBirthToAge(DateTime dob)
         {
-            var ts = DateTime.Now.Subtract(dob);            var tempDate = DateTime.MinValue.Add(ts);
+            var ts = DateTime.Now.Subtract(dob);
+            var tempDate = DateTime.MinValue.Add(ts);
+
             return tempDate.Year - 1;
         }
     }

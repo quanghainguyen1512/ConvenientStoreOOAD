@@ -16,26 +16,48 @@ namespace ConvenientStore.Services.Repositories
     {
         public bool AddCustomer(Customer customer)
         {
-            throw new NotImplementedException();
+            using (var con = DbConnection.Instance.Connection)
+            {
+                return con.Insert(customer) != 0;
+            }
         }
 
         public bool DeleteCustomer(Customer customer)
         {
-            throw new NotImplementedException();
+            using (var con = DbConnection.Instance.Connection)
+            {
+                return con.Delete(customer);
+            }
         }
 
-        public Customer GetCustomerById(int customerId)
+        public Customer GetCustomerById(int customerId, bool withType = false)
         {
             using (var con = DbConnection.Instance.Connection)
             {
+                if (withType)
+                {
+                    var sql = "SELECT * FROM customer as c " +
+                        "INNER JOIN customer_type as ct " +
+                        "ON c.CusTypeId = ct.TypeId " +
+                        "WHERE c.CustomerId = @customerId";
+                    return con.Query<Customer, CustomerType>(sql, splitOn: "TypeId", param: new { customerId }).FirstOrDefault();
+                }
                 return con.Get<Customer>(customerId);
             }
         }
 
-        public Customer GetCustomerByPhone(string phone)
+        public Customer GetCustomerByPhone(string phone, bool withType = false)
         {
             using (var con = DbConnection.Instance.Connection)
             {
+                if (withType)
+                {
+                    var sql = "SELECT * FROM customer as c " +
+                        "INNER JOIN customer_type as ct " +
+                        "ON c.CusTypeId = ct.TypeId " +
+                        "WHERE c.PhoneNumber = @phone";
+                    return con.Query<Customer, CustomerType>(sql, splitOn: "TypeId", param: new { phone }).FirstOrDefault();
+                }
                 var query = "SELECT * FROM customer WHERE PhoneNumber = @phone";
                 return con.QueryFirst<Customer>(query, param: new { phone });
             }
@@ -49,7 +71,7 @@ namespace ConvenientStore.Services.Repositories
             }
         }
 
-        public bool IsPhoneNumberExists(string phone)
+        public bool CheckPhoneNumberExists(string phone)
         {
             using (var con = DbConnection.Instance.Connection)
             {
