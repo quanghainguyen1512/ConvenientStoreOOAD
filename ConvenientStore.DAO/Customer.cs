@@ -15,7 +15,7 @@ namespace ConvenientStore.DAO
         public string Email { get; set; }
         public bool Gender { get; set; }
         public int Point { get; set; }
-        public int TypeId { get; set; }
+        public int CusTypeId { get; set; }
 
         [Write(false)]
         public CustomerType CustomerType { get; set; }

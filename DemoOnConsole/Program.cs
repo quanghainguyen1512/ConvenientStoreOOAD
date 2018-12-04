@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ConvenientStore.DTO;
 using System.Configuration;
+using ConvenientStore.BUS;
 
 namespace DemoOnConsole
 {

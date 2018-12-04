@@ -32,8 +32,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=8.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.8.0.0\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,8 +48,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="CustomerBus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConvenientStore.DAO\ConvenientStore.DAO.csproj">
+      <Project>{c546fcd7-5813-4509-8527-918823e1804c}</Project>
+      <Name>ConvenientStore.DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConvenientStore.DTO\ConvenientStore.DTO.csproj">
+      <Project>{7ac557c0-706f-461d-b30c-0c12b0f14083}</Project>
+      <Name>ConvenientStore.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConvenientStore.Helpers\ConvenientStore.Helpers.csproj">
+      <Project>{23aa55f4-a71a-459a-a9c5-85e74c8161ea}</Project>
+      <Name>ConvenientStore.Helpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConvenientStore.Services\ConvenientStore.Services.csproj">
+      <Project>{3fb2b351-b2b6-44c0-9b24-01f6e9f73c2e}</Project>
+      <Name>ConvenientStore.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
