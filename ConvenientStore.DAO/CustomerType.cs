@@ -11,7 +11,7 @@ namespace ConvenientStore.DAO
     public class CustomerType
     {
         [Key]
-        public int CustomerTypeId { get; set; }
+        public int TypeId { get; set; }
         public string Name { get; set; }
         [Write(false)]
         public ICollection<Customer> Customers { get; set; }

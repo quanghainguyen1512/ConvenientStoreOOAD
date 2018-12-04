@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ConvenientStore.DTO;
 using System.Configuration;
+using ConvenientStore.BUS;
 
 namespace DemoOnConsole
 {
@@ -16,11 +17,12 @@ namespace DemoOnConsole
         static void Main(string[] args)
         {
             //Console.WriteLine(ConfigurationManager.ConnectionStrings["ConnString"].ConnectionString);
-            ICustomerRepository cusRepo = new CustomerRepository();
-            var cus = cusRepo.GetCustomerById(1);
-            Console.WriteLine(cus.FirstName);
-            var cusdto = Mapping.Mapper.Map<CustomerDto>(cus);
-            Console.WriteLine(cusdto.FullName);
+            //ICustomerRepository cusRepo = new CustomerRepository();
+            //var cus = cusRepo.GetCustomerById(1);
+            var cus = CustomerBus.Instance.GetCustomerById(1);
+            //Console.WriteLine(cus.FirstName);
+            //var cusdto = Mapping.Mapper.Map<CustomerDto>(cus);
+            Console.WriteLine(cus.FullName);
         }
     }
 }
