@@ -14,39 +14,27 @@ namespace ConvenientStore.Services.Repositories
 {
     public class CustomerRepository : ICustomerRepository
     {
-        public bool AddCustomer(Customer customer)
+        //public bool DeleteCustomer(Customer customer)
+        //{
+        //    using (var con = DbConnection.Instance.Connection)
+        //    {
+        //        return con.Delete(customer);
+        //    }
+        //}
+
+        public Customer GetByIdWithType(int customerId)
         {
             using (var con = DbConnection.Instance.Connection)
             {
-                return con.Insert(customer) != 0;
+                var sql = "SELECT * FROM customer as c " +
+                         "INNER JOIN customer_type as ct " +
+                         "ON c.CusTypeId = ct.TypeId " +
+                         "WHERE c.CustomerId = @customerId";
+                return con.Query<Customer, CustomerType>(sql, splitOn: "TypeId", param: new { customerId }).FirstOrDefault();
             }
         }
 
-        public bool DeleteCustomer(Customer customer)
-        {
-            using (var con = DbConnection.Instance.Connection)
-            {
-                return con.Delete(customer);
-            }
-        }
-
-        public Customer GetCustomerById(int customerId, bool withType = false)
-        {
-            using (var con = DbConnection.Instance.Connection)
-            {
-                if (withType)
-                {
-                    var sql = "SELECT * FROM customer as c " +
-                        "INNER JOIN customer_type as ct " +
-                        "ON c.CusTypeId = ct.TypeId " +
-                        "WHERE c.CustomerId = @customerId";
-                    return con.Query<Customer, CustomerType>(sql, splitOn: "TypeId", param: new { customerId }).FirstOrDefault();
-                }
-                return con.Get<Customer>(customerId);
-            }
-        }
-
-        public Customer GetCustomerByPhone(string phone, bool withType = false)
+        public Customer GetByPhone(string phone, bool withType = false)
         {
             using (var con = DbConnection.Instance.Connection)
             {
@@ -63,14 +51,6 @@ namespace ConvenientStore.Services.Repositories
             }
         }
 
-        public IEnumerable<Customer> GetCustomers()
-        {
-            using (var con = DbConnection.Instance.Connection)
-            {
-                return con.GetAll<Customer>();
-            }
-        }
-
         public bool CheckPhoneNumberExists(string phone)
         {
             using (var con = DbConnection.Instance.Connection)
@@ -78,6 +58,40 @@ namespace ConvenientStore.Services.Repositories
                 var query = "SELECT CustomerId FROM customer WHERE PhoneNumber = @phone";
                 return con.ExecuteScalar(query, param: new { phone }) != null;
             }
+        }
+
+        public IEnumerable<Customer> GetAll()
+        {
+            using (var con = DbConnection.Instance.Connection)
+            {
+                return con.GetAll<Customer>();
+            }
+        }
+
+        public Customer GetById(int id)
+        {
+            using (var con = DbConnection.Instance.Connection)
+            {
+                return con.Get<Customer>(id);
+            }
+        }
+
+        public bool Add(Customer obj)
+        {
+            using (var con = DbConnection.Instance.Connection)
+            {
+                return con.Insert(obj) != 0;
+            }
+        }
+
+        public bool AddRange(IEnumerable<Customer> objs)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Update(Customer obj)
+        {
+            throw new NotImplementedException();
         }
     }
 }
