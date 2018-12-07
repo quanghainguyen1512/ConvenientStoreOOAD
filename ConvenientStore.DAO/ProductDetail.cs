@@ -15,11 +15,14 @@ namespace ConvenientStore.DAO
         public string BarCode { get; set; }
 
         //[Write(false)]
-        public int Quantity { get; set; }
+        public int Quantity { get; set; }
+
         //[Write(false)]
-        public int Price { get; set; }
+        public int Price { get; set; }
+
         //[Write(false)]
-        public DateTime ExpirationDate { get; set; }
+        public DateTime ExpirationDate { get; set; }
+
         [Write(false)]
         public Product Product { get; set; }
     }

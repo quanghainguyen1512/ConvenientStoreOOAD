@@ -12,8 +12,10 @@ namespace ConvenientStore.DAO
     {
         [Key]
         public int TypeId { get; set; }
-        public string Name { get; set; }
+        public string Name { get; set; }
+
         [Write(false)]
-        public ICollection<Customer> Customers { get; set; }
+        public ICollection<Customer> Customers { get; set; }
+
     }
 }

@@ -10,15 +10,18 @@ namespace ConvenientStore.DAO
     [Table("product")]
     public class Product
     {
-        [ExplicitKey]
+        [Key]
         public int ProductId { get; set; }
         public string Name { get; set; }
         public string Unit { get; set; }
-        public string ImageUrl { get; set; }        public int CategoryId { get; set; }
+        public string ImageUrl { get; set; }
+        public string Description { get; set; }
 
         [Write(false)]
-        public Category Category { get; set; }
+        public Category Category { get; set; }
+
         //[Write(false)]
-        //public ICollection<ProductDetail> Details { get; set; }
+        //public ICollection<ProductDetail> Details { get; set; }
+
     }
 }
