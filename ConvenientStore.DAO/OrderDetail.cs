@@ -15,9 +15,11 @@ namespace ConvenientStore.DAO
         public int Quantity { get; set; }
         public bool Status { get; set; }
         public int ProductId { get; set; }
-        public int OrderId { get; set; }        
+        public int OrderId { get; set; }
+        
         [Write(false)]
-        public Product Product { get; set; }        
+        public Product Product { get; set; }
+        
         [Write(false)]
         public Order Order { get; set; }
     }

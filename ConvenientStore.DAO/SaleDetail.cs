@@ -12,7 +12,7 @@ namespace ConvenientStore.DAO
         [Write(false)]
         public Product Product { get; set; }
         
-        [Write(false)]
-        public Sale Sale { get; set; }
+        //[Write(false)]
+        //public Sale Sale { get; set; }
     }
 }

@@ -14,6 +14,7 @@ namespace ConvenientStore.DAO
         [Key]
         public int BillId { get; set; }
         public DateTime CreatedDate { get; set; }
+        public int Total { get; set; }
 
         [Write(false)]
         public Customer Customer { get; set; }

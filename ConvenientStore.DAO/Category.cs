@@ -11,6 +11,9 @@ namespace ConvenientStore.DAO
         public string Name { get; set; }
 
         [Write(false)]
+        public Category ParentCategory { get; set; }
+
+        [Write(false)]
         public ICollection<Product> Products { get; set; }
     }
 }

@@ -10,7 +10,7 @@ namespace ConvenientStore.DAO
     [Table("product")]
     public class Product
     {
-        [ExplicitKey]
+        [Key]
         public int ProductId { get; set; }
         public string Name { get; set; }
         public string Unit { get; set; }
