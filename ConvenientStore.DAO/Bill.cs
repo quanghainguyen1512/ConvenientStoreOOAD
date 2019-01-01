@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace ConvenientStore.DAO
 {
-    [Table("bill")]
+    [Table("bill")]
+
     public class Bill
     {
         [Key]
@@ -15,7 +16,8 @@ namespace ConvenientStore.DAO
         public DateTime CreatedDate { get; set; }
 
         [Write(false)]
-        public Customer Customer { get; set; }
+        public Customer Customer { get; set; }
+
         [Write(false)]
         public List<BillDetail> BillDetails { get; set; }
     }
