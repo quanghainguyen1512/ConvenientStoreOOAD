@@ -17,7 +17,7 @@ namespace DemoOnConsole
         {
             //Console.WriteLine(ConfigurationManager.ConnectionStrings["ConnString"].ConnectionString);
             ICustomerRepository cusRepo = new CustomerRepository();
-            var cus = cusRepo.GetCustomerById(1);
+            var cus = cusRepo.GetCustomerById(2);
         
             Console.WriteLine(cus.FirstName);
             var cusdto = Mapping.Mapper.Map<CustomerDto>(cus);
