@@ -1,6 +1,6 @@
 ﻿namespace ConvenientStore
 {
-    partial class Form2
+    partial class xuLyHoaDon
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // xuLyHoaDon
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form2";
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(984, 461);
+            this.Name = "xuLyHoaDon";
+            this.Text = "Xử lý hóa đơn";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
