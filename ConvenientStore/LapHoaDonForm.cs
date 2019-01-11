@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace ConvenientStore
 {
-    public partial class xuLyHoaDon : Form
+    public partial class LapHoaDonForm : Form
     {
-        public xuLyHoaDon()
+        public LapHoaDonForm()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
