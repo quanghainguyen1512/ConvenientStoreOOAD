@@ -16,6 +16,7 @@ namespace ConvenientStore.DAO
         public string Unit { get; set; }
         public string ImageUrl { get; set; }
         public string Description { get; set; }
+        public string Barcode { get; set; }
 
         [Write(false)]
         public Category Category { get; set; }

@@ -65,6 +65,8 @@
     <Compile Include="Bill.cs" />
     <Compile Include="BillDetail.cs" />
     <Compile Include="Category.cs" />
+    <Compile Include="Combo.cs" />
+    <Compile Include="ComboDetail.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="CustomerType.cs" />
     <Compile Include="Delivery.cs" />
@@ -75,7 +77,6 @@
     <Compile Include="ProductDetail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sale.cs" />
-    <Compile Include="SaleDetail.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
