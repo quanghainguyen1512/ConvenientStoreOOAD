@@ -15,13 +15,14 @@ namespace ConvenientStore.DAO
         public string Name { get; set; }
         public string Unit { get; set; }
         public string ImageUrl { get; set; }
-        public int CategoryId { get; set; }
+        public string Description { get; set; }
+        public string Barcode { get; set; }
 
         [Write(false)]
         public Category Category { get; set; }
 
         //[Write(false)]
-        //public ICollection<ProductDetail> Details { get; set; }
+        public ICollection<ProductDetail> Details { get; set; }
 
     }
 }
