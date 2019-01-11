@@ -16,11 +16,7 @@ namespace ConvenientStore
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
-            Application.Run(new Form1());
-=======
-            Application.Run(new xuLyHoaDon());
->>>>>>> parent of eadb5dc... Cập nhật màn hình lập hóa đơn
+            Application.Run(new LapHoaDonForm());
         }
     }
 }
