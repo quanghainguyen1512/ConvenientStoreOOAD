@@ -29,14 +29,14 @@ namespace ConvenientStore.BUS
 
         public CustomerDto GetCustomerById(int id)
         {
-            var cusDao = _cusRepo.GetCustomerById(id);
+            var cusDao = _cusRepo.GetById(id);
             var cusDto = Mapping.Mapper.Map<CustomerDto>(cusDao);
             return cusDto;
         }
 
         public CustomerDto GetCustomerByPhone(string phone)
         {
-            var cusDao = _cusRepo.GetCustomerByPhone(phone);
+            var cusDao = _cusRepo.GetByPhone(phone);
             var cusDto = Mapping.Mapper.Map<CustomerDto>(cusDao);
             return cusDto;
         }
@@ -44,14 +44,14 @@ namespace ConvenientStore.BUS
         public bool AddCustomer(CustomerForOperationsDto customer)
         {
             var cusDao = Mapping.Mapper.Map<Customer>(customer);
-            return _cusRepo.AddCustomer(cusDao);
+            return _cusRepo.Add(cusDao);
         }
 
-        public bool DeleteCustomer(CustomerForOperationsDto customer)
-        {
-            var cusDao = Mapping.Mapper.Map<Customer>(customer);
-            return _cusRepo.DeleteCustomer(cusDao);
-        }
+        //public bool DeleteCustomer(CustomerForOperationsDto customer)
+        //{
+        //    var cusDao = Mapping.Mapper.Map<Customer>(customer);
+        //    return _cusRepo.DeleteCustomer(cusDao);
+        //}
 
         public bool CheckPhoneNumberExists(string phone)
         {

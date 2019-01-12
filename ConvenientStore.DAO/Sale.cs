@@ -16,8 +16,9 @@ namespace ConvenientStore.DAO
         public string Description { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-
-        [Write(false)]
-        public ICollection<SaleDetail> SaleDetails { get; set; }
+        public int Value { get; set; }
+        public bool TypeOfDiscount { get; set; }
+        public int ConditionMin { get; set; }
+        public int ConditionMax { get; set; }
     }
 }

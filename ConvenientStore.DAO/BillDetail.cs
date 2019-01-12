@@ -12,10 +12,7 @@ namespace ConvenientStore.DAO
     {
         [Key]
         public int BillDetailId { get; set; }
-
         public int Quantity { get; set; }
-        public string BarCode { get; set; }
-        // public int BillId { get; set; }
 
         [Write(false)]
         public ProductDetail ProductDetail { get; set; }
