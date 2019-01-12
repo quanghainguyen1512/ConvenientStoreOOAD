@@ -29,5 +29,11 @@ namespace ConvenientStore.Helpers.Message
         public static string SYSTEM_ERROR = "Không thể lấy dữ liệu";
 
         public static string ADD_BILL_ERROR = "Lỗi khi thêm hóa đơn";
+
+        public static string QUANTITY_FIELD_FORMAT_ERROR = "Số lượng phải là Số tự nhiên";
+
+        public static string REQUIRE_INPUT_QUANTITY_FIELD = "Bạn cần nhập số lượng";
+
+        public static string CONFIRM_DELETE_PRODUCT_BILL_DETAIL = "Bạn có chắc muốn xóa sản phẩm ra khỏi hóa đơn?";
     }
 }

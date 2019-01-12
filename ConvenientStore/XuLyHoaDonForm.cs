@@ -25,6 +25,7 @@ namespace ConvenientStore
         private ProductBillDto productBillDto;
         private CustomerBillDto customerBillDto;
         private List<ProductBillDto> productBillDtos;
+        private EditBillDetailForm editBillDetailForm;
 
         private XuLyHoaDonBus xuLyHoaDonService;
 
@@ -55,6 +56,7 @@ namespace ConvenientStore
 
             this.productBillDto = null;
             this.customerBillDto = null;
+            this.editBillDetailForm = null;
             this.productBillDtos = new List<ProductBillDto>();
 
             this.setSellProgramForCombobox();
@@ -180,17 +182,40 @@ namespace ConvenientStore
 
         private void doubleClickRow(object sender, EventArgs e)
         {
+            if (this.productBillDtos.Count <= 0)
+                return;
+
             if (this.dgvListProduct.SelectedRows.Count == 0)
                 return;
 
-            foreach (DataGridViewCell cell in this.dgvListProduct.SelectedRows[0].Cells)
+            string index = this.dgvListProduct.SelectedRows[0].Cells[0].Value.ToString();
+
+            ProductBillDto tempProductBillDto = this.productBillDtos[Convert.ToInt32(index) - 1];
+
+            this.editBillDetailForm = new EditBillDetailForm(tempProductBillDto);
+            this.editBillDetailForm.FormClosing += new FormClosingEventHandler(formClosing);
+            this.editBillDetailForm.Show();
+           
+        }
+
+        private void formClosing(object sender, FormClosingEventArgs e)
+        {
+            ProductBillDto tempProductBillDto = this.editBillDetailForm.ProductBillDto;
+
+            if(this.editBillDetailForm.FlagDelete)
             {
-                string value = cell.Value.ToString();
-                
+                this.productBillDtos.Remove(tempProductBillDto);
+            }
+            else
+            {
+                this.productBillDtos[Convert.ToInt32(tempProductBillDto.Index) - 1] = tempProductBillDto;
             }
 
-            MessageBox.Show("hello");
+            this.reloadDataGridView();
+
+            this.editBillDetailForm = null;
         }
+
 
         // Lấy thông tin [Khách hàng]
         private void setCustomerInfo()

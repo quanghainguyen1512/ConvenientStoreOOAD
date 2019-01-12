@@ -16,13 +16,12 @@ namespace DemoOnConsole
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine(ConfigurationManager.ConnectionStrings["ConnString"].ConnectionString);
-            ICustomerRepository cusRepo = new CustomerRepository();
-            var cus = cusRepo.GetCustomerByPhoneNumber("01283550324");
-            Console.WriteLine(cus.FirstName);
-            var cusDto = Mapping.mapperCustomerBill.Map<CustomerBillDto>(cus);
-            Console.WriteLine(cusDto.FullName);
-            Console.ReadLine();
+            
+        }
+
+        private static void updateImageForProduct()
+        {
+
         }
     }
 }
