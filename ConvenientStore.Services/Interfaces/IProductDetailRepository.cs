@@ -7,9 +7,13 @@ using System.Threading.Tasks;
 
 namespace ConvenientStore.Services.Interfaces
 {
-    public interface IProductDetailRepository
+    public interface IProductDetailRepository : IRepository<ProductDetail>
     {
-        IEnumerable<Product> GetProducts();
-        Product GetProductById(int productId);
+        //IEnumerable<ProductDetail> GetAllProductDetails();
+        ProductDetail GetByBarcode(string barcode);
+        //ProductDetail GetProductDetailById(int id);
+        //bool UpdateProductDetail(ProductDetail productDetail);
+        //bool AddProductDetail(ProductDetail productDetail);
+
     }
 }

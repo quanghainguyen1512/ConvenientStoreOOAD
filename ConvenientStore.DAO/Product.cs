@@ -22,7 +22,7 @@ namespace ConvenientStore.DAO
         public Category Category { get; set; }
 
         //[Write(false)]
-        public ICollection<ProductDetail> Details { get; set; }
+        //public ICollection<ProductDetail> Details { get; set; }
 
     }
 }
