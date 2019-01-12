@@ -93,5 +93,24 @@ namespace ConvenientStore.Services.Repositories
         {
             throw new NotImplementedException();
         }
+
+        public Customer GetCustomerByPhoneNumber(string phoneNumber)
+        {
+            using (var con = DbConnection.Instance.Connection)
+            {
+                Customer customer = null;
+                var query = "SELECT * FROM customer WHERE PhoneNumber = @phoneNumber";
+                try
+                {
+                    customer = con.QueryFirst<Customer>(query, param: new { phoneNumber });
+
+                }
+                catch
+                {
+                    Console.WriteLine("Không tìm thấy khách hàng");
+                }
+                return customer;
+            }
+        }
     }
 }

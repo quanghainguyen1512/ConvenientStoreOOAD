@@ -18,10 +18,11 @@ namespace DemoOnConsole
         {
             //Console.WriteLine(ConfigurationManager.ConnectionStrings["ConnString"].ConnectionString);
             ICustomerRepository cusRepo = new CustomerRepository();
-            var cus = cusRepo.GetCustomerById(1);
+            var cus = cusRepo.GetCustomerByPhoneNumber("01283550324");
             Console.WriteLine(cus.FirstName);
-            var cusdto = Mapping.Mapper.Map<CustomerDto>(cus);
-            Console.WriteLine(cusdto.FullName);
+            var cusDto = Mapping.mapperCustomerBill.Map<CustomerBillDto>(cus);
+            Console.WriteLine(cusDto.FullName);
+            Console.ReadLine();
         }
     }
 }

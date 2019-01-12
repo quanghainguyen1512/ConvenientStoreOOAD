@@ -9,12 +9,11 @@ namespace ConvenientStore.Services.Interfaces
 {
     public interface IProductRepository
     {
-        IEnumerable<ProductDetail> GetProductDetails();
+        IEnumerable<Product> GetProducts();
 
-        ProductDetail GetProductDetailById(int productDetailId);
+        Product GetProductById(int productId);
 
-        ProductDetail GetProductdetailByBarCode(string barcode);
+        Product GetProductByBarcode(string barcode);
 
-        bool IsProductDetailExist(string barcode);
     }
 }

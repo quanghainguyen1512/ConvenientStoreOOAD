@@ -95,20 +95,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="XuLyHoaDonForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="XuLyHoaDonForm.Designer.cs">
       <DependentUpon>XuLyHoaDonForm.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -135,6 +131,33 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuLyHoaDonForm.resx">
+      <DependentUpon>XuLyHoaDonForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConvenientStore.BUS\ConvenientStore.BUS.csproj">
+      <Project>{F4CE5172-6101-478D-A6B7-D71C77EE6729}</Project>
+      <Name>ConvenientStore.BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConvenientStore.DAO\ConvenientStore.DAO.csproj">
+      <Project>{C546FCD7-5813-4509-8527-918823E1804C}</Project>
+      <Name>ConvenientStore.DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConvenientStore.DTO\ConvenientStore.DTO.csproj">
+      <Project>{7AC557C0-706F-461D-B30C-0C12B0F14083}</Project>
+      <Name>ConvenientStore.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConvenientStore.Services\ConvenientStore.Services.csproj">
+      <Project>{3FB2B351-B2B6-44C0-9B24-01F6E9F73C2E}</Project>
+      <Name>ConvenientStore.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
