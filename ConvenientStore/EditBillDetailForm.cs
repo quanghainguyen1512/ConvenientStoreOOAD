@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,6 +39,14 @@ namespace ConvenientStore
             this.txtProductName.Text = this.ProductBillDto.ProductName;
             this.txtPrice.Text = this.ProductBillDto.Price;
             this.txtQuantity.Text = this.ProductBillDto.Quantity;
+
+            byte[] bytes = Convert.FromBase64String(this.ProductBillDto.ImageUrl);
+
+            using (var ms = new MemoryStream(bytes, 0, bytes.Length))
+            {
+                this.ptbPicture.Image = Image.FromStream(ms, true);
+                this.ptbPicture.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
 
             this.FlagDelete = false;
             this.txtQuantity.Focus();

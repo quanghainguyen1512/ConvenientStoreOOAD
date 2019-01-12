@@ -10,6 +10,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -263,7 +264,17 @@ namespace ConvenientStore
             this.txtProductName.Text = this.productBillDto.ProductName;
             this.txtSell.Text = this.productBillDto.SellRate;
             this.txtPrice.Text = this.productBillDto.Price;
+
+            byte[] bytes = Convert.FromBase64String(this.productBillDto.ImageUrl);
+
+            using(var ms = new MemoryStream(bytes, 0, bytes.Length))
+            {
+                this.ptbImage.Image = Image.FromStream(ms, true);
+                this.ptbImage.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+
             this.txtQuantity.Focus();
+
         }
 
         // Xóa thông tin sản phẩm vừa tìm kiếm

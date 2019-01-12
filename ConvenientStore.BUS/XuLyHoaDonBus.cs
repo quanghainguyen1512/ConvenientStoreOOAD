@@ -92,6 +92,7 @@ namespace ConvenientStore.BUS
             dto.Message = "";
             dto.Barcode = product.Barcode;
             dto.DetailId = productDetail.ProductDetailId.ToString();
+            dto.ImageUrl = Convert.ToBase64String(product.ImageUrl);
             return dto;
         }
 

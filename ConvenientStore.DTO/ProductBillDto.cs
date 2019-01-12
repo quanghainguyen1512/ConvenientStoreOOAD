@@ -19,6 +19,8 @@ namespace ConvenientStore.DTO
         public string Quantity { get; set; }
         public string Barcode { get; set; }
         public String Message { get; set; }
+
+        public string ImageUrl { get; set; } 
         public ProductBillDto() { }
 
         public string Total()

@@ -60,7 +60,10 @@ namespace ConvenientStore.Services.Repositories
 
         public bool Update(Product obj)
         {
-            throw new NotImplementedException();
+            using (var con = DbConnection.Instance.Connection)
+            {
+                return con.Update(obj);
+            }
         }
     }
 }
