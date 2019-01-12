@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnNumOfCustomers = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnRevenue = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.lbCurrencyUnit = new System.Windows.Forms.Label();
+            this.lbRevenue = new System.Windows.Forms.Label();
+            this.lbProduct = new System.Windows.Forms.Label();
+            this.label6lbNumOfProducts = new System.Windows.Forms.Label();
+            this.lbBill = new System.Windows.Forms.Label();
+            this.lbNumOfBills = new System.Windows.Forms.Label();
+            this.lbCustomer = new System.Windows.Forms.Label();
+            this.lbNumOfCustomers = new System.Windows.Forms.Label();
+            this.dtmChooseDay = new System.Windows.Forms.DateTimePicker();
             this.lbTitle = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -50,7 +50,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.panel2);
+            this.groupBox3.Controls.Add(this.pnNumOfCustomers);
             this.groupBox3.Location = new System.Drawing.Point(13, 353);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(949, 114);
@@ -58,17 +58,17 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Số lượng khách hàng";
             // 
-            // panel2
+            // pnNumOfCustomers
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel2.Location = new System.Drawing.Point(7, 31);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(936, 69);
-            this.panel2.TabIndex = 0;
+            this.pnNumOfCustomers.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pnNumOfCustomers.Location = new System.Drawing.Point(7, 31);
+            this.pnNumOfCustomers.Name = "pnNumOfCustomers";
+            this.pnNumOfCustomers.Size = new System.Drawing.Size(936, 69);
+            this.pnNumOfCustomers.TabIndex = 0;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.panel1);
+            this.groupBox2.Controls.Add(this.pnRevenue);
             this.groupBox2.Location = new System.Drawing.Point(13, 221);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(949, 114);
@@ -76,117 +76,117 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Doanh thu";
             // 
-            // panel1
+            // pnRevenue
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel1.Location = new System.Drawing.Point(7, 31);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(936, 69);
-            this.panel1.TabIndex = 0;
+            this.pnRevenue.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pnRevenue.Location = new System.Drawing.Point(7, 31);
+            this.pnRevenue.Name = "pnRevenue";
+            this.pnRevenue.Size = new System.Drawing.Size(936, 69);
+            this.pnRevenue.TabIndex = 0;
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.lbCurrencyUnit);
+            this.groupBox1.Controls.Add(this.lbRevenue);
+            this.groupBox1.Controls.Add(this.lbProduct);
+            this.groupBox1.Controls.Add(this.label6lbNumOfProducts);
+            this.groupBox1.Controls.Add(this.lbBill);
+            this.groupBox1.Controls.Add(this.lbNumOfBills);
+            this.groupBox1.Controls.Add(this.lbCustomer);
+            this.groupBox1.Controls.Add(this.lbNumOfCustomers);
             this.groupBox1.Location = new System.Drawing.Point(12, 97);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(950, 105);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             // 
-            // label7
+            // lbCurrencyUnit
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(821, 68);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 25);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "VND";
+            this.lbCurrencyUnit.AutoSize = true;
+            this.lbCurrencyUnit.Location = new System.Drawing.Point(821, 68);
+            this.lbCurrencyUnit.Name = "lbCurrencyUnit";
+            this.lbCurrencyUnit.Size = new System.Drawing.Size(56, 25);
+            this.lbCurrencyUnit.TabIndex = 7;
+            this.lbCurrencyUnit.Text = "VND";
             // 
-            // label8
+            // lbRevenue
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.label8.Location = new System.Drawing.Point(818, 24);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 25);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "1000";
+            this.lbRevenue.AutoSize = true;
+            this.lbRevenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRevenue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lbRevenue.Location = new System.Drawing.Point(818, 24);
+            this.lbRevenue.Name = "lbRevenue";
+            this.lbRevenue.Size = new System.Drawing.Size(64, 25);
+            this.lbRevenue.TabIndex = 6;
+            this.lbRevenue.Text = "1000";
             // 
-            // label5
+            // lbProduct
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(518, 68);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(171, 25);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "SẢN PHẨM BÁN";
+            this.lbProduct.AutoSize = true;
+            this.lbProduct.Location = new System.Drawing.Point(518, 68);
+            this.lbProduct.Name = "lbProduct";
+            this.lbProduct.Size = new System.Drawing.Size(171, 25);
+            this.lbProduct.TabIndex = 5;
+            this.lbProduct.Text = "SẢN PHẨM BÁN";
             // 
-            // label6
+            // label6lbNumOfProducts
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.label6.Location = new System.Drawing.Point(561, 24);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 25);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "1000";
+            this.label6lbNumOfProducts.AutoSize = true;
+            this.label6lbNumOfProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6lbNumOfProducts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label6lbNumOfProducts.Location = new System.Drawing.Point(561, 24);
+            this.label6lbNumOfProducts.Name = "label6lbNumOfProducts";
+            this.label6lbNumOfProducts.Size = new System.Drawing.Size(64, 25);
+            this.label6lbNumOfProducts.TabIndex = 4;
+            this.label6lbNumOfProducts.Text = "1000";
             // 
-            // label3
+            // lbBill
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(292, 68);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 25);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "HÓA ĐƠN";
+            this.lbBill.AutoSize = true;
+            this.lbBill.Location = new System.Drawing.Point(292, 68);
+            this.lbBill.Name = "lbBill";
+            this.lbBill.Size = new System.Drawing.Size(109, 25);
+            this.lbBill.TabIndex = 3;
+            this.lbBill.Text = "HÓA ĐƠN";
             // 
-            // label4
+            // lbNumOfBills
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.label4.Location = new System.Drawing.Point(310, 24);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 25);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "1000";
+            this.lbNumOfBills.AutoSize = true;
+            this.lbNumOfBills.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNumOfBills.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lbNumOfBills.Location = new System.Drawing.Point(310, 24);
+            this.lbNumOfBills.Name = "lbNumOfBills";
+            this.lbNumOfBills.Size = new System.Drawing.Size(64, 25);
+            this.lbNumOfBills.TabIndex = 2;
+            this.lbNumOfBills.Text = "1000";
             // 
-            // label2
+            // lbCustomer
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 68);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "KHÁCH HÀNG";
+            this.lbCustomer.AutoSize = true;
+            this.lbCustomer.Location = new System.Drawing.Point(20, 68);
+            this.lbCustomer.Name = "lbCustomer";
+            this.lbCustomer.Size = new System.Drawing.Size(151, 25);
+            this.lbCustomer.TabIndex = 1;
+            this.lbCustomer.Text = "KHÁCH HÀNG";
             // 
-            // label9
+            // lbNumOfCustomers
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.label9.Location = new System.Drawing.Point(59, 24);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(64, 25);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "1000";
+            this.lbNumOfCustomers.AutoSize = true;
+            this.lbNumOfCustomers.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNumOfCustomers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lbNumOfCustomers.Location = new System.Drawing.Point(59, 24);
+            this.lbNumOfCustomers.Name = "lbNumOfCustomers";
+            this.lbNumOfCustomers.Size = new System.Drawing.Size(64, 25);
+            this.lbNumOfCustomers.TabIndex = 0;
+            this.lbNumOfCustomers.Text = "1000";
             // 
-            // dateTimePicker1
+            // dtmChooseDay
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(388, 48);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 31);
-            this.dateTimePicker1.TabIndex = 6;
+            this.dtmChooseDay.Location = new System.Drawing.Point(388, 48);
+            this.dtmChooseDay.Name = "dtmChooseDay";
+            this.dtmChooseDay.Size = new System.Drawing.Size(200, 31);
+            this.dtmChooseDay.TabIndex = 6;
             // 
             // lbTitle
             // 
@@ -206,7 +206,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtmChooseDay);
             this.Controls.Add(this.lbTitle);
             this.Name = "ReportGUI";
             this.Text = "BÁO CÁO DOANH THU";
@@ -222,19 +222,19 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnNumOfCustomers;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnRevenue;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label lbCurrencyUnit;
+        private System.Windows.Forms.Label lbRevenue;
+        private System.Windows.Forms.Label lbProduct;
+        private System.Windows.Forms.Label label6lbNumOfProducts;
+        private System.Windows.Forms.Label lbBill;
+        private System.Windows.Forms.Label lbNumOfBills;
+        private System.Windows.Forms.Label lbCustomer;
+        private System.Windows.Forms.Label lbNumOfCustomers;
+        private System.Windows.Forms.DateTimePicker dtmChooseDay;
         private System.Windows.Forms.Label lbTitle;
     }
 }
