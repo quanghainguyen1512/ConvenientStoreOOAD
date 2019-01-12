@@ -19,6 +19,7 @@ namespace ConvenientStore
     {
         // Cờ dùng để nhận biết trường [Số điện thoại] có nhấn enter hay không
         private bool flagEnterPhoneNumberField;
+        private bool flagEnterProductCodeField;
 
         private XuLyHoaDonBus xuLyHoaDonService;
 
@@ -45,6 +46,7 @@ namespace ConvenientStore
             this.lbTotal.Text = "";
 
             this.flagEnterPhoneNumberField = false;
+            this.flagEnterProductCodeField = false;
 
             this.setSellProgramForCombobox();
         }
@@ -97,12 +99,18 @@ namespace ConvenientStore
         // Xử lý khi leave trường [Mã sản phẩm]
         private void leaveTxtProductCode(object sender, EventArgs e)
         {
+            if(this.flagEnterProductCodeField)
+            {
+                this.flagEnterProductCodeField = false;
+                return;
+            }
             this.setProductInfo();
         }
 
         // Xử lý khi nhấn enter trường [Mã sản phẩm]
         private void enterTxtProductCode(object sender, KeyEventArgs e)
         {
+            this.flagEnterProductCodeField = true;
             this.setProductInfo();
         }
 

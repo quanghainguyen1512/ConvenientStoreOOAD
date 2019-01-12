@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="MappingHelper\Mapping.cs" />
     <Compile Include="MappingHelper\MappingCustomerBill.cs" />
+    <Compile Include="MappingHelper\MappingProductBill.cs" />
     <Compile Include="MappingHelper\MappingProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

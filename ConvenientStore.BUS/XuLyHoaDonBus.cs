@@ -10,10 +10,12 @@ namespace ConvenientStore.BUS
     public class XuLyHoaDonBus
     {
         private ICustomerRepository customerRepository;
+        private IProductRepository productRepository;
 
         public XuLyHoaDonBus()
         {
             this.customerRepository = new CustomerRepository();
+            this.productRepository = new ProductRepository();
         }
 
         public CustomerBillDto GetCustomerByPhoneNumber(String phoneNumber)
@@ -50,5 +52,18 @@ namespace ConvenientStore.BUS
             return result;
         }
         
+        public ProductBillDto GetProductByBarcode(String barcode)
+        {
+            ProductBillDto dto = null;
+
+            Product product = this.productRepository.GetProductByBarcode(barcode);
+            if(product == null)
+            {
+                dto = new ProductBillDto("Không tìm thấy dữ liệu sản phẩm\r\nVui lòng nhập lại");
+                return dto;
+            }
+
+            return dto;
+        }
     }
 }
