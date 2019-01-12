@@ -95,6 +95,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XuLyHoaDonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuLyHoaDonForm.Designer.cs">
+      <DependentUpon>XuLyHoaDonForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
