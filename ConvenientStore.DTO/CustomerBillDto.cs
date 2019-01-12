@@ -33,6 +33,10 @@ namespace ConvenientStore.DTO
 
         public String PhoneNumer { get; set; }
 
+        public string Point { get; set; }
+
+        public string CusType { get; set; }
+
         public String Message { get; set; }
     }
 

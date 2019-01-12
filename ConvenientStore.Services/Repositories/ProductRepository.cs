@@ -35,7 +35,7 @@ namespace ConvenientStore.Services.Repositories
         {
             using (var con = DbConnection.Instance.Connection)
             {
-                var sql = "SELECT * FROM product WHERE Barcode = @barcode";
+                var sql = "SELECT * FROM product WHERE Barcode like @barcode";
                 return con.Query<Product>(sql, param: new { barcode }).FirstOrDefault();
             }
         }

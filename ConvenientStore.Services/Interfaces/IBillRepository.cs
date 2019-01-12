@@ -12,5 +12,6 @@ namespace ConvenientStore.Services.Interfaces
         IEnumerable<Bill> GetByDateRange(DateTime start, DateTime end);
         IEnumerable<Bill> GetByCustomerId(int customerId);
         Bill GetByIdWithCustomer(int id);
+        int CountBill();
     }
 }

@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace ConvenientStore.Services.Interfaces
 {
-    public interface IProductDetailRepository : IRepository<ProductDetail>
+    public interface IBillDetailRepository : IRepository<BillDetail>
     {
-        ProductDetail GetProductDetailByProductIdAndMinExpidationDate(int productId);
 
     }
 }

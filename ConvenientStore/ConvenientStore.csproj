@@ -154,6 +154,10 @@
       <Project>{7AC557C0-706F-461D-B30C-0C12B0F14083}</Project>
       <Name>ConvenientStore.DTO</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ConvenientStore.Helpers\ConvenientStore.Helpers.csproj">
+      <Project>{23AA55F4-A71A-459A-A9C5-85E74C8161EA}</Project>
+      <Name>ConvenientStore.Helpers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ConvenientStore.Services\ConvenientStore.Services.csproj">
       <Project>{3FB2B351-B2B6-44C0-9B24-01F6E9F73C2E}</Project>
       <Name>ConvenientStore.Services</Name>

@@ -64,6 +64,8 @@
     <Compile Include="MappingHelper\MappingCustomerBill.cs" />
     <Compile Include="MappingHelper\MappingProductBill.cs" />
     <Compile Include="MappingHelper\MappingProfile.cs" />
+    <Compile Include="Message\MessageContent.cs" />
+    <Compile Include="Message\MessageTitle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -79,5 +81,6 @@
       <Name>ConvenientStore.DTO</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

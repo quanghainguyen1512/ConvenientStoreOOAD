@@ -38,6 +38,8 @@ namespace ConvenientStore.Services.Repositories
         {
             using (var con = DbConnection.Instance.Connection)
             {
+
+
                 if (withType)
                 {
                     var sql = "SELECT * FROM customer as c " +
@@ -46,8 +48,12 @@ namespace ConvenientStore.Services.Repositories
                         "WHERE c.PhoneNumber = @phone";
                     return con.Query<Customer, CustomerType>(sql, splitOn: "TypeId", param: new { phone }).FirstOrDefault();
                 }
+
+
                 var query = "SELECT * FROM customer WHERE PhoneNumber = @phone";
-                return con.QueryFirst<Customer>(query, param: new { phone });
+                return con.Query<Customer>(query, param: new { phone }).FirstOrDefault();
+
+
             }
         }
 
@@ -91,7 +97,11 @@ namespace ConvenientStore.Services.Repositories
 
         public bool Update(Customer obj)
         {
-            throw new NotImplementedException();
+
+            using (var con = DbConnection.Instance.Connection)
+            {
+                return con.Update(obj);
+            }
         }
     }
 }
