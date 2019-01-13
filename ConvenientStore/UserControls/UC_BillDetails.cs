@@ -1,20 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ConvenientStore
+namespace ConvenientStore.UserControls
 {
-    public partial class customersList : Form
+    public partial class UC_BillDetails : UserControl
     {
-        public customersList()
+        public UC_BillDetails()
         {
             InitializeComponent();
         }
+
     }
 }
