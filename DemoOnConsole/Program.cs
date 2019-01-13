@@ -25,7 +25,7 @@ namespace DemoOnConsole
             //Console.WriteLine(product.ImageUrl);
             //Console.ReadLine();
 
-            updateImageForProduct();
+           // updateImageForProduct();
         }
 
         private static void updateImageForProduct()
