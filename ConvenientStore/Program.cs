@@ -18,6 +18,7 @@ namespace ConvenientStore
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmDashboard());
+            //Application.Run(new frm_AddSale());
         }
     }
 }

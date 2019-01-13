@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ConvenientStore.Forms;
 
 namespace ConvenientStore.UserControls
 {
@@ -15,6 +16,14 @@ namespace ConvenientStore.UserControls
         public UC_SaleDetails()
         {
             InitializeComponent();
+        }
+
+        private void btnAddSale_Click(object sender, EventArgs e)
+        {
+            using (frm_AddSale frmAddSale = new frm_AddSale())
+            {
+                frmAddSale.ShowDialog();
+            }
         }
     }
 }

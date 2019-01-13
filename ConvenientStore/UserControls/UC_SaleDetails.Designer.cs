@@ -28,20 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_SaleDetails));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAddSale = new System.Windows.Forms.Button();
-            this.btnPageRight = new System.Windows.Forms.Button();
-            this.pnlPage = new System.Windows.Forms.Panel();
-            this.btnPageLeft = new System.Windows.Forms.Button();
-            this.lblPage = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtSearch = new System.Windows.Forms.TextBox();
             this.cboSearch = new System.Windows.Forms.ComboBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnPageLeft = new System.Windows.Forms.Button();
+            this.pnlPage = new System.Windows.Forms.Panel();
+            this.lblPage = new System.Windows.Forms.Label();
+            this.btnPageRight = new System.Windows.Forms.Button();
+            this.btnAddSale = new System.Windows.Forms.Button();
             this.dgSaleDetails = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.dgcol_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcol_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcol_Val = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,8 +46,10 @@
             this.dgcol_EndDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcol_Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcol_Condition = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnDeleteSale = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.btnEditSale = new System.Windows.Forms.Button();
+            this.btnDeleteSale = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.pnlPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgSaleDetails)).BeginInit();
@@ -74,45 +73,32 @@
             this.panel1.Size = new System.Drawing.Size(1000, 70);
             this.panel1.TabIndex = 0;
             // 
-            // btnAddSale
+            // cboSearch
             // 
-            this.btnAddSale.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnAddSale.FlatAppearance.BorderSize = 0;
-            this.btnAddSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddSale.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddSale.ForeColor = System.Drawing.Color.White;
-            this.btnAddSale.Image = ((System.Drawing.Image)(resources.GetObject("btnAddSale.Image")));
-            this.btnAddSale.Location = new System.Drawing.Point(0, 0);
-            this.btnAddSale.Name = "btnAddSale";
-            this.btnAddSale.Size = new System.Drawing.Size(250, 70);
-            this.btnAddSale.TabIndex = 0;
-            this.btnAddSale.Text = " Thêm Mới Khuyến Mãi";
-            this.btnAddSale.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddSale.UseVisualStyleBackColor = true;
+            this.cboSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cboSearch.FormattingEnabled = true;
+            this.cboSearch.Location = new System.Drawing.Point(377, 23);
+            this.cboSearch.Name = "cboSearch";
+            this.cboSearch.Size = new System.Drawing.Size(138, 24);
+            this.cboSearch.TabIndex = 6;
             // 
-            // btnPageRight
+            // txtSearch
             // 
-            this.btnPageRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnPageRight.FlatAppearance.BorderSize = 0;
-            this.btnPageRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPageRight.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPageRight.ForeColor = System.Drawing.Color.White;
-            this.btnPageRight.Image = ((System.Drawing.Image)(resources.GetObject("btnPageRight.Image")));
-            this.btnPageRight.Location = new System.Drawing.Point(950, 0);
-            this.btnPageRight.Name = "btnPageRight";
-            this.btnPageRight.Size = new System.Drawing.Size(50, 70);
-            this.btnPageRight.TabIndex = 1;
-            this.btnPageRight.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPageRight.UseVisualStyleBackColor = true;
+            this.txtSearch.Location = new System.Drawing.Point(517, 24);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(250, 22);
+            this.txtSearch.TabIndex = 5;
             // 
-            // pnlPage
+            // label2
             // 
-            this.pnlPage.Controls.Add(this.lblPage);
-            this.pnlPage.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlPage.Location = new System.Drawing.Point(850, 0);
-            this.pnlPage.Name = "pnlPage";
-            this.pnlPage.Size = new System.Drawing.Size(100, 70);
-            this.pnlPage.TabIndex = 2;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(290, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(83, 17);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Tìm kiếm:";
             // 
             // btnPageLeft
             // 
@@ -129,6 +115,15 @@
             this.btnPageLeft.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPageLeft.UseVisualStyleBackColor = true;
             // 
+            // pnlPage
+            // 
+            this.pnlPage.Controls.Add(this.lblPage);
+            this.pnlPage.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlPage.Location = new System.Drawing.Point(850, 0);
+            this.pnlPage.Name = "pnlPage";
+            this.pnlPage.Size = new System.Drawing.Size(100, 70);
+            this.pnlPage.TabIndex = 2;
+            // 
             // lblPage
             // 
             this.lblPage.AutoSize = true;
@@ -140,33 +135,37 @@
             this.lblPage.TabIndex = 0;
             this.lblPage.Text = "Trang #/#";
             // 
-            // label2
+            // btnPageRight
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(290, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 17);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Tìm kiếm:";
+            this.btnPageRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnPageRight.FlatAppearance.BorderSize = 0;
+            this.btnPageRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPageRight.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPageRight.ForeColor = System.Drawing.Color.White;
+            this.btnPageRight.Image = ((System.Drawing.Image)(resources.GetObject("btnPageRight.Image")));
+            this.btnPageRight.Location = new System.Drawing.Point(950, 0);
+            this.btnPageRight.Name = "btnPageRight";
+            this.btnPageRight.Size = new System.Drawing.Size(50, 70);
+            this.btnPageRight.TabIndex = 1;
+            this.btnPageRight.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPageRight.UseVisualStyleBackColor = true;
             // 
-            // txtSearch
+            // btnAddSale
             // 
-            this.txtSearch.Location = new System.Drawing.Point(517, 24);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(250, 22);
-            this.txtSearch.TabIndex = 5;
-            // 
-
-            // cboSearch
-            // 
-            this.cboSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cboSearch.FormattingEnabled = true;
-            this.cboSearch.Location = new System.Drawing.Point(377, 23);
-            this.cboSearch.Name = "cboSearch";
-            this.cboSearch.Size = new System.Drawing.Size(138, 24);
-            this.cboSearch.TabIndex = 6;
+            this.btnAddSale.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnAddSale.FlatAppearance.BorderSize = 0;
+            this.btnAddSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddSale.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddSale.ForeColor = System.Drawing.Color.White;
+            this.btnAddSale.Image = ((System.Drawing.Image)(resources.GetObject("btnAddSale.Image")));
+            this.btnAddSale.Location = new System.Drawing.Point(0, 0);
+            this.btnAddSale.Name = "btnAddSale";
+            this.btnAddSale.Size = new System.Drawing.Size(250, 70);
+            this.btnAddSale.TabIndex = 0;
+            this.btnAddSale.Text = " Thêm Mới Khuyến Mãi";
+            this.btnAddSale.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddSale.UseVisualStyleBackColor = true;
+            this.btnAddSale.Click += new System.EventHandler(this.btnAddSale_Click);
             // 
             // dgSaleDetails
             // 
@@ -189,26 +188,6 @@
             this.dgSaleDetails.RowTemplate.Height = 24;
             this.dgSaleDetails.Size = new System.Drawing.Size(1000, 360);
             this.dgSaleDetails.TabIndex = 2;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(166)))));
-            this.panel3.Controls.Add(this.btnEditSale);
-            this.panel3.Controls.Add(this.btnDeleteSale);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 430);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1000, 70);
-            this.panel3.TabIndex = 3;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.dgSaleDetails);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 70);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1000, 360);
-            this.panel4.TabIndex = 4;
             // 
             // dgcol_Name
             // 
@@ -256,21 +235,16 @@
             this.dgcol_Condition.Name = "dgcol_Condition";
             this.dgcol_Condition.ReadOnly = true;
             // 
-            // btnDeleteSale
+            // panel3
             // 
-            this.btnDeleteSale.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnDeleteSale.FlatAppearance.BorderSize = 0;
-            this.btnDeleteSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteSale.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteSale.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteSale.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteSale.Image")));
-            this.btnDeleteSale.Location = new System.Drawing.Point(820, 0);
-            this.btnDeleteSale.Name = "btnDeleteSale";
-            this.btnDeleteSale.Size = new System.Drawing.Size(180, 70);
-            this.btnDeleteSale.TabIndex = 1;
-            this.btnDeleteSale.Text = " Xóa Khuyến Mãi";
-            this.btnDeleteSale.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDeleteSale.UseVisualStyleBackColor = true;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(166)))));
+            this.panel3.Controls.Add(this.btnEditSale);
+            this.panel3.Controls.Add(this.btnDeleteSale);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 430);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1000, 70);
+            this.panel3.TabIndex = 3;
             // 
             // btnEditSale
             // 
@@ -287,6 +261,31 @@
             this.btnEditSale.Text = " Sửa Khuyến Mãi";
             this.btnEditSale.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditSale.UseVisualStyleBackColor = true;
+            // 
+            // btnDeleteSale
+            // 
+            this.btnDeleteSale.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnDeleteSale.FlatAppearance.BorderSize = 0;
+            this.btnDeleteSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteSale.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteSale.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteSale.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteSale.Image")));
+            this.btnDeleteSale.Location = new System.Drawing.Point(820, 0);
+            this.btnDeleteSale.Name = "btnDeleteSale";
+            this.btnDeleteSale.Size = new System.Drawing.Size(180, 70);
+            this.btnDeleteSale.TabIndex = 1;
+            this.btnDeleteSale.Text = " Xóa Khuyến Mãi";
+            this.btnDeleteSale.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDeleteSale.UseVisualStyleBackColor = true;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.dgSaleDetails);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 70);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1000, 360);
+            this.panel4.TabIndex = 4;
             // 
             // UC_SaleDetails
             // 
