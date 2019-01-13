@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ConvenientStore
 {
-    public partial class Form2 : Form
+    public partial class ReportGUI : Form
     {
-        public Form2()
+        public ReportGUI()
         {
             InitializeComponent();
         }

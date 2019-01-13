@@ -14,6 +14,10 @@ namespace ConvenientStore.DAO
         public int BillDetailId { get; set; }
         public int Quantity { get; set; }
 
+        public int ProductDetailId { get; set; }
+
+        public int BillId { get; set; }
+
         [Write(false)]
         public ProductDetail ProductDetail { get; set; }
         

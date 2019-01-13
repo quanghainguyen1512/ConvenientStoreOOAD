@@ -12,5 +12,6 @@ namespace ConvenientStore.Services.Interfaces
         //bool AddCustomer(Customer customer);
         //bool DeleteCustomer(Customer customer);
         bool CheckPhoneNumberExists(string phone);
+
     }
 }

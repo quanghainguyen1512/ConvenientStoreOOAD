@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DbConnection.cs" />
+    <Compile Include="Interfaces\IBillDetailRepository.cs" />
     <Compile Include="Interfaces\IBillRepository.cs" />
     <Compile Include="Interfaces\ICategoryRepository.cs" />
     <Compile Include="Interfaces\IComboRepository.cs" />
@@ -80,7 +81,10 @@
     <Compile Include="Interfaces\ISaleRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ComboRepository.cs" />
+    <Compile Include="Repositories\BillDetailRepository.cs" />
+    <Compile Include="Repositories\BillRepository.cs" />
     <Compile Include="Repositories\CustomerRepository.cs" />
+    <Compile Include="Repositories\ProductDetailRepository.cs" />
     <Compile Include="Repositories\ProductRepository.cs" />
     <Compile Include="Repositories\SaleRepository.cs" />
   </ItemGroup>
