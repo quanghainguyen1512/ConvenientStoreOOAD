@@ -13,6 +13,7 @@ namespace ConvenientStore.Services.Interfaces
         IEnumerable<Product> GetProductsByName(string name);
         Product GetByIdWithCategory(int id);
         Product GetByBarcode(string barcode);
+        bool CheckBarCodeExists(string barcode);
         //bool AddProduct(Product product);
         //bool UpdateProduct(Product product);
     }

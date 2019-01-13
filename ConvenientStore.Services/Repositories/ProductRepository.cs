@@ -23,6 +23,15 @@ namespace ConvenientStore.Services.Repositories
             throw new NotImplementedException();
         }
 
+        public bool CheckBarCodeExists(string barcode)
+        {
+            var sql = "SELECT ProductId FROM product WHERE Barcode = @barcode";
+            using (var con = DbConnection.Instance.Connection)
+            {
+                return con.ExecuteScalar(sql, param: new { barcode }) != null;
+            }
+        }
+
         public IEnumerable<Product> GetAll()
         {
             using (var con = DbConnection.Instance.Connection)
@@ -50,17 +59,29 @@ namespace ConvenientStore.Services.Repositories
 
         public Product GetByIdWithCategory(int id)
         {
-            throw new NotImplementedException();
+            using (var con = DbConnection.Instance.Connection)
+            {
+                var sql = "SELECT * FROM product as p INNER JOIN category as c ON p.CategoryId = c.CategoryId WHERE ProductId = @id";
+                return con.Query<Product, Category>(sql, param: new { id }).FirstOrDefault();
+            }
         }
 
         public IEnumerable<Product> GetProductsByName(string name)
         {
-            throw new NotImplementedException();
+            using (var con = DbConnection.Instance.Connection)
+            {
+                name = $"%{name}%";
+                var sql = $"SELECT * FROM product WHERE Name LIKE @name";
+                return con.Query<Product>(sql, param: new { name });
+            }
         }
 
         public bool Update(Product obj)
         {
-            throw new NotImplementedException();
+            using (var con = DbConnection.Instance.Connection)
+            {
+                return con.Update(obj);
+            }
         }
     }
 }

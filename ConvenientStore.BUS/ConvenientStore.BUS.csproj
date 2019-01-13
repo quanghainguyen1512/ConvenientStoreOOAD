@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="CustomerBus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaleBus.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ConvenientStore.DAO\ConvenientStore.DAO.csproj">

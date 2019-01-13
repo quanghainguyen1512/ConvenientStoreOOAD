@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConvenientStore.Services.Interfaces
 {
-    public interface ISaleRepository : IRepository<Sale>
+    public interface IComboRepository : IRepository<Combo>
     {
-        Sale GetByIdWithDetail(int id);
     }
 }
