@@ -26,5 +26,9 @@ namespace ConvenientStore.Helpers.Message
         public static string REQUIRE_INPUT_INFORMATION = "Vui lòng nhập thông tin";
 
         public static string CONFIRM_INFORMATION = "Xác nhận thông tin";
+
+        public static string UPDATE_SUCCESSFULLY = "Cập nhật thành công";
+
+        public static string UPDATE_ERROR = "Cập nhật thất bại";
     }
 }

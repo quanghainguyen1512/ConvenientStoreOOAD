@@ -18,7 +18,7 @@ using System.Windows.Forms;
 
 namespace ConvenientStore
 {
-    public partial class XuLyHoaDonForm : Form
+    public partial class frm_CreateBill : Form
     {
         // Cờ dùng để nhận biết trường [Số điện thoại] có nhấn enter hay không
         private bool flagEnterPhoneNumberField;
@@ -30,7 +30,7 @@ namespace ConvenientStore
 
         private XuLyHoaDonBus xuLyHoaDonService;
 
-        public XuLyHoaDonForm()
+        public frm_CreateBill()
         {
             InitializeComponent();
 

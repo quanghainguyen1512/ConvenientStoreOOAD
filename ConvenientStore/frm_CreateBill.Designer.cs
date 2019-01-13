@@ -1,6 +1,6 @@
 ﻿namespace ConvenientStore
 {
-    partial class XuLyHoaDonForm
+    partial class frm_CreateBill
     {
         /// <summary>
         /// Required designer variable.
