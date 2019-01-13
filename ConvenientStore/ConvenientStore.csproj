@@ -87,16 +87,39 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EditBillDetailForm.cs">
+    <Compile Include="Forms\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+	<Compile Include="EditBillDetailForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EditBillDetailForm.Designer.cs">
       <DependentUpon>EditBillDetailForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="customersList.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\UC_BillDetails.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="customersList.Designer.cs">
+    <Compile Include="UserControls\UC_BillDetails.Designer.cs">
+      <DependentUpon>UC_BillDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_SaleDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_SaleDetails.Designer.cs">
+      <DependentUpon>UC_SaleDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_StoreDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_StoreDetails.Designer.cs">
+      <DependentUpon>UC_StoreDetails.cs</DependentUpon>
+    </Compile>
+	<Compile Include="customersList.Designer.cs">
       <DependentUpon>customersList.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -121,6 +144,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportGUI.resx">
       <DependentUpon>ReportGUI.cs</DependentUpon>
@@ -134,6 +158,15 @@
     <Compile Include="XuLyHoaDonForm.Designer.cs">
       <DependentUpon>XuLyHoaDonForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControls\UC_BillDetails.resx">
+      <DependentUpon>UC_BillDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_SaleDetails.resx">
+      <DependentUpon>UC_SaleDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_StoreDetails.resx">
+      <DependentUpon>UC_StoreDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
