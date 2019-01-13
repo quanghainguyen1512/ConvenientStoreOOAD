@@ -58,7 +58,7 @@
             this.btnAddCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCustomer.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAddCustomer.Location = new System.Drawing.Point(778, 66);
+            this.btnAddCustomer.Location = new System.Drawing.Point(794, 86);
             this.btnAddCustomer.Name = "btnAddCustomer";
             this.btnAddCustomer.Size = new System.Drawing.Size(194, 40);
             this.btnAddCustomer.TabIndex = 22;
@@ -162,11 +162,11 @@
             this.columnBirthOfDate,
             this.columnPoint});
             this.dgvListCustomer.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvListCustomer.Location = new System.Drawing.Point(0, 128);
+            this.dgvListCustomer.Location = new System.Drawing.Point(0, 167);
             this.dgvListCustomer.MultiSelect = false;
             this.dgvListCustomer.Name = "dgvListCustomer";
             this.dgvListCustomer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListCustomer.Size = new System.Drawing.Size(984, 383);
+            this.dgvListCustomer.Size = new System.Drawing.Size(1000, 383);
             this.dgvListCustomer.TabIndex = 20;
             this.dgvListCustomer.DoubleClick += new System.EventHandler(this.doubleClickRow);
             // 
@@ -217,7 +217,7 @@
             this.btnExportExcel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExportExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExportExcel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnExportExcel.Location = new System.Drawing.Point(778, 11);
+            this.btnExportExcel.Location = new System.Drawing.Point(794, 31);
             this.btnExportExcel.Name = "btnExportExcel";
             this.btnExportExcel.Size = new System.Drawing.Size(194, 40);
             this.btnExportExcel.TabIndex = 19;
@@ -236,7 +236,7 @@
             this.groupBox1.Controls.Add(this.txtPhoneNumber);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.txtCustomerName);
-            this.groupBox1.Location = new System.Drawing.Point(12, 6);
+            this.groupBox1.Location = new System.Drawing.Point(12, 26);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(742, 100);
             this.groupBox1.TabIndex = 21;
@@ -263,11 +263,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 511);
+            this.ClientSize = new System.Drawing.Size(1000, 550);
             this.Controls.Add(this.btnAddCustomer);
             this.Controls.Add(this.dgvListCustomer);
             this.Controls.Add(this.btnExportExcel);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_CustomerManagement";
             this.Text = "Quản lý khách hàng";
             ((System.ComponentModel.ISupportInitialize)(this.dgvListCustomer)).EndInit();

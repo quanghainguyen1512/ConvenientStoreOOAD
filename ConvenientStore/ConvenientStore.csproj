@@ -111,6 +111,18 @@
     <Compile Include="Forms\frm_Dashboard.Designer.cs">
       <DependentUpon>frm_Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_BillDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_BillDetail.Designer.cs">
+      <DependentUpon>frm_BillDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_BillManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_BillManagement.Designer.cs">
+      <DependentUpon>frm_BillManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_CustomerAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +204,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_Dashboard.resx">
       <DependentUpon>frm_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_BillDetail.resx">
+      <DependentUpon>frm_BillDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_BillManagement.resx">
+      <DependentUpon>frm_BillManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_CustomerAdd.resx">
       <DependentUpon>frm_CustomerAdd.cs</DependentUpon>

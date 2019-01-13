@@ -39,5 +39,7 @@ namespace ConvenientStore.Helpers.Message
         public static string EMPTY_FIELD_ERROR = "Trường [{0}] không được trống";
 
         public static string UPDATE_INFOR_SUCCESSFULLY = "Cập nhật thông tin [{0}] thành công";
+
+        public static string CONFIRM_CLOSE_DASHBOARD = "Bạn có chắc muốn đóng ứng dụng?";
     }
 }

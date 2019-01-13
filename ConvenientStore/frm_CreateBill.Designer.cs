@@ -88,9 +88,9 @@
             this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.btnSubmit);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 445);
+            this.panel1.Location = new System.Drawing.Point(0, 484);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(984, 66);
+            this.panel1.Size = new System.Drawing.Size(1000, 66);
             this.panel1.TabIndex = 0;
             // 
             // label4
@@ -143,7 +143,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCancel.Location = new System.Drawing.Point(696, 14);
+            this.btnCancel.Location = new System.Drawing.Point(712, 14);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(140, 40);
             this.btnCancel.TabIndex = 1;
@@ -159,7 +159,7 @@
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSubmit.Location = new System.Drawing.Point(842, 14);
+            this.btnSubmit.Location = new System.Drawing.Point(858, 14);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(140, 40);
             this.btnSubmit.TabIndex = 0;
@@ -182,10 +182,10 @@
             this.columnUnit,
             this.columnTotal});
             this.dgvListProduct.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvListProduct.Location = new System.Drawing.Point(0, 248);
+            this.dgvListProduct.Location = new System.Drawing.Point(0, 287);
             this.dgvListProduct.MultiSelect = false;
             this.dgvListProduct.Name = "dgvListProduct";
-            this.dgvListProduct.Size = new System.Drawing.Size(984, 197);
+            this.dgvListProduct.Size = new System.Drawing.Size(1000, 197);
             this.dgvListProduct.TabIndex = 1;
             this.dgvListProduct.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.doubleClickRow);
             this.dgvListProduct.DoubleClick += new System.EventHandler(this.doubleClickRow);
@@ -264,7 +264,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(444, 248);
+            this.groupBox1.Size = new System.Drawing.Size(444, 287);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chung";
@@ -424,9 +424,9 @@
             this.groupBox2.Controls.Add(this.txtProductCode);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox2.Location = new System.Drawing.Point(450, 0);
+            this.groupBox2.Location = new System.Drawing.Point(466, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(534, 248);
+            this.groupBox2.Size = new System.Drawing.Size(534, 287);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin sản phẩm";
@@ -573,16 +573,17 @@
             this.label10.TabIndex = 13;
             this.label10.Text = "Mã sản phẩm (*)";
             // 
-            // XuLyHoaDonForm
+            // frm_CreateBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 511);
+            this.ClientSize = new System.Drawing.Size(1000, 550);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvListProduct);
             this.Controls.Add(this.panel1);
-            this.Name = "XuLyHoaDonForm";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "frm_CreateBill";
             this.Text = "LapHoaDonForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

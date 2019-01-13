@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ConvenientStore.Helpers.Message;
+using ConvenientStore.UserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,9 +17,15 @@ namespace ConvenientStore.Forms
         public frmDashboard()
         {
             InitializeComponent();
-            pnlHighlight.Height = btnBill.Height;
-            pnlHighlight.Top = btnBill.Top;
-            uc_SaleDetails.BringToFront();
+
+
+
+            frm_CreateBill form = new frm_CreateBill();
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.TopLevel = false;
+            form.AutoScroll = true;
+            this.pnForm.Controls.Add(form);
+            form.Show();
         }
 
         private void frmDashboard_Load(object sender, EventArgs e)
@@ -29,29 +37,44 @@ namespace ConvenientStore.Forms
         {
             pnlHighlight.Height = btnBill.Height;
             pnlHighlight.Top = btnBill.Top;
-            uc_BillDetails.BringToFront();
+            this.pnForm.Controls.Clear();
+
+            frm_CreateBill form = new frm_CreateBill();
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.TopLevel = false;
+            form.AutoScroll = true;
+            this.pnForm.Controls.Add(form);
+            form.Show();
         }
 
         private void btnStore_Click(object sender, EventArgs e)
         {
             pnlHighlight.Height = btnStore.Height;
             pnlHighlight.Top = btnStore.Top;
-            uc_StoreDetails.BringToFront();
+            this.pnForm.Controls.Clear();
 
+            frm_ProductManagement form = new frm_ProductManagement();
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.TopLevel = false;
+            form.AutoScroll = true;
+            this.pnForm.Controls.Add(form);
+            form.Show();
         }
 
         private void btnSale_Click(object sender, EventArgs e)
         {
             pnlHighlight.Height = btnSale.Height;
             pnlHighlight.Top = btnSale.Top;
-            uc_SaleDetails.BringToFront();
+            this.pnForm.Controls.Clear();
+
+            UC_SaleDetails uc = new UC_SaleDetails();
+            uc.AutoScroll = true;
+            this.pnForm.Controls.Add(uc);
         }
 
         private void btnContact_Click(object sender, EventArgs e)
         {
-            pnlHighlight.Height = btnContact.Height;
-            pnlHighlight.Top = btnContact.Top;
-            uc_OrderProducts.BringToFront();
+
 
         }
 
@@ -59,21 +82,27 @@ namespace ConvenientStore.Forms
         {
             pnlHighlight.Height = btnCustomer.Height;
             pnlHighlight.Top = btnCustomer.Top;
+            this.pnForm.Controls.Clear();
+
+            frm_CustomerManagement form = new frm_CustomerManagement();
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.TopLevel = false;
+            form.AutoScroll = true;
+            this.pnForm.Controls.Add(form);
+            form.Show();
 
         }
 
         private void btnRollback_Click(object sender, EventArgs e)
         {
-            pnlHighlight.Height = btnRollback.Height;
-            pnlHighlight.Top = btnRollback.Top;
+
 
 
         }
 
         private void btnChart_Click(object sender, EventArgs e)
         {
-            pnlHighlight.Height = btnChart.Height;
-            pnlHighlight.Top = btnChart.Top;
+
 
 
         }
@@ -102,15 +131,16 @@ namespace ConvenientStore.Forms
 
         private void frmDashboard_FormClosing(object sender, FormClosingEventArgs e)
         {
-            // Display a MsgBox asking the user to save changes or abort.
-            if (MessageBox.Show("Do you want close ?", "Convenient store application",
-               MessageBoxButtons.YesNo) == DialogResult.No)
+            if (MessageBox.Show(MessageContent.CONFIRM_CLOSE_DASHBOARD, MessageTitle.APPLICATION_NAME,
+               MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
             {
-                // Cancel the Closing event from closing the form.
                 e.Cancel = true;
-                // Can Call method to save file here...
             }
         }
 
+        private void btnEditBill_Click(object sender, EventArgs e)
+        {
+                
+        }
     }
 }

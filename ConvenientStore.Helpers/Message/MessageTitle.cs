@@ -8,6 +8,7 @@ namespace ConvenientStore.Helpers.Message
 {
     public class MessageTitle
     {
+        public static string APPLICATION_NAME = "Convenient store application";
 
         public static string GET_CUSTOMER_ERROR = "Lỗi khi lấy dữ liệu khách hàng";
 

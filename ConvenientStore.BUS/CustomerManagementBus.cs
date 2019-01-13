@@ -54,7 +54,7 @@ namespace ConvenientStore.BUS
 
             try
             {
-                customers = this.customerRepository.GetByName(name);
+                customers = this.customerRepository.GetByName(name, true).ToList();
             }
             catch
             {
@@ -63,7 +63,7 @@ namespace ConvenientStore.BUS
 
             foreach (Customer customer in customers)
             {
-                CustomerManagementDto dto = new CustomerManagementDto();
+                CustomerManagementDto dto = Mapping.Mapper.Map<CustomerManagementDto>(customer);
                 Console.WriteLine(customer.CusTypeId);
                 customerManagementDtos.Add(dto);
             }
