@@ -48,7 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomEditBus.cs" />
     <Compile Include="CustomerBus.cs" />
+    <Compile Include="CustomerManagementBus.cs" />
+    <Compile Include="ProductManagementBus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XuLyHoaDonBus.cs" />
   </ItemGroup>

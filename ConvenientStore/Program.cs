@@ -16,7 +16,7 @@ namespace ConvenientStore
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new XuLyHoaDonForm());
+            Application.Run(new frm_CustomerManagement());
         }
     }
 }

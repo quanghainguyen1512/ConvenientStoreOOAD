@@ -99,6 +99,36 @@
     <Compile Include="customersList.Designer.cs">
       <DependentUpon>customersList.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_CustomerAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_CustomerAdd.Designer.cs">
+      <DependentUpon>frm_CustomerAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_CustomerEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_CustomerEdit.Designer.cs">
+      <DependentUpon>frm_CustomerEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_CustomerManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_CustomerManagement.Designer.cs">
+      <DependentUpon>frm_CustomerManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ProductManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ProductManagement.Designer.cs">
+      <DependentUpon>frm_ProductManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ProductManagementDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ProductManagementDetail.Designer.cs">
+      <DependentUpon>frm_ProductManagementDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -118,6 +148,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_CustomerAdd.resx">
+      <DependentUpon>frm_CustomerAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_CustomerEdit.resx">
+      <DependentUpon>frm_CustomerEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_CustomerManagement.resx">
+      <DependentUpon>frm_CustomerManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ProductManagement.resx">
+      <DependentUpon>frm_ProductManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ProductManagementDetail.resx">
+      <DependentUpon>frm_ProductManagementDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -128,11 +173,11 @@
     <EmbeddedResource Include="StatisticGUI.resx">
       <DependentUpon>StatisticGUI.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="XuLyHoaDonForm.cs">
+    <Compile Include="frm_CreateBill.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="XuLyHoaDonForm.Designer.cs">
-      <DependentUpon>XuLyHoaDonForm.cs</DependentUpon>
+    <Compile Include="frm_CreateBill.Designer.cs">
+      <DependentUpon>frm_CreateBill.cs</DependentUpon>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -164,8 +209,8 @@
     <EmbeddedResource Include="EditBillDetailForm.resx">
       <DependentUpon>EditBillDetailForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="XuLyHoaDonForm.resx">
-      <DependentUpon>XuLyHoaDonForm.cs</DependentUpon>
+    <EmbeddedResource Include="frm_CreateBill.resx">
+      <DependentUpon>frm_CreateBill.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
