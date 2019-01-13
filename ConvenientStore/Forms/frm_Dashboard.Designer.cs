@@ -45,13 +45,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.uc_OrderProducts = new ConvenientStore.UserControls.UC_OrderProducts();
+            this.uc_StoreDetails = new ConvenientStore.UserControls.UC_StoreDetails();
+            this.uc_BillDetails = new ConvenientStore.UserControls.UC_BillDetails();
+            this.uc_SaleDetails = new ConvenientStore.UserControls.UC_SaleDetails();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnQuestion = new System.Windows.Forms.Button();
-            this.uc_StoreDetails = new ConvenientStore.UserControls.UC_StoreDetails();
-            this.uc_BillDetails = new ConvenientStore.UserControls.UC_BillDetails();
-            this.uc_SaleDetails = new ConvenientStore.UserControls.UC_SaleDetails();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -73,7 +75,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(215, 700);
+            this.panel1.Size = new System.Drawing.Size(215, 750);
             this.panel1.TabIndex = 0;
             // 
             // pnlHighlight
@@ -96,7 +98,7 @@
             this.btnStore.Name = "btnStore";
             this.btnStore.Size = new System.Drawing.Size(200, 70);
             this.btnStore.TabIndex = 2;
-            this.btnStore.Text = "   Danh sách mặt hàng";
+            this.btnStore.Text = "   Quản lý sản phẩm";
             this.btnStore.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnStore.UseVisualStyleBackColor = false;
             this.btnStore.Click += new System.EventHandler(this.btnStore_Click);
@@ -164,7 +166,7 @@
             this.btnContact.Name = "btnContact";
             this.btnContact.Size = new System.Drawing.Size(200, 70);
             this.btnContact.TabIndex = 4;
-            this.btnContact.Text = "   Nhập hàng và đặt hàng";
+            this.btnContact.Text = "           Đặt hàng";
             this.btnContact.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnContact.UseVisualStyleBackColor = false;
             this.btnContact.Click += new System.EventHandler(this.btnContact_Click);
@@ -266,14 +268,51 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.uc_OrderProducts);
             this.panel5.Controls.Add(this.uc_StoreDetails);
             this.panel5.Controls.Add(this.uc_BillDetails);
             this.panel5.Controls.Add(this.uc_SaleDetails);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.Location = new System.Drawing.Point(215, 200);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1000, 500);
+            this.panel5.Size = new System.Drawing.Size(1000, 550);
             this.panel5.TabIndex = 2;
+            // 
+            // uc_OrderProducts
+            // 
+            this.uc_OrderProducts.BackColor = System.Drawing.Color.White;
+            this.uc_OrderProducts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uc_OrderProducts.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uc_OrderProducts.Location = new System.Drawing.Point(0, 0);
+            this.uc_OrderProducts.Name = "uc_OrderProducts";
+            this.uc_OrderProducts.Size = new System.Drawing.Size(1000, 550);
+            this.uc_OrderProducts.TabIndex = 3;
+            // 
+            // uc_StoreDetails
+            // 
+            this.uc_StoreDetails.BackColor = System.Drawing.Color.White;
+            this.uc_StoreDetails.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uc_StoreDetails.Location = new System.Drawing.Point(0, 0);
+            this.uc_StoreDetails.Name = "uc_StoreDetails";
+            this.uc_StoreDetails.Size = new System.Drawing.Size(1000, 550);
+            this.uc_StoreDetails.TabIndex = 2;
+            // 
+            // uc_BillDetails
+            // 
+            this.uc_BillDetails.BackColor = System.Drawing.Color.White;
+            this.uc_BillDetails.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uc_BillDetails.Location = new System.Drawing.Point(0, 0);
+            this.uc_BillDetails.Name = "uc_BillDetails";
+            this.uc_BillDetails.Size = new System.Drawing.Size(1000, 550);
+            this.uc_BillDetails.TabIndex = 1;
+            // 
+            // uc_SaleDetails
+            // 
+            this.uc_SaleDetails.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uc_SaleDetails.Location = new System.Drawing.Point(0, 0);
+            this.uc_SaleDetails.Name = "uc_SaleDetails";
+            this.uc_SaleDetails.Size = new System.Drawing.Size(1000, 550);
+            this.uc_SaleDetails.TabIndex = 0;
             // 
             // lblTitle
             // 
@@ -293,7 +332,7 @@
             this.btnClose.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(1173, 27);
+            this.btnClose.Location = new System.Drawing.Point(1144, 27);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(30, 30);
             this.btnClose.TabIndex = 10;
@@ -310,7 +349,7 @@
             this.btnMinimize.ForeColor = System.Drawing.Color.White;
             this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
             this.btnMinimize.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnMinimize.Location = new System.Drawing.Point(1137, 27);
+            this.btnMinimize.Location = new System.Drawing.Point(1108, 27);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(30, 30);
             this.btnMinimize.TabIndex = 9;
@@ -326,7 +365,7 @@
             this.btnQuestion.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuestion.ForeColor = System.Drawing.Color.White;
             this.btnQuestion.Image = ((System.Drawing.Image)(resources.GetObject("btnQuestion.Image")));
-            this.btnQuestion.Location = new System.Drawing.Point(1101, 27);
+            this.btnQuestion.Location = new System.Drawing.Point(1072, 27);
             this.btnQuestion.Name = "btnQuestion";
             this.btnQuestion.Size = new System.Drawing.Size(30, 30);
             this.btnQuestion.TabIndex = 8;
@@ -334,34 +373,21 @@
             this.btnQuestion.UseVisualStyleBackColor = false;
             this.btnQuestion.Click += new System.EventHandler(this.btnQuestion_Click);
             // 
-            // uc_StoreDetails
+            // panel6
             // 
-            this.uc_StoreDetails.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uc_StoreDetails.Location = new System.Drawing.Point(0, 0);
-            this.uc_StoreDetails.Name = "uc_StoreDetails";
-            this.uc_StoreDetails.Size = new System.Drawing.Size(1000, 500);
-            this.uc_StoreDetails.TabIndex = 2;
-            // 
-            // uc_BillDetails
-            // 
-            this.uc_BillDetails.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uc_BillDetails.Location = new System.Drawing.Point(0, 0);
-            this.uc_BillDetails.Name = "uc_BillDetails";
-            this.uc_BillDetails.Size = new System.Drawing.Size(1000, 500);
-            this.uc_BillDetails.TabIndex = 1;
-            // 
-            // uc_SaleDetails
-            // 
-            this.uc_SaleDetails.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uc_SaleDetails.Location = new System.Drawing.Point(0, 0);
-            this.uc_SaleDetails.Name = "uc_SaleDetails";
-            this.uc_SaleDetails.Size = new System.Drawing.Size(1000, 500);
-            this.uc_SaleDetails.TabIndex = 0;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(166)))));
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel6.Location = new System.Drawing.Point(1205, 20);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(10, 180);
+            this.panel6.TabIndex = 11;
             // 
             // frmDashboard
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1215, 700);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1215, 750);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
@@ -411,5 +437,7 @@
         private System.Windows.Forms.Button btnQuestion;
         private UserControls.UC_BillDetails uc_BillDetails;
         private UserControls.UC_StoreDetails uc_StoreDetails;
+        private UserControls.UC_OrderProducts uc_OrderProducts;
+        private System.Windows.Forms.Panel panel6;
     }
 }

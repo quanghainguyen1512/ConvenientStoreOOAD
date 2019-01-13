@@ -87,6 +87,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\frm_AddOrderProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_AddOrderProducts.Designer.cs">
+      <DependentUpon>frm_AddOrderProducts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frm_AddSale.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,12 @@
     <Compile Include="Forms\frm_Dashboard.Designer.cs">
       <DependentUpon>frm_Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frm_EditOrderProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_EditOrderProduct.Designer.cs">
+      <DependentUpon>frm_EditOrderProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserControls\UC_BillDetails.cs">
@@ -106,6 +118,12 @@
     </Compile>
     <Compile Include="UserControls\UC_BillDetails.Designer.cs">
       <DependentUpon>UC_BillDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_OrderProducts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_OrderProducts.Designer.cs">
+      <DependentUpon>UC_OrderProducts.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UC_SaleDetails.cs">
       <SubType>UserControl</SubType>
@@ -119,11 +137,17 @@
     <Compile Include="UserControls\UC_StoreDetails.Designer.cs">
       <DependentUpon>UC_StoreDetails.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\frm_AddOrderProducts.resx">
+      <DependentUpon>frm_AddOrderProducts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_AddSale.resx">
       <DependentUpon>frm_AddSale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_Dashboard.resx">
       <DependentUpon>frm_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_EditOrderProduct.resx">
+      <DependentUpon>frm_EditOrderProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -136,6 +160,9 @@
     </Compile>
     <EmbeddedResource Include="UserControls\UC_BillDetails.resx">
       <DependentUpon>UC_BillDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_OrderProducts.resx">
+      <DependentUpon>UC_OrderProducts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_SaleDetails.resx">
       <DependentUpon>UC_SaleDetails.cs</DependentUpon>
@@ -169,6 +196,26 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Images\Icons\bill.png" />
+    <Content Include="Images\Icons\chart.png" />
+    <Content Include="Images\Icons\close.png" />
+    <Content Include="Images\Icons\contact.png" />
+    <Content Include="Images\Icons\delete.png" />
+    <Content Include="Images\Icons\delete_input.png" />
+    <Content Include="Images\Icons\edit.png" />
+    <Content Include="Images\Icons\excel.png" />
+    <Content Include="Images\Icons\left.png" />
+    <Content Include="Images\Icons\minimize.png" />
+    <Content Include="Images\Icons\people.png" />
+    <Content Include="Images\Icons\plus.png" />
+    <Content Include="Images\Icons\pricetag.png" />
+    <Content Include="Images\Icons\question.png" />
+    <Content Include="Images\Icons\right.png" />
+    <Content Include="Images\Icons\roleback.png" />
+    <Content Include="Images\Icons\save.png" />
+    <Content Include="Images\Icons\store.png" />
+    <Content Include="Images\Logo.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
