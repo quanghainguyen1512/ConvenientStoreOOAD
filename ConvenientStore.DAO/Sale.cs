@@ -13,12 +13,14 @@ namespace ConvenientStore.DAO
         [Key]
         public int SaleId { get; set; }
         public string ShortName { get; set; }
-        public string Description { get; set; }
+        public string Description { get; set; } = "";
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public int Value { get; set; }
-        public bool TypeOfDiscount { get; set; }
+        public bool TypeOfDiscount { get; set; }    // false = coupon, true = voucher
         public int ConditionMin { get; set; }
-        public int ConditionMax { get; set; }
+        
+        [Write(false)]
+        public List<SaleToCustomerType> SaleToCustomerTypes { get; set; }
     }
 }

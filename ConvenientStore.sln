@@ -17,8 +17,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvenientStore.Services", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvenientStore.Helpers", "ConvenientStore.Helpers\ConvenientStore.Helpers.csproj", "{23AA55F4-A71A-459A-A9C5-85E74C8161EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoOnConsole", "DemoOnConsole\DemoOnConsole.csproj", "{E0C22C62-183F-4CC1-8DF8-7FEBBD0B014F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,10 +51,6 @@ Global
 		{23AA55F4-A71A-459A-A9C5-85E74C8161EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23AA55F4-A71A-459A-A9C5-85E74C8161EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23AA55F4-A71A-459A-A9C5-85E74C8161EA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E0C22C62-183F-4CC1-8DF8-7FEBBD0B014F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E0C22C62-183F-4CC1-8DF8-7FEBBD0B014F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E0C22C62-183F-4CC1-8DF8-7FEBBD0B014F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E0C22C62-183F-4CC1-8DF8-7FEBBD0B014F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

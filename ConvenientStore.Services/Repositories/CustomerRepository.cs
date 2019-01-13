@@ -38,8 +38,6 @@ namespace ConvenientStore.Services.Repositories
         {
             using (var con = DbConnection.Instance.Connection)
             {
-
-
                 if (withType)
                 {
                     var sql = "SELECT * FROM customer as c " +
@@ -48,10 +46,26 @@ namespace ConvenientStore.Services.Repositories
                         "WHERE c.PhoneNumber = @phone";
                     return con.Query<Customer, CustomerType>(sql, splitOn: "TypeId", param: new { phone }).FirstOrDefault();
                 }
-
-
                 var query = "SELECT * FROM customer WHERE PhoneNumber = @phone";
                 return con.Query<Customer>(query, param: new { phone }).FirstOrDefault();
+            }
+        }
+
+        public IEnumerable<Customer> GetByName(string name, bool withType = false)
+        {
+            using (var con = DbConnection.Instance.Connection)
+            {
+
+
+                if (withType)
+                {
+                    var sql = "SELECT * FROM customer as c INNER JOIN customer_type as ct ON c.CusTypeId = ct.TypeId where concat(c.FirstName,' ',c.LastName) like '%name%'";
+                    return con.Query<Customer, CustomerType>(sql, splitOn: "TypeId", param: new { name });
+                }
+
+
+                var query = "SELECT * FROM customer where concat(FirstName,\' \',LastName) like \'%@name%\'";
+                return con.Query<Customer>(query, param: new { name });
 
 
             }
@@ -97,10 +111,22 @@ namespace ConvenientStore.Services.Repositories
 
         public bool Update(Customer obj)
         {
-
             using (var con = DbConnection.Instance.Connection)
             {
                 return con.Update(obj);
+            }
+        }
+
+        public List<Customer> GetByName(string name)
+        {
+
+            using (var con = DbConnection.Instance.Connection)
+            {
+
+                var query = "SELECT * FROM customer WHERE concat(FirstName,\' \',LastName) = @name";
+                return con.Query<Customer>(query, param: new { name }).ToList();
+
+
             }
         }
     }

@@ -35,5 +35,9 @@ namespace ConvenientStore.Helpers.Message
         public static string REQUIRE_INPUT_QUANTITY_FIELD = "Bạn cần nhập số lượng";
 
         public static string CONFIRM_DELETE_PRODUCT_BILL_DETAIL = "Bạn có chắc muốn xóa sản phẩm ra khỏi hóa đơn?";
+
+        public static string EMPTY_FIELD_ERROR = "Trường [{0}] không được trống";
+
+        public static string UPDATE_INFOR_SUCCESSFULLY = "Cập nhật thông tin [{0}] thành công";
     }
 }

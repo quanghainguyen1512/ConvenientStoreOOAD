@@ -13,13 +13,10 @@ namespace ConvenientStore.DAO
         [Key]
         public int ProductDetailId { get; set; }
 
-        //[Write(false)]
         public int Quantity { get; set; }
 
-        //[Write(false)]
         public int Price { get; set; }
 
-        //[Write(false)]
         public DateTime ExpirationDate { get; set; }
 
         [Write(false)]

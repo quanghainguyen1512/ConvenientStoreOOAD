@@ -82,42 +82,64 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="Z.Dapper.Plus, Version=1.4.1.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Z.Dapper.Plus.1.4.1\lib\net45\Z.Dapper.Plus.dll</HintPath>
+    <Reference Include="Z.Dapper.Plus, Version=1.4.6.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Z.Dapper.Plus.1.4.6\lib\net45\Z.Dapper.Plus.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\Dashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Dashboard.Designer.cs">
-      <DependentUpon>Dashboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="EditBillDetailForm.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_AddOrderProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_AddOrderProducts.Designer.cs">
+      <DependentUpon>frm_AddOrderProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_AddSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_AddSale.Designer.cs">
+      <DependentUpon>frm_AddSale.cs</DependentUpon>
     </Compile>
     <Compile Include="EditBillDetailForm.Designer.cs">
       <DependentUpon>EditBillDetailForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControls\UC_BillDetails.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Forms\frm_Dashboard.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserControls\UC_BillDetails.Designer.cs">
-      <DependentUpon>UC_BillDetails.cs</DependentUpon>
+    <Compile Include="Forms\frm_Dashboard.Designer.cs">
+      <DependentUpon>frm_Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UC_SaleDetails.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="frm_CustomerAdd.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserControls\UC_SaleDetails.Designer.cs">
-      <DependentUpon>UC_SaleDetails.cs</DependentUpon>
+    <Compile Include="frm_CustomerAdd.Designer.cs">
+      <DependentUpon>frm_CustomerAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UC_StoreDetails.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="frm_CustomerEdit.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserControls\UC_StoreDetails.Designer.cs">
-      <DependentUpon>UC_StoreDetails.cs</DependentUpon>
+    <Compile Include="frm_CustomerEdit.Designer.cs">
+      <DependentUpon>frm_CustomerEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_CustomerManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_CustomerManagement.Designer.cs">
+      <DependentUpon>frm_CustomerManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ProductManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ProductManagement.Designer.cs">
+      <DependentUpon>frm_ProductManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ProductManagementDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ProductManagementDetail.Designer.cs">
+      <DependentUpon>frm_ProductManagementDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -136,7 +158,59 @@
     <Compile Include="StatisticGUI.Designer.cs">
       <DependentUpon>StatisticGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\UC_BillDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_BillDetails.Designer.cs">
+      <DependentUpon>UC_BillDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_OrderProducts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_OrderProducts.Designer.cs">
+      <DependentUpon>UC_OrderProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_SaleDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_SaleDetails.Designer.cs">
+      <DependentUpon>UC_SaleDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_StoreDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_StoreDetails.Designer.cs">
+      <DependentUpon>UC_StoreDetails.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\frm_AddOrderProducts.resx">
+      <DependentUpon>frm_AddOrderProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_AddSale.resx">
+      <DependentUpon>frm_AddSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Dashboard.resx">
+      <DependentUpon>frm_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_CustomerAdd.resx">
+      <DependentUpon>frm_CustomerAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_CustomerEdit.resx">
+      <DependentUpon>frm_CustomerEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_CustomerManagement.resx">
+      <DependentUpon>frm_CustomerManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ProductManagement.resx">
+      <DependentUpon>frm_ProductManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ProductManagementDetail.resx">
+      <DependentUpon>frm_ProductManagementDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_EditOrderProduct.resx">
+      <DependentUpon>frm_EditOrderProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -148,14 +222,17 @@
     <EmbeddedResource Include="StatisticGUI.resx">
       <DependentUpon>StatisticGUI.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="XuLyHoaDonForm.cs">
+    <Compile Include="frm_CreateBill.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="XuLyHoaDonForm.Designer.cs">
-      <DependentUpon>XuLyHoaDonForm.cs</DependentUpon>
+    <Compile Include="frm_CreateBill.Designer.cs">
+      <DependentUpon>frm_CreateBill.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="UserControls\UC_BillDetails.resx">
       <DependentUpon>UC_BillDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_OrderProducts.resx">
+      <DependentUpon>UC_OrderProducts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_SaleDetails.resx">
       <DependentUpon>UC_SaleDetails.cs</DependentUpon>
@@ -163,7 +240,9 @@
     <EmbeddedResource Include="UserControls\UC_StoreDetails.resx">
       <DependentUpon>UC_StoreDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -193,8 +272,8 @@
     <EmbeddedResource Include="EditBillDetailForm.resx">
       <DependentUpon>EditBillDetailForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="XuLyHoaDonForm.resx">
-      <DependentUpon>XuLyHoaDonForm.cs</DependentUpon>
+    <EmbeddedResource Include="frm_CreateBill.resx">
+      <DependentUpon>frm_CreateBill.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -218,6 +297,27 @@
       <Project>{3FB2B351-B2B6-44C0-9B24-01F6E9F73C2E}</Project>
       <Name>ConvenientStore.Services</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\Icons\bill.png" />
+    <Content Include="Images\Icons\chart.png" />
+    <Content Include="Images\Icons\close.png" />
+    <Content Include="Images\Icons\contact.png" />
+    <Content Include="Images\Icons\delete.png" />
+    <Content Include="Images\Icons\delete_input.png" />
+    <Content Include="Images\Icons\edit.png" />
+    <Content Include="Images\Icons\excel.png" />
+    <Content Include="Images\Icons\left.png" />
+    <Content Include="Images\Icons\minimize.png" />
+    <Content Include="Images\Icons\people.png" />
+    <Content Include="Images\Icons\plus.png" />
+    <Content Include="Images\Icons\pricetag.png" />
+    <Content Include="Images\Icons\question.png" />
+    <Content Include="Images\Icons\right.png" />
+    <Content Include="Images\Icons\roleback.png" />
+    <Content Include="Images\Icons\save.png" />
+    <Content Include="Images\Icons\store.png" />
+    <Content Include="Images\Logo.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
