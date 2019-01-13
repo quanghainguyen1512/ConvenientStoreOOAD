@@ -45,8 +45,8 @@
             this.dgcol_StartDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcol_EndDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcol_Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcol_Condition = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnEditSale = new System.Windows.Forms.Button();
             this.btnDeleteSale = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -75,7 +75,7 @@
             // 
             // cboSearch
             // 
-            this.cboSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cboSearch.BackColor = System.Drawing.Color.White;
             this.cboSearch.FormattingEnabled = true;
             this.cboSearch.Location = new System.Drawing.Point(377, 23);
             this.cboSearch.Name = "cboSearch";
@@ -171,7 +171,7 @@
             // 
             this.dgSaleDetails.AllowUserToAddRows = false;
             this.dgSaleDetails.AllowUserToDeleteRows = false;
-            this.dgSaleDetails.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgSaleDetails.BackgroundColor = System.Drawing.Color.White;
             this.dgSaleDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgSaleDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgcol_Name,
@@ -179,14 +179,13 @@
             this.dgcol_Val,
             this.dgcol_StartDay,
             this.dgcol_EndDay,
-            this.dgcol_Description,
-            this.dgcol_Condition});
+            this.dgcol_Description});
             this.dgSaleDetails.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgSaleDetails.Location = new System.Drawing.Point(0, 0);
             this.dgSaleDetails.Name = "dgSaleDetails";
             this.dgSaleDetails.ReadOnly = true;
             this.dgSaleDetails.RowTemplate.Height = 24;
-            this.dgSaleDetails.Size = new System.Drawing.Size(1000, 360);
+            this.dgSaleDetails.Size = new System.Drawing.Size(1000, 410);
             this.dgSaleDetails.TabIndex = 2;
             // 
             // dgcol_Name
@@ -227,24 +226,35 @@
             this.dgcol_Description.HeaderText = "MÔ TẢ";
             this.dgcol_Description.Name = "dgcol_Description";
             this.dgcol_Description.ReadOnly = true;
-            this.dgcol_Description.Width = 200;
-            // 
-            // dgcol_Condition
-            // 
-            this.dgcol_Condition.HeaderText = "KHUNG ÁP DỤNG";
-            this.dgcol_Condition.Name = "dgcol_Condition";
-            this.dgcol_Condition.ReadOnly = true;
+            this.dgcol_Description.Width = 300;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(166)))));
+            this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.btnEditSale);
             this.panel3.Controls.Add(this.btnDeleteSale);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 430);
+            this.panel3.Location = new System.Drawing.Point(0, 480);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1000, 70);
             this.panel3.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(460, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(180, 70);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Điều kiện áp dụng";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // btnEditSale
             // 
@@ -284,7 +294,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 70);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1000, 360);
+            this.panel4.Size = new System.Drawing.Size(1000, 410);
             this.panel4.TabIndex = 4;
             // 
             // UC_SaleDetails
@@ -294,7 +304,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Name = "UC_SaleDetails";
-            this.Size = new System.Drawing.Size(1000, 500);
+            this.Size = new System.Drawing.Size(1000, 550);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.pnlPage.ResumeLayout(false);
@@ -318,16 +328,16 @@
         private System.Windows.Forms.Label lblPage;
         private System.Windows.Forms.Button btnPageRight;
         private System.Windows.Forms.DataGridView dgSaleDetails;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnEditSale;
+        private System.Windows.Forms.Button btnDeleteSale;
+        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcol_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcol_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcol_Val;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcol_StartDay;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcol_EndDay;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcol_Description;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcol_Condition;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnEditSale;
-        private System.Windows.Forms.Button btnDeleteSale;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button button1;
     }
 }

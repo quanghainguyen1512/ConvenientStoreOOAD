@@ -51,6 +51,7 @@ namespace ConvenientStore.Forms
         {
             pnlHighlight.Height = btnContact.Height;
             pnlHighlight.Top = btnContact.Top;
+            uc_OrderProducts.BringToFront();
 
         }
 

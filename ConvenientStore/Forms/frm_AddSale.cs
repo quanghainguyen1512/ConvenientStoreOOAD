@@ -17,9 +17,9 @@ namespace ConvenientStore.Forms
             InitializeComponent();
             // Set the Format type and the CustomFormat string.
             dtmSaleBeginDay.Format = DateTimePickerFormat.Custom;
-            dtmSaleBeginDay.CustomFormat = "dd MM, yyyy";
+            dtmSaleBeginDay.CustomFormat = "dd/MM/yyyy";
             dtmSaleEndDay.Format = DateTimePickerFormat.Custom;
-            dtmSaleEndDay.CustomFormat = "dd MM, yyyy";
+            dtmSaleEndDay.CustomFormat = "dd/MM/yyyy";
         }
 
         private void btnClose_Click(object sender, EventArgs e)
