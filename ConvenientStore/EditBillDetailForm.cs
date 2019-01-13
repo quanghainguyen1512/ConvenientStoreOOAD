@@ -77,10 +77,13 @@ namespace ConvenientStore
         // Xử lý khi nhấn enter trường [Số lượng]
         private void enterTxtQuantity(object sender, KeyEventArgs e)
         {
-            if (!this.checkQuantityFormat())
-                return;
+            if(e.KeyCode == Keys.Enter)
+            {
+                if (!this.checkQuantityFormat())
+                    return;
 
-            this.submitChange();
+                this.submitChange();
+            }
         }
 
         private void submitChange()
