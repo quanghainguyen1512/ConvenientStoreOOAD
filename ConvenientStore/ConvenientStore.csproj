@@ -320,20 +320,26 @@
     <Content Include="Images\Icons\bill.png" />
     <Content Include="Images\Icons\chart.png" />
     <Content Include="Images\Icons\close.png" />
+    <None Include="Images\Icons\close_white.png" />
     <Content Include="Images\Icons\contact.png" />
     <Content Include="Images\Icons\delete.png" />
     <Content Include="Images\Icons\delete_input.png" />
     <Content Include="Images\Icons\edit.png" />
     <Content Include="Images\Icons\excel.png" />
+    <None Include="Images\Icons\human.png" />
     <Content Include="Images\Icons\left.png" />
     <Content Include="Images\Icons\minimize.png" />
+    <None Include="Images\Icons\paycard.png" />
     <Content Include="Images\Icons\people.png" />
     <Content Include="Images\Icons\plus.png" />
     <Content Include="Images\Icons\pricetag.png" />
+    <None Include="Images\Icons\pricetag_blue.png" />
     <Content Include="Images\Icons\question.png" />
+    <None Include="Images\Icons\remove.png" />
     <Content Include="Images\Icons\right.png" />
     <Content Include="Images\Icons\roleback.png" />
     <Content Include="Images\Icons\save.png" />
+    <None Include="Images\Icons\search.png" />
     <Content Include="Images\Icons\store.png" />
     <Content Include="Images\Logo.jpg" />
   </ItemGroup>

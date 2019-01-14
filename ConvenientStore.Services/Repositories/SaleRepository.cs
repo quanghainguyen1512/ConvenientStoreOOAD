@@ -107,8 +107,8 @@ namespace ConvenientStore.Services.Repositories
                             Sale = s,
                             CustomerType = c
                         };
-
-                        if (!dict.TryGetValue(s.SaleId, out var entry))
+                        var entry = new Sale();
+                        if (!dict.TryGetValue(s.SaleId, out entry))
                         {
                             entry = s;
                             entry.SaleToCustomerTypes = new List<SaleToCustomerType>();

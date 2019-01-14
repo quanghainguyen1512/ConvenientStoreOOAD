@@ -16,5 +16,22 @@ namespace ConvenientStore
         {
             InitializeComponent();
         }
+
+        private void frm_BillManagement_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Display a MsgBox asking the user to save changes or abort.
+            if (MessageBox.Show("Do you want close ?", "Bill Management Form",
+               MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                // Cancel the Closing event from closing the form.
+                e.Cancel = true;
+                // Can Call method to save file here...
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
