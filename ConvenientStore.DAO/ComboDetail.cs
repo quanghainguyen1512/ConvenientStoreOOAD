@@ -9,5 +9,6 @@ namespace ConvenientStore.DAO
         public ProductDetail ProductDetail { get; set; }
         [Write(false)]
         public Combo Combo { get; set; }
+        public int SubQuantity { get; set; }
     }
 }
