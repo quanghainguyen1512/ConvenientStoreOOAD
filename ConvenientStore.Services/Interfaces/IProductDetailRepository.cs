@@ -10,6 +10,6 @@ namespace ConvenientStore.Services.Interfaces
     public interface IProductDetailRepository : IRepository<ProductDetail>
     {
         ProductDetail GetProductDetailByProductIdAndMinExpidationDate(int productId);
-
+        ProductDetail GetProductDetailByGeneratedCode(string generatedCode);
     }
 }

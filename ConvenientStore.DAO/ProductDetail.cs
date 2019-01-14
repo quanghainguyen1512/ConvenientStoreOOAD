@@ -19,6 +19,10 @@ namespace ConvenientStore.DAO
 
         public DateTime ExpirationDate { get; set; }
 
+        public string GeneratedCode { get; set; }
+
+        public int ProductId { get; set; }
+
         [Write(false)]
         public Product Product { get; set; }
     }

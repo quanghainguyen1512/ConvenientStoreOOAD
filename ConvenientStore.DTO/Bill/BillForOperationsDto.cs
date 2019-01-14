@@ -10,6 +10,6 @@ namespace ConvenientStore.DTO.Bill
     {
         public DateTime CreateDate { get; set; }
         public int CustomerId { get; set; }
-        public List<Bill MyProperty { get; set; }
+        public List<BillDto> MyProperty { get; set; }
     }
 }

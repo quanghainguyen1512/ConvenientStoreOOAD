@@ -11,5 +11,7 @@ namespace ConvenientStore.Services.Interfaces
         IEnumerable<Customer> GetByName(string name, bool withType = false);
         bool CheckPhoneNumberExists(string phone);
 
+        bool CheckEmailExist(string email);
+
     }
 }

@@ -111,5 +111,14 @@ namespace ConvenientStore.Services.Repositories
                 return con.Update(obj);
             }
         }
+
+        public bool CheckEmailExist(string email)
+        {
+            using (var con = DbConnection.Instance.Connection)
+            {
+                var query = "SELECT CustomerId FROM customer WHERE Email = @email";
+                return con.ExecuteScalar(query, param: new { email }) != null;
+            }
+        }
     }
 }

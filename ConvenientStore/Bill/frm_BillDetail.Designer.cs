@@ -31,22 +31,23 @@
             this.dgvListBillDetails = new System.Windows.Forms.DataGridView();
             this.btnExportExcel = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.columnIndex = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnProductCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnProduceName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnSale = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label10 = new System.Windows.Forms.Label();
             this.txtBillCode = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCustomerName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCreateDate = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lbTotal = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.columnIndex = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnProductCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnProduceName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnSale = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListBillDetails)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,6 +60,7 @@
             this.columnProductCode,
             this.columnProduceName,
             this.columnPrice,
+            this.columnQuantity,
             this.columnUnit,
             this.columnSale,
             this.columnTotal});
@@ -99,56 +101,7 @@
             this.btnCancel.TabIndex = 27;
             this.btnCancel.Text = "Trở về";
             this.btnCancel.UseVisualStyleBackColor = false;
-            // 
-            // columnIndex
-            // 
-            this.columnIndex.Frozen = true;
-            this.columnIndex.HeaderText = "STT";
-            this.columnIndex.Name = "columnIndex";
-            this.columnIndex.ReadOnly = true;
-            this.columnIndex.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.columnIndex.Width = 50;
-            // 
-            // columnProductCode
-            // 
-            this.columnProductCode.HeaderText = "Mã sản phẩm";
-            this.columnProductCode.Name = "columnProductCode";
-            // 
-            // columnProduceName
-            // 
-            this.columnProduceName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.columnProduceName.HeaderText = "Tên sản phẩm";
-            this.columnProduceName.Name = "columnProduceName";
-            this.columnProduceName.ReadOnly = true;
-            this.columnProduceName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // columnPrice
-            // 
-            this.columnPrice.HeaderText = "Đơn giá (VNĐ)";
-            this.columnPrice.Name = "columnPrice";
-            this.columnPrice.ReadOnly = true;
-            this.columnPrice.Width = 150;
-            // 
-            // columnUnit
-            // 
-            this.columnUnit.HeaderText = "Đơn vị tính";
-            this.columnUnit.Name = "columnUnit";
-            this.columnUnit.ReadOnly = true;
-            this.columnUnit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // columnSale
-            // 
-            this.columnSale.HeaderText = "Giảm giá (%)";
-            this.columnSale.Name = "columnSale";
-            this.columnSale.ReadOnly = true;
-            this.columnSale.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // columnTotal
-            // 
-            this.columnTotal.HeaderText = "Thành tiền (VNĐ)";
-            this.columnTotal.Name = "columnTotal";
-            this.columnTotal.ReadOnly = true;
-            this.columnTotal.Width = 150;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label10
             // 
@@ -201,14 +154,14 @@
             this.label2.TabIndex = 32;
             this.label2.Text = "Ngày tạo";
             // 
-            // textBox1
+            // txtCreateDate
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(456, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(165, 22);
-            this.textBox1.TabIndex = 33;
-            this.textBox1.Text = "15520027";
+            this.txtCreateDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCreateDate.Location = new System.Drawing.Point(456, 31);
+            this.txtCreateDate.Name = "txtCreateDate";
+            this.txtCreateDate.Size = new System.Drawing.Size(165, 22);
+            this.txtCreateDate.TabIndex = 33;
+            this.txtCreateDate.Text = "15520027";
             // 
             // label3
             // 
@@ -244,6 +197,63 @@
             this.label5.TabIndex = 36;
             this.label5.Text = "VNĐ";
             // 
+            // columnIndex
+            // 
+            this.columnIndex.Frozen = true;
+            this.columnIndex.HeaderText = "STT";
+            this.columnIndex.Name = "columnIndex";
+            this.columnIndex.ReadOnly = true;
+            this.columnIndex.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.columnIndex.Width = 50;
+            // 
+            // columnProductCode
+            // 
+            this.columnProductCode.HeaderText = "Mã sản phẩm";
+            this.columnProductCode.Name = "columnProductCode";
+            // 
+            // columnProduceName
+            // 
+            this.columnProduceName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.columnProduceName.HeaderText = "Tên sản phẩm";
+            this.columnProduceName.Name = "columnProduceName";
+            this.columnProduceName.ReadOnly = true;
+            this.columnProduceName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // columnPrice
+            // 
+            this.columnPrice.HeaderText = "Đơn giá (VNĐ)";
+            this.columnPrice.Name = "columnPrice";
+            this.columnPrice.ReadOnly = true;
+            this.columnPrice.Width = 150;
+            // 
+            // columnQuantity
+            // 
+            this.columnQuantity.HeaderText = "Số lượng";
+            this.columnQuantity.Name = "columnQuantity";
+            this.columnQuantity.ReadOnly = true;
+            this.columnQuantity.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // columnUnit
+            // 
+            this.columnUnit.HeaderText = "Đơn vị tính";
+            this.columnUnit.Name = "columnUnit";
+            this.columnUnit.ReadOnly = true;
+            this.columnUnit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // columnSale
+            // 
+            this.columnSale.HeaderText = "Đã giảm";
+            this.columnSale.Name = "columnSale";
+            this.columnSale.ReadOnly = true;
+            this.columnSale.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // columnTotal
+            // 
+            this.columnTotal.HeaderText = "Thành tiền (VNĐ)";
+            this.columnTotal.Name = "columnTotal";
+            this.columnTotal.ReadOnly = true;
+            this.columnTotal.Width = 150;
+            // 
             // frm_BillDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -253,7 +263,7 @@
             this.Controls.Add(this.lbTotal);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCreateDate);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCustomerName);
             this.Controls.Add(this.label10);
@@ -274,21 +284,22 @@
         private System.Windows.Forms.DataGridView dgvListBillDetails;
         private System.Windows.Forms.Button btnExportExcel;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnIndex;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnProductCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnProduceName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnUnit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnSale;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnTotal;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtBillCode;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCustomerName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCreateDate;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbTotal;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnIndex;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnProductCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnProduceName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnQuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnUnit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnSale;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnTotal;
     }
 }

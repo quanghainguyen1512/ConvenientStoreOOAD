@@ -70,6 +70,8 @@
             this.txtBillCode.Size = new System.Drawing.Size(165, 22);
             this.txtBillCode.TabIndex = 18;
             this.txtBillCode.Text = "15520027";
+            this.txtBillCode.TextChanged += new System.EventHandler(this.txtBillCode_TextChanged);
+            this.txtBillCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBillCode_KeyDown);
             // 
             // label10
             // 
@@ -105,6 +107,8 @@
             this.txtCustomerName.Size = new System.Drawing.Size(165, 22);
             this.txtCustomerName.TabIndex = 16;
             this.txtCustomerName.Text = "15520027";
+            this.txtCustomerName.TextChanged += new System.EventHandler(this.txtCustomerName_TextChanged);
+            this.txtCustomerName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCustomerName_KeyDown);
             // 
             // dgvListBills
             // 
@@ -123,6 +127,7 @@
             this.dgvListBills.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListBills.Size = new System.Drawing.Size(1000, 383);
             this.dgvListBills.TabIndex = 24;
+            this.dgvListBills.DoubleClick += new System.EventHandler(this.dgvListBills_DoubleClick);
             // 
             // columnIndex
             // 
@@ -193,6 +198,7 @@
             this.cbbTotal.Name = "cbbTotal";
             this.cbbTotal.Size = new System.Drawing.Size(136, 21);
             this.cbbTotal.TabIndex = 26;
+            this.cbbTotal.SelectedIndexChanged += new System.EventHandler(this.cbbTotal_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -212,6 +218,7 @@
             this.cbbCreateDate.Name = "cbbCreateDate";
             this.cbbCreateDate.Size = new System.Drawing.Size(150, 21);
             this.cbbCreateDate.TabIndex = 28;
+            this.cbbCreateDate.SelectedIndexChanged += new System.EventHandler(this.cbbCreateDate_SelectedIndexChanged);
             // 
             // groupBox2
             // 

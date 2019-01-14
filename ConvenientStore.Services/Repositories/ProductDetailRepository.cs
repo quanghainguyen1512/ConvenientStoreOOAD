@@ -32,6 +32,16 @@ namespace ConvenientStore.Services.Repositories
             }
         }
 
+        public ProductDetail GetProductDetailByGeneratedCode(string generatedCode)
+        {
+            using (var con = DbConnection.Instance.Connection)
+            {
+                generatedCode = $"{generatedCode}%";
+                var query = "select * from product_detail where product_detail.GeneratedCode like @generatedCode";
+                return con.Query<ProductDetail>(query, param: new { generatedCode }).FirstOrDefault();
+            }
+        }
+
         public ProductDetail GetProductDetailByProductIdAndMinExpidationDate(int productId)
         {
             using (var con = DbConnection.Instance.Connection)
@@ -50,5 +60,7 @@ namespace ConvenientStore.Services.Repositories
                 return con.Update(obj);
             }
         }
+
+
     }
 }

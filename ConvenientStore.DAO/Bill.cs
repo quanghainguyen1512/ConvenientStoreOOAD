@@ -20,6 +20,8 @@ namespace ConvenientStore.DAO
 
         public int Total { get; set; }
 
+        public bool Status { get; set; }
+
         [Write(false)]
         public Customer Customer { get; set; }
 

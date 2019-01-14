@@ -48,7 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BillDetailBus.cs" />
+    <Compile Include="BillManagementBus.cs" />
     <Compile Include="CustomEditBus.cs" />
+    <Compile Include="CustomerAddBus.cs" />
     <Compile Include="CustomerBus.cs" />
     <Compile Include="CustomerManagementBus.cs" />
     <Compile Include="ProductManagementBus.cs" />

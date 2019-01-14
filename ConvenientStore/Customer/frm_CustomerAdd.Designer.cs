@@ -60,6 +60,7 @@
             this.btnCancel.TabIndex = 50;
             this.btnCancel.Text = "Trở về";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.clickBtnCancel);
             // 
             // btnSaveChange
             // 
@@ -75,6 +76,7 @@
             this.btnSaveChange.TabIndex = 49;
             this.btnSaveChange.Text = "Thêm";
             this.btnSaveChange.UseVisualStyleBackColor = false;
+            this.btnSaveChange.Click += new System.EventHandler(this.clickBtnSubmit);
             // 
             // label5
             // 
@@ -223,6 +225,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtCustomerName);
             this.Name = "frm_CustomerAdd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Màn hình thêm khách hàng";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -9,6 +9,6 @@ namespace ConvenientStore.Services.Interfaces
 {
     public interface IBillDetailRepository : IRepository<BillDetail>
     {
-
+        IEnumerable<BillDetail> GetByBill(int billId);
     }
 }

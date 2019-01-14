@@ -2,8 +2,6 @@
 using ConvenientStore.DAO;
 using ConvenientStore.DTO;
 using ConvenientStore.Helpers.Message;
-using ConvenientStore.Services.Interfaces;
-using ConvenientStore.Services.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -252,7 +250,7 @@ namespace ConvenientStore
                 return;
             }
 
-            this.productBillDto = this.xuLyHoaDonService.GetProductByBarcode(productCode);
+            this.productBillDto = this.xuLyHoaDonService.GetProductByGeneratedCode(productCode);
 
             if (!"".Equals(this.productBillDto.Message.Trim()))
             {
