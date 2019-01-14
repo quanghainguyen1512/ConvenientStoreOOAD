@@ -74,7 +74,17 @@ namespace ConvenientStore.Forms
 
         private void btnContact_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Tính năng đang được cập nhật", "Hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            pnlHighlight.Height = btnContact.Height;
+            pnlHighlight.Top = btnContact.Top;
+            this.pnForm.Controls.Clear();
 
+            frm_AddOrderProducts form = new frm_AddOrderProducts();
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.TopLevel = false;
+            form.AutoScroll = true;
+            this.pnForm.Controls.Add(form);
+            form.Show();
 
         }
 
@@ -96,14 +106,23 @@ namespace ConvenientStore.Forms
         private void btnRollback_Click(object sender, EventArgs e)
         {
 
-
+            MessageBox.Show("Tính năng đang được cập nhật", "Hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
         private void btnChart_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Tính năng đang được cập nhật", "Hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            pnlHighlight.Height = btnChart.Height;
+            pnlHighlight.Top = btnChart.Top;
+            this.pnForm.Controls.Clear();
 
-
+            ReportGUI form = new ReportGUI();
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.TopLevel = false;
+            form.AutoScroll = true;
+            this.pnForm.Controls.Add(form);
+            form.Show();
 
         }
 
