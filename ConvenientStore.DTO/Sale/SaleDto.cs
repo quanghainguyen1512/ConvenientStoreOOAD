@@ -17,6 +17,6 @@ namespace ConvenientStore.DTO.Sale
         public int ConditionMin { get; set; }
         public string Status { get; set; }
 
-        //public 
+        public IEnumerable<string> CustomerTypes;
     }
 }

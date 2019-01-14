@@ -4,17 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F4CE5172-6101-478D-A6B7-D71C77EE6729}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ConvenientStore.BUS</RootNamespace>
-    <AssemblyName>ConvenientStore.BUS</AssemblyName>
+    <ProjectGuid>{53E25A87-9654-4AAA-8CF1-585F9CA1DEF9}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ConsoleApp1</RootNamespace>
+    <AssemblyName>ConsoleApp1</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,15 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper, Version=8.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
-      <HintPath>..\packages\AutoMapper.8.0.0\lib\net461\AutoMapper.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,35 +43,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomEditBus.cs" />
-    <Compile Include="CustomerBus.cs" />
-    <Compile Include="CustomerManagementBus.cs" />
-    <Compile Include="OrderBus.cs" />
-    <Compile Include="ProductManagementBus.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SaleBus.cs" />
-    <Compile Include="XuLyHoaDonBus.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConvenientStore.BUS\ConvenientStore.BUS.csproj">
+      <Project>{F4CE5172-6101-478D-A6B7-D71C77EE6729}</Project>
+      <Name>ConvenientStore.BUS</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ConvenientStore.DAO\ConvenientStore.DAO.csproj">
-      <Project>{c546fcd7-5813-4509-8527-918823e1804c}</Project>
+      <Project>{C546FCD7-5813-4509-8527-918823E1804C}</Project>
       <Name>ConvenientStore.DAO</Name>
     </ProjectReference>
     <ProjectReference Include="..\ConvenientStore.DTO\ConvenientStore.DTO.csproj">
-      <Project>{7ac557c0-706f-461d-b30c-0c12b0f14083}</Project>
+      <Project>{7AC557C0-706F-461D-B30C-0C12B0F14083}</Project>
       <Name>ConvenientStore.DTO</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ConvenientStore.Helpers\ConvenientStore.Helpers.csproj">
-      <Project>{23aa55f4-a71a-459a-a9c5-85e74c8161ea}</Project>
-      <Name>ConvenientStore.Helpers</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ConvenientStore.Services\ConvenientStore.Services.csproj">
-      <Project>{3fb2b351-b2b6-44c0-9b24-01f6e9f73c2e}</Project>
+      <Project>{3FB2B351-B2B6-44C0-9B24-01F6E9F73C2E}</Project>
       <Name>ConvenientStore.Services</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -19,11 +19,13 @@ namespace ConvenientStore.DTO
         public int Point { get; set; }
         public int TypeId { get; set; }
 
-        public (bool isValid, IEnumerable<ValidationResult> errors) Validate()
-        {
-            var validator = new CustomerValidation();            var result = validator.Validate(this);            if (result.IsValid)
-                return (true, null);
-            return (false, result.Errors.Select(item => new ValidationResult(item.ErrorMessage, new[] { item.PropertyName })));
-        }
+        //public (bool isValid, IEnumerable<ValidationResult> errors) Validate()
+        //{
+        //    var validator = new CustomerValidation();
+        //    var result = validator.Validate(this);
+        //    if (result.IsValid)
+        //        return (true, null);
+        //    return (false, result.Errors.Select(item => new ValidationResult(item.ErrorMessage, new[] { item.PropertyName })));
+        //}
     }
 }
