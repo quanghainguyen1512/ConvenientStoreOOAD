@@ -50,7 +50,7 @@ namespace ConvenientStore.BUS
         {
             List<CustomerManagementDto> customerManagementDtos = new List<CustomerManagementDto>();
 
-            List<Customer> customers = null;
+            IEnumerable<Customer> customers = null;
 
             try
             {
