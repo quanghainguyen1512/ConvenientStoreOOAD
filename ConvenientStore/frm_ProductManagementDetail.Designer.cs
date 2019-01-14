@@ -34,12 +34,7 @@
             this.txtProductCode = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtProductName = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.columnIndex = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnExpiration = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -48,7 +43,13 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.ptbPicture = new System.Windows.Forms.PictureBox();
             this.btnCancel = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.columnIndex = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnGeneratedCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnExpiration = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -65,7 +66,7 @@
             this.btnOrder.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnOrder.Image = global::ConvenientStore.Properties.Resources.paycard;
             this.btnOrder.Location = new System.Drawing.Point(511, 1);
-            this.btnOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOrder.Margin = new System.Windows.Forms.Padding(4);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(200, 70);
             this.btnOrder.TabIndex = 20;
@@ -84,7 +85,7 @@
             this.btnExportExcel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnExportExcel.Image = global::ConvenientStore.Properties.Resources.excel;
             this.btnExportExcel.Location = new System.Drawing.Point(0, 0);
-            this.btnExportExcel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExportExcel.Margin = new System.Windows.Forms.Padding(4);
             this.btnExportExcel.Name = "btnExportExcel";
             this.btnExportExcel.Size = new System.Drawing.Size(200, 70);
             this.btnExportExcel.TabIndex = 19;
@@ -101,7 +102,7 @@
             this.label10.Location = new System.Drawing.Point(15, 174);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(134, 20);
+            this.label10.Size = new System.Drawing.Size(110, 17);
             this.label10.TabIndex = 22;
             this.label10.Text = "Mã sản phẩm";
             // 
@@ -109,10 +110,10 @@
             // 
             this.txtProductCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProductCode.Location = new System.Drawing.Point(19, 198);
-            this.txtProductCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtProductCode.Margin = new System.Windows.Forms.Padding(4);
             this.txtProductCode.Name = "txtProductCode";
             this.txtProductCode.ReadOnly = true;
-            this.txtProductCode.Size = new System.Drawing.Size(239, 26);
+            this.txtProductCode.Size = new System.Drawing.Size(239, 22);
             this.txtProductCode.TabIndex = 23;
             this.txtProductCode.Text = "15520027";
             // 
@@ -124,7 +125,7 @@
             this.label1.Location = new System.Drawing.Point(369, 174);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 20);
+            this.label1.Size = new System.Drawing.Size(117, 17);
             this.label1.TabIndex = 24;
             this.label1.Text = "Tên sản phẩm";
             // 
@@ -132,63 +133,30 @@
             // 
             this.txtProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProductName.Location = new System.Drawing.Point(373, 198);
-            this.txtProductName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtProductName.Margin = new System.Windows.Forms.Padding(4);
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.ReadOnly = true;
-            this.txtProductName.Size = new System.Drawing.Size(239, 26);
+            this.txtProductName.Size = new System.Drawing.Size(239, 22);
             this.txtProductName.TabIndex = 25;
             this.txtProductName.Text = "15520027";
             // 
-            // dataGridView1
+            // dgv
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv.BackgroundColor = System.Drawing.Color.White;
+            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.columnIndex,
+            this.columnGeneratedCode,
             this.columnQuantity,
             this.columnPrice,
             this.columnUnit,
             this.columnExpiration});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(710, 230);
-            this.dataGridView1.TabIndex = 27;
-            // 
-            // columnIndex
-            // 
-            this.columnIndex.HeaderText = "STT";
-            this.columnIndex.Name = "columnIndex";
-            this.columnIndex.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.columnIndex.Width = 50;
-            // 
-            // columnQuantity
-            // 
-            this.columnQuantity.HeaderText = "Số lượng";
-            this.columnQuantity.Name = "columnQuantity";
-            this.columnQuantity.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.columnQuantity.Width = 90;
-            // 
-            // columnPrice
-            // 
-            this.columnPrice.HeaderText = "Đơn giá";
-            this.columnPrice.Name = "columnPrice";
-            this.columnPrice.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.columnPrice.Width = 90;
-            // 
-            // columnUnit
-            // 
-            this.columnUnit.HeaderText = "Đơn vị tính";
-            this.columnUnit.Name = "columnUnit";
-            this.columnUnit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // columnExpiration
-            // 
-            this.columnExpiration.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.columnExpiration.HeaderText = "Ngày hết hạn";
-            this.columnExpiration.Name = "columnExpiration";
-            this.columnExpiration.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv.Location = new System.Drawing.Point(0, 0);
+            this.dgv.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv.Name = "dgv";
+            this.dgv.Size = new System.Drawing.Size(710, 230);
+            this.dgv.TabIndex = 27;
             // 
             // panel1
             // 
@@ -230,7 +198,7 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.dataGridView1);
+            this.panel4.Controls.Add(this.dgv);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(10, 250);
             this.panel4.Name = "panel4";
@@ -273,6 +241,47 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.clickBtnCancel);
             // 
+            // columnIndex
+            // 
+            this.columnIndex.HeaderText = "STT";
+            this.columnIndex.Name = "columnIndex";
+            this.columnIndex.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.columnIndex.Width = 50;
+            // 
+            // columnGeneratedCode
+            // 
+            this.columnGeneratedCode.HeaderText = "Mã";
+            this.columnGeneratedCode.Name = "columnGeneratedCode";
+            this.columnGeneratedCode.ReadOnly = true;
+            this.columnGeneratedCode.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // columnQuantity
+            // 
+            this.columnQuantity.HeaderText = "Số lượng";
+            this.columnQuantity.Name = "columnQuantity";
+            this.columnQuantity.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.columnQuantity.Width = 90;
+            // 
+            // columnPrice
+            // 
+            this.columnPrice.HeaderText = "Đơn giá";
+            this.columnPrice.Name = "columnPrice";
+            this.columnPrice.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.columnPrice.Width = 90;
+            // 
+            // columnUnit
+            // 
+            this.columnUnit.HeaderText = "Đơn vị tính";
+            this.columnUnit.Name = "columnUnit";
+            this.columnUnit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // columnExpiration
+            // 
+            this.columnExpiration.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.columnExpiration.HeaderText = "Ngày hết hạn";
+            this.columnExpiration.Name = "columnExpiration";
+            this.columnExpiration.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // frm_ProductManagementDetail
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -290,12 +299,12 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtProductCode);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_ProductManagementDetail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin chi tiết sản phẩm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_ProductManagementDetail_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -315,17 +324,18 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtProductName;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnIndex;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnQuantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnUnit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnExpiration;
+        private System.Windows.Forms.DataGridView dgv;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnIndex;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnGeneratedCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnQuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnUnit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnExpiration;
     }
 }

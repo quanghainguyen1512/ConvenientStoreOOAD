@@ -11,5 +11,9 @@ namespace ConvenientStore.Services.Interfaces
     {
         ProductDetail GetProductDetailByProductIdAndMinExpidationDate(int productId);
         ProductDetail GetProductDetailByGeneratedCode(string generatedCode);
+
+        List<ProductDetail> GetProductDetailByProduct(int productId);
+
+        string Quantity(int productId);
     }
 }

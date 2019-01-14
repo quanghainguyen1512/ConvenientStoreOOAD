@@ -42,6 +42,15 @@ namespace ConvenientStore.Services.Repositories
             }
         }
 
+        public List<ProductDetail> GetProductDetailByProduct(int productId)
+        {
+            using(var con = DbConnection.Instance.Connection)
+            {
+                var query = "SELECT * from product_detail where product_detail.ProductId = @productId and curdate() < ExpirationDate";
+                return con.Query<ProductDetail>(query, param: new { productId }).ToList();
+            }
+        }
+
         public ProductDetail GetProductDetailByProductIdAndMinExpidationDate(int productId)
         {
             using (var con = DbConnection.Instance.Connection)
@@ -53,6 +62,15 @@ namespace ConvenientStore.Services.Repositories
             }
         }
 
+        public string Quantity(int productId)
+        {
+            using (var con = DbConnection.Instance.Connection)
+            {
+                var query = "SELECT count(product_detail.Quantity) from product_detail where product_detail.ProductId = @productId";
+                return con.Query<string>(query, param: new { productId }).FirstOrDefault();
+            }
+        }
+
         public bool Update(ProductDetail obj)
         {
             using (var con = DbConnection.Instance.Connection)
@@ -61,6 +79,6 @@ namespace ConvenientStore.Services.Repositories
             }
         }
 
-
+        
     }
 }

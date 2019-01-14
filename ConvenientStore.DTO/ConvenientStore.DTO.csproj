@@ -74,6 +74,7 @@
     <Compile Include="ProductDto.cs" />
     <Compile Include="CustomerManagementDto.cs" />
     <Compile Include="ProductBillDto.cs" />
+    <Compile Include="ProductManagementDetailDto.cs" />
     <Compile Include="ProductMangementDto.cs" />
     <Compile Include="Product\ProductDetailForOperationsDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
