@@ -67,16 +67,21 @@
     <Compile Include="CustomerTypeDto.cs" />
     <Compile Include="Customer\CustomerDto.cs" />
     <Compile Include="Customer\CustomerForOperationsDto.cs" />
+    <Compile Include="Order\OrderDetailDto.cs" />
     <Compile Include="Order\OrderDetailForOperationsDto.cs" />
-    <Compile Include="Order\OrderForOperations.cs" />
+    <Compile Include="Order\OrderDto.cs" />
+    <Compile Include="Order\OrderForOperationsDto.cs" />
     <Compile Include="ProductDto.cs" />
     <Compile Include="CustomerManagementDto.cs" />
     <Compile Include="ProductBillDto.cs" />
     <Compile Include="ProductMangementDto.cs" />
+    <Compile Include="Product\ProductDetailForOperationsDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sale\SaleDto.cs" />
     <Compile Include="Sale\SaleForOperationDto.cs" />
     <Compile Include="Validation\CustomerValidation.cs" />
+    <Compile Include="Validation\OrderDetailValidation.cs" />
+    <Compile Include="Validation\OrderValidation.cs" />
     <Compile Include="Validation\SaleValidation.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -84,7 +89,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Delivery\" />
-    <Folder Include="Product\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

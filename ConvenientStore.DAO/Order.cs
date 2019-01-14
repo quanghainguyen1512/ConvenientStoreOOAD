@@ -15,6 +15,6 @@ namespace ConvenientStore.DAO
         public DateTime OrderedDate { get; set; }
         
         [Write(false)]
-        public ICollection<OrderDetail> OrderDetails { get; set; }
+        public List<OrderDetail> OrderDetails { get; set; }
     }
 }

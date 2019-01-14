@@ -17,7 +17,7 @@ namespace ConvenientStore.DAO
         public bool Status { get; set; }
         public int ProductId { get; set; }
         public int OrderId { get; set; }
-        
+
         [Write(false)]
         public Product Product { get; set; }
         

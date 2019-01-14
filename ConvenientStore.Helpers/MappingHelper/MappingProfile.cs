@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using ConvenientStore.DAO;
 using ConvenientStore.DTO;
-using ConvenientStore.DTO.Sale;
 using System;
 
 namespace ConvenientStore.Helpers.MappingHelper
@@ -22,14 +21,28 @@ namespace ConvenientStore.Helpers.MappingHelper
 
             CreateMap<CustomerForOperationsDto, Customer>();
 
-            CreateMap<Sale, SaleDto>()
+            CreateMap<Sale, DTO.Sale.SaleDto>()
                 .ForMember(dest => dest.Status,
                     opt => opt.MapFrom(src => GetStatusFromDate(src.StartDate, src.EndDate)))
                 .ForMember(dest => dest.TypeOfDiscount,
                     opt => opt.MapFrom(src => src.TypeOfDiscount ? "Voucher" : "Coupon"));
 
-            //CreateMap<SaleForOperations, Sale>()
-                
+            CreateMap<DTO.Sale.SaleForOperationsDto, Sale>();
+
+            CreateMap<Order, DTO.Order.OrderDto>();
+
+            CreateMap<DTO.Order.OrderForOperationsDto, Order>();
+
+            CreateMap<OrderDetail, DTO.Order.OrderDetailDto>()
+                .ForMember(dest => dest.ProductName,
+                    opt => opt.MapFrom(src => src.Product.Name))
+                .ForMember(dest => dest.Barcode,
+                    opt => opt.MapFrom(src => src.Product.Barcode))
+                .ForMember(dest => dest.Status,
+                    opt => opt.MapFrom(src => src.Status ? "Đã nhận" : "Đang chờ"));
+
+            CreateMap<DTO.Order.OrderDetailForOperationsDto, OrderDetail>();
+                            
             CreateMap<Customer, CustomerManagementDto>()
                 .ForMember(dest => dest.Id,
                     opt => opt.MapFrom(src => src.CustomerId.ToString()))

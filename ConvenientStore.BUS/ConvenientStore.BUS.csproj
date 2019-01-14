@@ -36,6 +36,7 @@
       <HintPath>..\packages\AutoMapper.8.0.0\lib\net461\AutoMapper.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
@@ -54,6 +55,7 @@
     <Compile Include="CustomerAddBus.cs" />
     <Compile Include="CustomerBus.cs" />
     <Compile Include="CustomerManagementBus.cs" />
+    <Compile Include="OrderBus.cs" />
     <Compile Include="ProductManagementBus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SaleBus.cs" />

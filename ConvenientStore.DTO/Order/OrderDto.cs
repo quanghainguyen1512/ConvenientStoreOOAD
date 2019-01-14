@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConvenientStore.DTO.Order
 {
-    public class OrderForOperations
+    public class OrderDto
     {
         public DateTime OrderedDate { get; set; }
-        public List<OrderDetailForOperationsDto> OrderDetails { get; set; }
+        public IEnumerable<OrderDetailDto> OrderDetails { get; set; }
     }
 }

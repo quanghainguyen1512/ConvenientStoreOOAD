@@ -41,12 +41,21 @@ namespace ConvenientStore.BUS
             return Mapping.Mapper.Map<SaleDto>(sale);
         }
 
-        public bool AddSale(SaleForOperationsDto saledto)
+        public (bool, string) AddSale(SaleForOperationsDto saledto)
         {
-            /// TODO: Add validation
-            var saledao = Mapping.Mapper.Map<Sale>(saledto);    /// TODO: Add Mapping
-            var res = _saleRepo.Add(saledao);
-            return res;
+            var (isvalid, message) = saledto.Validate();
+            if (!isvalid)
+                return (false, message.First().ToString());
+            try
+            {
+                var saledao = Mapping.Mapper.Map<Sale>(saledto);
+                var res = _saleRepo.Add(saledao);
+                return (res, res ? "Them thanh cong" : "Có lỗi xảy ra");
+            }
+            catch
+            {
+                return (false, "Có lỗi xảy ra (Ánh xạ)");
+            }
         }
     }
 }

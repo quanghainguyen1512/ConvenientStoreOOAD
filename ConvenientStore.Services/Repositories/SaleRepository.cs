@@ -34,15 +34,6 @@ namespace ConvenientStore.Services.Repositories
                             sc.Sale.SaleId,
                             CustomerTypeId = sc.CustomerType.TypeId
                         });
-                    //DapperPlusManager.Entity<SaleToProduct>()
-                    //    .Table("sale_to_products")
-                    //    .Ignore(sp => sp.Sale)
-                    //    .Ignore(sp => sp.Product)
-                    //    .Map(sp => new
-                    //    {
-                    //        sp.Sale.SaleId,
-                    //        sp.Product.ProductId
-                    //    });
                     try
                     {
                         tran.BulkInsert(obj)
