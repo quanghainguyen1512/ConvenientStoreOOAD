@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashboard));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEditBill = new System.Windows.Forms.Button();
             this.pnlHighlight = new System.Windows.Forms.Panel();
             this.btnStore = new System.Windows.Forms.Button();
             this.btnChart = new System.Windows.Forms.Button();
@@ -43,13 +44,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnQuestion = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pnForm = new System.Windows.Forms.Panel();
-            this.btnEditBill = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,6 +71,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(215, 735);
             this.panel1.TabIndex = 0;
+            // 
+            // btnEditBill
+            // 
+            this.btnEditBill.BackColor = System.Drawing.Color.Black;
+            this.btnEditBill.FlatAppearance.BorderSize = 0;
+            this.btnEditBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditBill.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditBill.ForeColor = System.Drawing.Color.White;
+            this.btnEditBill.Image = ((System.Drawing.Image)(resources.GetObject("btnEditBill.Image")));
+            this.btnEditBill.Location = new System.Drawing.Point(12, 132);
+            this.btnEditBill.Name = "btnEditBill";
+            this.btnEditBill.Size = new System.Drawing.Size(200, 70);
+            this.btnEditBill.TabIndex = 8;
+            this.btnEditBill.Text = "Danh sách hóa đơn";
+            this.btnEditBill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEditBill.UseVisualStyleBackColor = false;
+            this.btnEditBill.Click += new System.EventHandler(this.btnEditBill_Click);
             // 
             // pnlHighlight
             // 
@@ -252,16 +268,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Conveniton Store";
             // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(434, 27);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(403, 17);
-            this.lblTitle.TabIndex = 3;
-            this.lblTitle.Text = "Winform - Demo - Phần mềm quản lý cửa hàng tiện lợi";
-            // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
@@ -329,23 +335,6 @@
             this.pnForm.Size = new System.Drawing.Size(1000, 550);
             this.pnForm.TabIndex = 12;
             // 
-            // btnEditBill
-            // 
-            this.btnEditBill.BackColor = System.Drawing.Color.Black;
-            this.btnEditBill.FlatAppearance.BorderSize = 0;
-            this.btnEditBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditBill.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditBill.ForeColor = System.Drawing.Color.White;
-            this.btnEditBill.Image = ((System.Drawing.Image)(resources.GetObject("btnEditBill.Image")));
-            this.btnEditBill.Location = new System.Drawing.Point(12, 132);
-            this.btnEditBill.Name = "btnEditBill";
-            this.btnEditBill.Size = new System.Drawing.Size(200, 70);
-            this.btnEditBill.TabIndex = 8;
-            this.btnEditBill.Text = "Danh sách hóa đơn";
-            this.btnEditBill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEditBill.UseVisualStyleBackColor = false;
-            this.btnEditBill.Click += new System.EventHandler(this.btnEditBill_Click);
-            // 
             // frmDashboard
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -353,7 +342,6 @@
             this.ClientSize = new System.Drawing.Size(1225, 735);
             this.Controls.Add(this.pnForm);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -371,7 +359,6 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -390,7 +377,6 @@
         private System.Windows.Forms.Button btnSale;
         private System.Windows.Forms.Button btnBill;
         private System.Windows.Forms.Panel pnlHighlight;
-        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnChart;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnMinimize;
