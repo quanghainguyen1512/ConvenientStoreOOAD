@@ -87,7 +87,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EditBillDetailForm.cs">
+    <Compile Include="Bill\EditBillDetailForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frm_AddOrderProducts.cs">
@@ -102,7 +102,7 @@
     <Compile Include="Forms\frm_AddSale.Designer.cs">
       <DependentUpon>frm_AddSale.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditBillDetailForm.Designer.cs">
+    <Compile Include="Bill\EditBillDetailForm.Designer.cs">
       <DependentUpon>EditBillDetailForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frm_Dashboard.cs">
@@ -111,34 +111,34 @@
     <Compile Include="Forms\frm_Dashboard.Designer.cs">
       <DependentUpon>frm_Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_BillDetail.cs">
+    <Compile Include="Bill\frm_BillDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_BillDetail.Designer.cs">
+    <Compile Include="Bill\frm_BillDetail.Designer.cs">
       <DependentUpon>frm_BillDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_BillManagement.cs">
+    <Compile Include="Bill\frm_BillManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_BillManagement.Designer.cs">
+    <Compile Include="Bill\frm_BillManagement.Designer.cs">
       <DependentUpon>frm_BillManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_CustomerAdd.cs">
+    <Compile Include="Customer\frm_CustomerAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_CustomerAdd.Designer.cs">
+    <Compile Include="Customer\frm_CustomerAdd.Designer.cs">
       <DependentUpon>frm_CustomerAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_CustomerEdit.cs">
+    <Compile Include="Customer\frm_CustomerEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_CustomerEdit.Designer.cs">
+    <Compile Include="Customer\frm_CustomerEdit.Designer.cs">
       <DependentUpon>frm_CustomerEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_CustomerManagement.cs">
+    <Compile Include="Customer\frm_CustomerManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_CustomerManagement.Designer.cs">
+    <Compile Include="Customer\frm_CustomerManagement.Designer.cs">
       <DependentUpon>frm_CustomerManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_ProductManagement.cs">
@@ -205,19 +205,19 @@
     <EmbeddedResource Include="Forms\frm_Dashboard.resx">
       <DependentUpon>frm_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_BillDetail.resx">
+    <EmbeddedResource Include="Bill\frm_BillDetail.resx">
       <DependentUpon>frm_BillDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_BillManagement.resx">
+    <EmbeddedResource Include="Bill\frm_BillManagement.resx">
       <DependentUpon>frm_BillManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_CustomerAdd.resx">
+    <EmbeddedResource Include="Customer\frm_CustomerAdd.resx">
       <DependentUpon>frm_CustomerAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_CustomerEdit.resx">
+    <EmbeddedResource Include="Customer\frm_CustomerEdit.resx">
       <DependentUpon>frm_CustomerEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_CustomerManagement.resx">
+    <EmbeddedResource Include="Customer\frm_CustomerManagement.resx">
       <DependentUpon>frm_CustomerManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ProductManagement.resx">
@@ -240,10 +240,10 @@
     <EmbeddedResource Include="StatisticGUI.resx">
       <DependentUpon>StatisticGUI.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="frm_CreateBill.cs">
+    <Compile Include="Bill\frm_CreateBill.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_CreateBill.Designer.cs">
+    <Compile Include="Bill\frm_CreateBill.Designer.cs">
       <DependentUpon>frm_CreateBill.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="UserControls\UC_BillDetails.resx">
@@ -287,10 +287,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="EditBillDetailForm.resx">
+    <EmbeddedResource Include="Bill\EditBillDetailForm.resx">
       <DependentUpon>EditBillDetailForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_CreateBill.resx">
+    <EmbeddedResource Include="Bill\frm_CreateBill.resx">
       <DependentUpon>frm_CreateBill.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

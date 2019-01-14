@@ -44,7 +44,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtCustomerName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCreateDate = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lbTotal = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -69,6 +69,7 @@
             this.columnProductCode,
             this.columnProduceName,
             this.columnPrice,
+            this.columnQuantity,
             this.columnUnit,
             this.columnSale,
             this.columnTotal});
@@ -80,6 +81,36 @@
             this.dgvListBillDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListBillDetails.Size = new System.Drawing.Size(980, 300);
             this.dgvListBillDetails.TabIndex = 25;
+            // 
+            // btnExportExcel
+            // 
+            this.btnExportExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExportExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnExportExcel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExportExcel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExportExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportExcel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnExportExcel.Location = new System.Drawing.Point(790, 29);
+            this.btnExportExcel.Name = "btnExportExcel";
+            this.btnExportExcel.Size = new System.Drawing.Size(194, 40);
+            this.btnExportExcel.TabIndex = 26;
+            this.btnExportExcel.Text = "Xuất Excel";
+            this.btnExportExcel.UseVisualStyleBackColor = false;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancel.BackColor = System.Drawing.Color.Gray;
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCancel.Location = new System.Drawing.Point(790, 75);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(194, 40);
+            this.btnCancel.TabIndex = 27;
+            this.btnCancel.Text = "Trở về";
+            this.btnCancel.UseVisualStyleBackColor = false;
             // 
             // columnIndex
             // 
@@ -224,15 +255,14 @@
             this.label2.TabIndex = 32;
             this.label2.Text = "Ngày tạo";
             // 
-            // textBox1
+            // txtCreateDate
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(634, 40);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(219, 26);
-            this.textBox1.TabIndex = 33;
-            this.textBox1.Text = "15520027";
+            this.txtCreateDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCreateDate.Location = new System.Drawing.Point(456, 31);
+            this.txtCreateDate.Name = "txtCreateDate";
+            this.txtCreateDate.Size = new System.Drawing.Size(165, 22);
+            this.txtCreateDate.TabIndex = 33;
+            this.txtCreateDate.Text = "15520027";
             // 
             // label3
             // 
@@ -342,7 +372,7 @@
             this.Controls.Add(this.lbTotal);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCreateDate);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCustomerName);
             this.Controls.Add(this.label10);
@@ -367,22 +397,23 @@
         private System.Windows.Forms.DataGridView dgvListBillDetails;
         private System.Windows.Forms.Button btnExportExcel;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnIndex;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnProductCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnProduceName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnUnit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnSale;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnTotal;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtBillCode;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCustomerName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCreateDate;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbTotal;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnIndex;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnProductCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnProduceName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnQuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnUnit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnSale;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnTotal;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel6;

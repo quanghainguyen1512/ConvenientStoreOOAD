@@ -75,6 +75,7 @@
     <Compile Include="Interfaces\IComboRepository.cs" />
     <Compile Include="Interfaces\ICustomerRepository.cs" />
     <Compile Include="Interfaces\ICustomerTypeRepository.cs" />
+    <Compile Include="Interfaces\IOrderRepository.cs" />
     <Compile Include="Interfaces\IProductDetailRepository.cs" />
     <Compile Include="Interfaces\IProductRepository.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
@@ -84,6 +85,7 @@
     <Compile Include="Repositories\BillDetailRepository.cs" />
     <Compile Include="Repositories\BillRepository.cs" />
     <Compile Include="Repositories\CustomerRepository.cs" />
+    <Compile Include="Repositories\CustomerTypeRepository.cs" />
     <Compile Include="Repositories\ProductDetailRepository.cs" />
     <Compile Include="Repositories\ProductRepository.cs" />
     <Compile Include="Repositories\SaleRepository.cs" />

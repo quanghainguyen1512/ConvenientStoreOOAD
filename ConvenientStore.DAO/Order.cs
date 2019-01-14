@@ -12,7 +12,8 @@ namespace ConvenientStore.DAO
     {
         [Key]
         public int OrderId { get; set; }
-        public DateTime OrderedDate { get; set; }        
+        public DateTime OrderedDate { get; set; }
+        
         [Write(false)]
         public ICollection<OrderDetail> OrderDetails { get; set; }
     }

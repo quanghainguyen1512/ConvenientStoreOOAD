@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace ConvenientStore.Services.Interfaces
 {
-    public interface IBillDetailRepository : IRepository<BillDetail>
+    public interface IOrderRepository : IRepository<Order>
     {
-        IEnumerable<BillDetail> GetByBill(int billId);
+
     }
 }

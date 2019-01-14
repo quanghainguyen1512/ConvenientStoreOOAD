@@ -12,6 +12,8 @@ namespace ConvenientStore.Helpers.Message
 
         public static string BREAK_LINE = "\r\n";
 
+       
+
         public static string GET_CUSTOMER_ERROR = "Không tìm thấy thông tin khách hàng";
 
         public static string GET_PRODUCT_ERROR = "Không tìm thấy thông tin sản phẩm";
@@ -41,5 +43,19 @@ namespace ConvenientStore.Helpers.Message
         public static string UPDATE_INFOR_SUCCESSFULLY = "Cập nhật thông tin [{0}] thành công";
 
         public static string CONFIRM_CLOSE_DASHBOARD = "Bạn có chắc muốn đóng ứng dụng?";
+
+        public static string ADD_CUSTOMER_ERROR = "Đã xảy ra lỗi khi thêm khách hàng [{0}]";
+
+        public static string ADD_CUSTOMER_SUCCESSFULLY = "Thêm thông tin [{0}] thành công";
+
+        public static string CONFIRM_READD_CUSTOMER = "Bạn có muốn tiếp tục hay không?";
+
+        public static string INVALID_EMAIL = "Email [{0}] không hợp lệ";
+
+        public static string EMAIL_IS_EXIST = "Email [{0}] đã tồn tại";
+
+        public static string INVALID_PHONE = "Số điện thoại [{0}] không hợp lệ";
+
+        public static string PHONE_IS_EXIST = "Số điện thoại [{0}] đã tồn tại";
     }
 }

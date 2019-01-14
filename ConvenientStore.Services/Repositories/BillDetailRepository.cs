@@ -1,5 +1,6 @@
 ﻿using ConvenientStore.DAO;
 using ConvenientStore.Services.Interfaces;
+using Dapper;
 using Dapper.Contrib.Extensions;
 using System;
 using System.Collections.Generic;
@@ -26,7 +27,19 @@ namespace ConvenientStore.Services.Repositories
 
         public IEnumerable<BillDetail> GetAll()
         {
-            throw new NotImplementedException();
+            using (var con = DbConnection.Instance.Connection)
+            {
+                return con.GetAll<BillDetail>();
+            }
+        }
+
+        public IEnumerable<BillDetail> GetByBill(int billId)
+        {
+            using (var con = DbConnection.Instance.Connection)
+            {
+                var query = "select * from bill_detail where BillId = @billId";
+                return con.Query<BillDetail>(query, param: new { billId });
+            }
         }
 
         public BillDetail GetById(int id)

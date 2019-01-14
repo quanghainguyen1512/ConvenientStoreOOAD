@@ -96,6 +96,42 @@ namespace ConvenientStore.BUS
             return dto;
         }
 
+        public ProductBillDto GetProductByGeneratedCode(string generatedCode)
+        {
+            ProductBillDto dto = null;
+
+            ProductDetail productDetail = this.productDetailRepository.GetProductDetailByGeneratedCode(generatedCode);
+
+            if (productDetail == null)
+            {
+                dto = new ProductBillDto(MessageContent.GET_PRODUCT_ERROR + "\r\n" + MessageContent.REQUIRE_REINPUT_FIELD);
+                return dto;
+            }
+
+            Product product = this.productRepository.GetById(productDetail.ProductId);
+
+            if (product == null)
+            {
+                dto = new ProductBillDto(MessageContent.GET_PRODUCT_ERROR + "\r\n" + MessageContent.REQUIRE_REINPUT_FIELD);
+                return dto;
+            }
+
+
+
+            dto = new ProductBillDto();
+
+            dto.Id = product.ProductId.ToString();
+            dto.ProductName = product.Name;
+            dto.Price = productDetail.Price.ToString();
+            dto.SellRate = "0";
+            dto.Unit = product.Unit;
+            dto.Message = "";
+            dto.Barcode = product.Barcode;
+            dto.DetailId = productDetail.ProductDetailId.ToString();
+            dto.ImageUrl = Convert.ToBase64String(product.ImageUrl);
+            return dto;
+        }
+
         public string SubmitBill(List<ProductBillDto> productBillDtos, CustomerBillDto customerBillDto, string total)
         {
             string result = "";
@@ -203,6 +239,11 @@ namespace ConvenientStore.BUS
                 Customer customer = this.customerRepository.GetById(Convert.ToInt32(customerBillDto.Id));
                 bill.Customer = customer;
                 bill.CustomerId = Convert.ToInt32(customerBillDto.Id);
+            }else
+            {
+                Customer customer = this.customerRepository.GetById(5);
+                bill.CustomerId = 5;
+                bill.Customer = customer;
             }
 
             this.billRepository.Add(bill);
@@ -216,7 +257,9 @@ namespace ConvenientStore.BUS
                 billDetail.BillId = Convert.ToInt32(bill.BillId);
 
                 this.billDetailRepository.Add(billDetail);
+               
             }
+
 
             
 

@@ -55,19 +55,14 @@ namespace ConvenientStore.Services.Repositories
         {
             using (var con = DbConnection.Instance.Connection)
             {
-
-
+                name = $"%{name}%";
                 if (withType)
                 {
-                    var sql = "SELECT * FROM customer as c INNER JOIN customer_type as ct ON c.CusTypeId = ct.TypeId where concat(c.FirstName,' ',c.LastName) like '%name%'";
+                    var sql = "SELECT * FROM customer as c INNER JOIN customer_type as ct ON c.CusTypeId = ct.TypeId where concat(c.FirstName,' ',c.LastName) like @name";
                     return con.Query<Customer, CustomerType>(sql, splitOn: "TypeId", param: new { name });
                 }
-
-
-                var query = "SELECT * FROM customer where concat(FirstName,\' \',LastName) like \'%@name%\'";
+                var query = "SELECT * FROM customer where concat(FirstName,' ',LastName) like @name";
                 return con.Query<Customer>(query, param: new { name });
-
-
             }
         }
 
@@ -117,16 +112,12 @@ namespace ConvenientStore.Services.Repositories
             }
         }
 
-        public List<Customer> GetByName(string name)
+        public bool CheckEmailExist(string email)
         {
-
             using (var con = DbConnection.Instance.Connection)
             {
-
-                var query = "SELECT * FROM customer WHERE concat(FirstName,\' \',LastName) = @name";
-                return con.Query<Customer>(query, param: new { name }).ToList();
-
-
+                var query = "SELECT CustomerId FROM customer WHERE Email = @email";
+                return con.ExecuteScalar(query, param: new { email }) != null;
             }
         }
     }

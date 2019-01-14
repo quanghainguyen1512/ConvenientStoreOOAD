@@ -140,7 +140,16 @@ namespace ConvenientStore.Forms
 
         private void btnEditBill_Click(object sender, EventArgs e)
         {
-                
+            pnlHighlight.Height = btnEditBill.Height;
+            pnlHighlight.Top = btnEditBill.Top;
+            this.pnForm.Controls.Clear();
+
+            frm_BillManagement form = new frm_BillManagement();
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.TopLevel = false;
+            form.AutoScroll = true;
+            this.pnForm.Controls.Add(form);
+            form.Show();
         }
     }
 }
