@@ -89,7 +89,11 @@ namespace ConvenientStore.Services.Repositories
 
         public Bill GetById(int id)
         {
-            throw new NotImplementedException();
+            using (var con = DbConnection.Instance.Connection)
+            {
+
+                return con.Get<Bill>(id);
+            }
         }
 
         public Bill GetByIdWithCustomer(int id)

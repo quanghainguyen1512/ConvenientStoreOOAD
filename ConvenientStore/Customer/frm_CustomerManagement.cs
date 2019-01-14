@@ -1,5 +1,6 @@
 ﻿using ConvenientStore.BUS;
 using ConvenientStore.DTO;
+using ConvenientStore.ExportFile;
 using ConvenientStore.Helpers.Message;
 using System;
 using System.Collections.Generic;
@@ -79,7 +80,7 @@ namespace ConvenientStore
         // Xử lý khi click nút [Xuất Excel]
         private void clickBtnExportExcel(object sender, EventArgs e)
         {
-
+            ExportExcel exportExcel = new ExportExcel(this.dgvListCustomer, "Danh sách khách hàng"); 
         }
 
         // Xử lý khi click nút [Thêm khách hàng]
@@ -159,10 +160,16 @@ namespace ConvenientStore
             for (int i = 0; i < this.customerManagementDtos.Count(); i++)
             {
 
-                this.customerManagementDtos[i].Index = (i + 1).ToString();
+                if (!"5".Equals(this.customerManagementDtos[i].Id))
+                {
+                    this.customerManagementDtos[i].Index = (i + 1).ToString();
 
-                this.dgvListCustomer.Rows.Add(i + 1, this.customerManagementDtos[i].fullName(), this.customerManagementDtos[i].PhoneNumber,
-                    this.customerManagementDtos[i].DateOfBirth, this.customerManagementDtos[i].Point);
+                    this.dgvListCustomer.Rows.Add(i + 1, this.customerManagementDtos[i].fullName(), this.customerManagementDtos[i].PhoneNumber,
+                        this.customerManagementDtos[i].DateOfBirth, this.customerManagementDtos[i].Point);
+
+                }
+
+
             }
 
         }

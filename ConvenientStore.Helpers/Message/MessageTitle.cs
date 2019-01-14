@@ -31,5 +31,6 @@ namespace ConvenientStore.Helpers.Message
         public static string UPDATE_SUCCESSFULLY = "Cập nhật thành công";
 
         public static string UPDATE_ERROR = "Cập nhật thất bại";
+
     }
 }

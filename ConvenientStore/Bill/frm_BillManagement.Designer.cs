@@ -40,11 +40,6 @@
             this.columnCreateDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cbbTotal = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cbbCreateDate = new System.Windows.Forms.ComboBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -52,7 +47,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListBills)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -62,7 +56,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(166)))));
-            this.label1.Location = new System.Drawing.Point(501, 36);
+            this.label1.Location = new System.Drawing.Point(499, 65);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -73,7 +67,7 @@
             // txtBillCode
             // 
             this.txtBillCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBillCode.Location = new System.Drawing.Point(628, 36);
+            this.txtBillCode.Location = new System.Drawing.Point(626, 65);
             this.txtBillCode.Margin = new System.Windows.Forms.Padding(4);
             this.txtBillCode.Name = "txtBillCode";
             this.txtBillCode.Size = new System.Drawing.Size(219, 22);
@@ -87,7 +81,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(166)))));
-            this.label10.Location = new System.Drawing.Point(8, 36);
+            this.label10.Location = new System.Drawing.Point(6, 65);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(132, 17);
@@ -112,11 +106,12 @@
             this.btnExportExcel.Text = "   Xuất Excel";
             this.btnExportExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExportExcel.UseVisualStyleBackColor = false;
+            this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
             // 
             // txtCustomerName
             // 
             this.txtCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustomerName.Location = new System.Drawing.Point(175, 34);
+            this.txtCustomerName.Location = new System.Drawing.Point(173, 63);
             this.txtCustomerName.Margin = new System.Windows.Forms.Padding(4);
             this.txtCustomerName.Name = "txtCustomerName";
             this.txtCustomerName.Size = new System.Drawing.Size(219, 22);
@@ -194,70 +189,10 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(950, 80);
+            this.groupBox1.Size = new System.Drawing.Size(950, 139);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(166)))));
-            this.label4.Location = new System.Drawing.Point(8, 38);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(245, 17);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "Sắp xếp (theo giá trị hóa đơn)";
-            // 
-            // cbbTotal
-            // 
-            this.cbbTotal.FormattingEnabled = true;
-            this.cbbTotal.Location = new System.Drawing.Point(279, 37);
-            this.cbbTotal.Margin = new System.Windows.Forms.Padding(4);
-            this.cbbTotal.Name = "cbbTotal";
-            this.cbbTotal.Size = new System.Drawing.Size(180, 20);
-            this.cbbTotal.TabIndex = 26;
-            this.cbbTotal.SelectedIndexChanged += new System.EventHandler(this.cbbTotal_SelectedIndexChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(166)))));
-            this.label5.Location = new System.Drawing.Point(501, 41);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(199, 17);
-            this.label5.TabIndex = 27;
-            this.label5.Text = "Sắp xếp (theo ngày tạo)";
-            // 
-            // cbbCreateDate
-            // 
-            this.cbbCreateDate.FormattingEnabled = true;
-            this.cbbCreateDate.Location = new System.Drawing.Point(733, 37);
-            this.cbbCreateDate.Margin = new System.Windows.Forms.Padding(4);
-            this.cbbCreateDate.Name = "cbbCreateDate";
-            this.cbbCreateDate.Size = new System.Drawing.Size(199, 20);
-            this.cbbCreateDate.TabIndex = 28;
-            this.cbbCreateDate.SelectedIndexChanged += new System.EventHandler(this.cbbCreateDate_SelectedIndexChanged);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.cbbCreateDate);
-            this.groupBox2.Controls.Add(this.cbbTotal);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(17, 157);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(950, 80);
-            this.groupBox2.TabIndex = 29;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Sắp xếp";
             // 
             // panel1
             // 
@@ -315,7 +250,6 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -325,8 +259,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvListBills)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -346,11 +278,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn columnCustomerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnCreateDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnTotal;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbbTotal;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cbbCreateDate;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel2;

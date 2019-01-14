@@ -65,6 +65,16 @@ namespace ConvenientStore.Services.Repositories
             }
         }
 
+        public List<Sale> GetByCustomerType(int customerTypeId)
+        {
+            var sql = "SELECT distinct sale.* FROM (sale inner join sale_to_customer_type on sale.SaleId = sale_to_customer_type.SaleId) " +
+                    "inner join customer_type where sale_to_customer_type.CustomerTypeId = @customerTypeId and curdate() between sale.StartDate and sale.EndDate";
+            using (var con = DbConnection.Instance.Connection)
+            {
+                return con.Query<Sale>(sql, param: new { customerTypeId }).ToList();
+            }
+        }
+
         public Sale GetById(int id)
         {
             using (var con = DbConnection.Instance.Connection)

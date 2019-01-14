@@ -98,6 +98,13 @@
     <Compile Include="Bill\EditBillDetailForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Bill\frm_DelayBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bill\frm_DelayBill.Designer.cs">
+      <DependentUpon>frm_DelayBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExportFile\ExportExcel.cs" />
     <Compile Include="Forms\frm_AddOrderProducts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +211,9 @@
     <Compile Include="UserControls\UC_StoreDetails.Designer.cs">
       <DependentUpon>UC_StoreDetails.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Bill\frm_DelayBill.resx">
+      <DependentUpon>frm_DelayBill.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_AddOrderProducts.resx">
       <DependentUpon>frm_AddOrderProducts.cs</DependentUpon>
     </EmbeddedResource>
