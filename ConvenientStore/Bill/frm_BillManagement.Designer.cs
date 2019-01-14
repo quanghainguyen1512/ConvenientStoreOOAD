@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_BillManagement));
             this.label1 = new System.Windows.Forms.Label();
             this.txtBillCode = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -51,7 +50,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListBills)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -68,7 +66,7 @@
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(119, 20);
+            this.label1.Size = new System.Drawing.Size(99, 17);
             this.label1.TabIndex = 17;
             this.label1.Text = "Mã hóa đơn";
             // 
@@ -78,7 +76,7 @@
             this.txtBillCode.Location = new System.Drawing.Point(628, 36);
             this.txtBillCode.Margin = new System.Windows.Forms.Padding(4);
             this.txtBillCode.Name = "txtBillCode";
-            this.txtBillCode.Size = new System.Drawing.Size(219, 26);
+            this.txtBillCode.Size = new System.Drawing.Size(219, 22);
             this.txtBillCode.TabIndex = 18;
             this.txtBillCode.Text = "15520027";
             this.txtBillCode.TextChanged += new System.EventHandler(this.txtBillCode_TextChanged);
@@ -92,7 +90,7 @@
             this.label10.Location = new System.Drawing.Point(8, 36);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(159, 20);
+            this.label10.Size = new System.Drawing.Size(132, 17);
             this.label10.TabIndex = 15;
             this.label10.Text = "Tên khách hàng";
             // 
@@ -121,7 +119,7 @@
             this.txtCustomerName.Location = new System.Drawing.Point(175, 34);
             this.txtCustomerName.Margin = new System.Windows.Forms.Padding(4);
             this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.Size = new System.Drawing.Size(219, 26);
+            this.txtCustomerName.Size = new System.Drawing.Size(219, 22);
             this.txtCustomerName.TabIndex = 16;
             this.txtCustomerName.Text = "15520027";
             this.txtCustomerName.TextChanged += new System.EventHandler(this.txtCustomerName_TextChanged);
@@ -209,17 +207,17 @@
             this.label4.Location = new System.Drawing.Point(8, 38);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(297, 20);
+            this.label4.Size = new System.Drawing.Size(245, 17);
             this.label4.TabIndex = 24;
             this.label4.Text = "Sắp xếp (theo giá trị hóa đơn)";
             // 
             // cbbTotal
             // 
             this.cbbTotal.FormattingEnabled = true;
-            this.cbbTotal.Location = new System.Drawing.Point(313, 37);
+            this.cbbTotal.Location = new System.Drawing.Point(279, 37);
             this.cbbTotal.Margin = new System.Windows.Forms.Padding(4);
             this.cbbTotal.Name = "cbbTotal";
-            this.cbbTotal.Size = new System.Drawing.Size(180, 24);
+            this.cbbTotal.Size = new System.Drawing.Size(180, 20);
             this.cbbTotal.TabIndex = 26;
             this.cbbTotal.SelectedIndexChanged += new System.EventHandler(this.cbbTotal_SelectedIndexChanged);
             // 
@@ -231,17 +229,17 @@
             this.label5.Location = new System.Drawing.Point(501, 41);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(240, 20);
+            this.label5.Size = new System.Drawing.Size(199, 17);
             this.label5.TabIndex = 27;
             this.label5.Text = "Sắp xếp (theo ngày tạo)";
             // 
             // cbbCreateDate
             // 
             this.cbbCreateDate.FormattingEnabled = true;
-            this.cbbCreateDate.Location = new System.Drawing.Point(743, 37);
+            this.cbbCreateDate.Location = new System.Drawing.Point(733, 37);
             this.cbbCreateDate.Margin = new System.Windows.Forms.Padding(4);
             this.cbbCreateDate.Name = "cbbCreateDate";
-            this.cbbCreateDate.Size = new System.Drawing.Size(199, 24);
+            this.cbbCreateDate.Size = new System.Drawing.Size(199, 20);
             this.cbbCreateDate.TabIndex = 28;
             this.cbbCreateDate.SelectedIndexChanged += new System.EventHandler(this.cbbCreateDate_SelectedIndexChanged);
             // 
@@ -307,28 +305,11 @@
             this.panel3.Size = new System.Drawing.Size(980, 226);
             this.panel3.TabIndex = 34;
             // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(954, 26);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(30, 30);
-            this.btnClose.TabIndex = 35;
-            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
             // frm_BillManagement
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1000, 550);
-            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
@@ -341,7 +322,6 @@
             this.Name = "frm_BillManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý hóa đơn";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_BillManagement_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListBills)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -376,6 +356,5 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnClose;
     }
 }

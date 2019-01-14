@@ -62,7 +62,7 @@
             this.label5.Location = new System.Drawing.Point(43, 428);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 20);
+            this.label5.Size = new System.Drawing.Size(72, 17);
             this.label5.TabIndex = 45;
             this.label5.Text = "Giới tính";
             // 
@@ -74,7 +74,7 @@
             this.label4.Location = new System.Drawing.Point(43, 378);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(164, 20);
+            this.label4.Size = new System.Drawing.Size(135, 17);
             this.label4.TabIndex = 43;
             this.label4.Text = "Loại khách hàng";
             // 
@@ -84,7 +84,7 @@
             this.txtEmail.Location = new System.Drawing.Point(223, 323);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(219, 26);
+            this.txtEmail.Size = new System.Drawing.Size(219, 22);
             this.txtEmail.TabIndex = 42;
             this.txtEmail.Text = "15520027";
             // 
@@ -96,7 +96,7 @@
             this.label3.Location = new System.Drawing.Point(43, 325);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 20);
+            this.label3.Size = new System.Drawing.Size(49, 17);
             this.label3.TabIndex = 41;
             this.label3.Text = "Email";
             // 
@@ -106,7 +106,7 @@
             this.txtPhoneNumber.Location = new System.Drawing.Point(223, 274);
             this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(219, 26);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(219, 22);
             this.txtPhoneNumber.TabIndex = 40;
             this.txtPhoneNumber.Text = "15520027";
             // 
@@ -118,7 +118,7 @@
             this.label2.Location = new System.Drawing.Point(43, 276);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 20);
+            this.label2.Size = new System.Drawing.Size(110, 17);
             this.label2.TabIndex = 39;
             this.label2.Text = "Số điện thoại";
             // 
@@ -131,7 +131,7 @@
             this.dtpDateOfBirth.Location = new System.Drawing.Point(223, 226);
             this.dtpDateOfBirth.Margin = new System.Windows.Forms.Padding(4);
             this.dtpDateOfBirth.Name = "dtpDateOfBirth";
-            this.dtpDateOfBirth.Size = new System.Drawing.Size(219, 27);
+            this.dtpDateOfBirth.Size = new System.Drawing.Size(219, 23);
             this.dtpDateOfBirth.TabIndex = 38;
             // 
             // label1
@@ -142,7 +142,7 @@
             this.label1.Location = new System.Drawing.Point(43, 230);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 20);
+            this.label1.Size = new System.Drawing.Size(84, 17);
             this.label1.TabIndex = 37;
             this.label1.Text = "Ngày sinh";
             // 
@@ -154,7 +154,7 @@
             this.label10.Location = new System.Drawing.Point(43, 186);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(159, 20);
+            this.label10.Size = new System.Drawing.Size(132, 17);
             this.label10.TabIndex = 34;
             this.label10.Text = "Tên khách hàng";
             // 
@@ -164,7 +164,7 @@
             this.txtCustomerName.Location = new System.Drawing.Point(223, 184);
             this.txtCustomerName.Margin = new System.Windows.Forms.Padding(4);
             this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.Size = new System.Drawing.Size(219, 26);
+            this.txtCustomerName.Size = new System.Drawing.Size(219, 22);
             this.txtCustomerName.TabIndex = 35;
             this.txtCustomerName.Text = "15520027";
             // 
@@ -175,7 +175,7 @@
             this.cbbCusType.Location = new System.Drawing.Point(223, 376);
             this.cbbCusType.Margin = new System.Windows.Forms.Padding(4);
             this.cbbCusType.Name = "cbbCusType";
-            this.cbbCusType.Size = new System.Drawing.Size(219, 28);
+            this.cbbCusType.Size = new System.Drawing.Size(219, 25);
             this.cbbCusType.TabIndex = 51;
             // 
             // cbbGender
@@ -185,7 +185,7 @@
             this.cbbGender.Location = new System.Drawing.Point(223, 426);
             this.cbbGender.Margin = new System.Windows.Forms.Padding(4);
             this.cbbGender.Name = "cbbGender";
-            this.cbbGender.Size = new System.Drawing.Size(219, 28);
+            this.cbbGender.Size = new System.Drawing.Size(219, 25);
             this.cbbGender.TabIndex = 52;
             // 
             // panel1
@@ -215,7 +215,7 @@
             this.btnCancel.Size = new System.Drawing.Size(30, 30);
             this.btnCancel.TabIndex = 50;
             this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnCancel.Click += new System.EventHandler(this.clickBtnCancel);
             // 
             // panel5
             // 
@@ -284,6 +284,7 @@
             this.btnSaveChange.Text = "   Thêm";
             this.btnSaveChange.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSaveChange.UseVisualStyleBackColor = false;
+            this.btnSaveChange.Click += new System.EventHandler(this.clickBtnSubmit);
             // 
             // frm_CustomerAdd
             // 
@@ -311,7 +312,6 @@
             this.Name = "frm_CustomerAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Màn hình thêm khách hàng";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_CustomerAdd_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

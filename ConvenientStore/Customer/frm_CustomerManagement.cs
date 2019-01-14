@@ -26,8 +26,6 @@ namespace ConvenientStore
         {
             this.txtCustomerName.Text = "";
             this.txtPhoneNumber.Text = "";
-            this.dtpDateStart.Value = DateTime.Now;
-            this.dtpDateEnd.Value = DateTime.Now;
 
             this.customerEditForm = null;
 
@@ -87,11 +85,14 @@ namespace ConvenientStore
         // Xử lý khi click nút [Thêm khách hàng]
         private void clickBtnAddCustomer(object sender, EventArgs e)
         {
-
+            frm_CustomerAdd form = new frm_CustomerAdd();
+            form.FormClosing += new FormClosingEventHandler((sender1, e1)=>this.initForm());
+            form.Show();
+            
         }
 
-        // Xử lý khi nhấn enter trường [Số điện thoại]
-        private void enterTxtPhoneNumber(object sender, KeyEventArgs e)
+            // Xử lý khi nhấn enter trường [Số điện thoại]
+            private void enterTxtPhoneNumber(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Enter)
             {

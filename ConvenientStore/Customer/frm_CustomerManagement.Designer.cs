@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dtpDateEnd = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dtpDateStart = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -44,7 +40,6 @@
             this.columnPoint = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnExportExcel = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnSearchByDate = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -57,72 +52,26 @@
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dtpDateEnd
-            // 
-            this.dtpDateEnd.CustomFormat = "dd / MM / yyyy";
-            this.dtpDateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDateEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDateEnd.Location = new System.Drawing.Point(400, 90);
-            this.dtpDateEnd.Margin = new System.Windows.Forms.Padding(5);
-            this.dtpDateEnd.Name = "dtpDateEnd";
-            this.dtpDateEnd.Size = new System.Drawing.Size(200, 27);
-            this.dtpDateEnd.TabIndex = 23;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(166)))));
-            this.label3.Location = new System.Drawing.Point(382, 93);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(17, 20);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "-";
-            // 
-            // dtpDateStart
-            // 
-            this.dtpDateStart.CustomFormat = "dd / MM / yyyy";
-            this.dtpDateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDateStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDateStart.Location = new System.Drawing.Point(181, 89);
-            this.dtpDateStart.Margin = new System.Windows.Forms.Padding(5);
-            this.dtpDateStart.Name = "dtpDateStart";
-            this.dtpDateStart.Size = new System.Drawing.Size(200, 27);
-            this.dtpDateStart.TabIndex = 21;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(166)))));
-            this.label2.Location = new System.Drawing.Point(12, 94);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 20);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Ngày sinh";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(166)))));
-            this.label1.Location = new System.Drawing.Point(480, 36);
+            this.label1.Location = new System.Drawing.Point(480, 73);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(135, 20);
+            this.label1.Size = new System.Drawing.Size(110, 17);
             this.label1.TabIndex = 17;
             this.label1.Text = "Số điện thoại";
             // 
             // txtPhoneNumber
             // 
             this.txtPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhoneNumber.Location = new System.Drawing.Point(625, 34);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(625, 71);
             this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(5);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(200, 26);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(200, 22);
             this.txtPhoneNumber.TabIndex = 18;
             this.txtPhoneNumber.Text = "15520027";
             this.txtPhoneNumber.TextChanged += new System.EventHandler(this.changeTxtPhoneNumber);
@@ -133,20 +82,20 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(166)))));
-            this.label10.Location = new System.Drawing.Point(12, 36);
+            this.label10.Location = new System.Drawing.Point(12, 73);
             this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(159, 20);
+            this.label10.Size = new System.Drawing.Size(132, 17);
             this.label10.TabIndex = 15;
             this.label10.Text = "Tên khách hàng";
             // 
             // txtCustomerName
             // 
             this.txtCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustomerName.Location = new System.Drawing.Point(181, 34);
+            this.txtCustomerName.Location = new System.Drawing.Point(181, 71);
             this.txtCustomerName.Margin = new System.Windows.Forms.Padding(5);
             this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.Size = new System.Drawing.Size(200, 26);
+            this.txtCustomerName.Size = new System.Drawing.Size(200, 22);
             this.txtCustomerName.TabIndex = 16;
             this.txtCustomerName.Text = "15520027";
             this.txtCustomerName.TextChanged += new System.EventHandler(this.changeTxtCustomerName);
@@ -233,11 +182,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnSearchByDate);
-            this.groupBox1.Controls.Add(this.dtpDateEnd);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.dtpDateStart);
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtPhoneNumber);
             this.groupBox1.Controls.Add(this.label10);
@@ -251,26 +195,6 @@
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm";
-            // 
-            // btnSearchByDate
-            // 
-            this.btnSearchByDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearchByDate.BackColor = System.Drawing.Color.White;
-            this.btnSearchByDate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearchByDate.FlatAppearance.BorderSize = 0;
-            this.btnSearchByDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearchByDate.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchByDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(166)))));
-            this.btnSearchByDate.Image = global::ConvenientStore.Properties.Resources.search;
-            this.btnSearchByDate.Location = new System.Drawing.Point(625, 69);
-            this.btnSearchByDate.Margin = new System.Windows.Forms.Padding(5);
-            this.btnSearchByDate.Name = "btnSearchByDate";
-            this.btnSearchByDate.Size = new System.Drawing.Size(234, 70);
-            this.btnSearchByDate.TabIndex = 23;
-            this.btnSearchByDate.Text = "   Tìm kiếm theo ngày sinh";
-            this.btnSearchByDate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSearchByDate.UseVisualStyleBackColor = false;
-            this.btnSearchByDate.Click += new System.EventHandler(this.clickBtnSearchByDate);
             // 
             // panel1
             // 
@@ -368,10 +292,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnAddCustomer;
-        private System.Windows.Forms.DateTimePicker dtpDateEnd;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dtpDateStart;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtPhoneNumber;
         private System.Windows.Forms.Label label10;
@@ -384,7 +304,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn columnPhoneNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnBirthOfDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnPoint;
-        private System.Windows.Forms.Button btnSearchByDate;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
