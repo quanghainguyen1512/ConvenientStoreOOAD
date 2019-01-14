@@ -67,6 +67,8 @@ namespace ConvenientStore.BUS
             customer.FirstName = firstName;
             customer.LastName = lastName;
 
+            customer.FirstName = Convert.ToBase64String(ASCIIEncoding.UTF8.GetBytes(customer.FirstName));
+            customer.LastName = Convert.ToBase64String(ASCIIEncoding.UTF8.GetBytes(customer.LastName));
 
             customer.DateOfBirth = DateTime.Parse(lists[1]);
 
