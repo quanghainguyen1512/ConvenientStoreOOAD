@@ -57,5 +57,48 @@ namespace ConvenientStore.BUS
 
             return dtos;
         }
+
+        public List<BillManagementDto> GetAllDelayBill()
+        {
+            List<BillManagementDto> dtos = new List<BillManagementDto>();
+
+            try
+            {
+                List<Bill> bills = this.billRepository.GetAll().ToList();
+
+                foreach (Bill b in bills)
+                {
+                    if (!b.Status)
+                    {
+                        BillManagementDto dto = new BillManagementDto();
+                        dto.Id = b.BillId.ToString();
+                        dto.CreateDate = b.CreateDate.ToString("dd/MM/yyyy");
+                        dto.Total = b.Total.ToString("#,#", CultureInfo.InvariantCulture);
+                        
+                        int customerId = b.CustomerId;
+                        if (customerId == 5)
+                        {
+                            dto.CustomerName = "";
+                        }
+                        else
+                        {
+                            Customer customer = this.customerRepository.GetById(customerId);
+                            dto.CustomerName = customer.FirstName + " " + customer.LastName;
+                            dto.PhoneNumber = customer.PhoneNumber;
+                        }
+
+                        dtos.Add(dto);
+                    }
+                    
+                }
+            }
+            catch
+            {
+                return dtos;
+            }
+
+            return dtos;
+        }
+
     }
 }

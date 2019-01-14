@@ -1,4 +1,5 @@
-﻿using ConvenientStore.BUS;
+﻿using ConvenientStore.Bill;
+using ConvenientStore.BUS;
 using ConvenientStore.DAO;
 using ConvenientStore.DTO;
 using ConvenientStore.Helpers.Message;
@@ -25,8 +26,12 @@ namespace ConvenientStore
         private CustomerBillDto customerBillDto;
         private List<ProductBillDto> productBillDtos;
         private EditBillDetailForm editBillDetailForm;
+        private List<SaleBillDto> saleBillDtos;
 
         private XuLyHoaDonBus xuLyHoaDonService;
+        private frm_DelayBill delayBillForm;
+
+        private bool FlagDelay { get; set; }
 
         public frm_CreateBill()
         {
@@ -44,7 +49,7 @@ namespace ConvenientStore
             this.txtPhoneNumber.Text = "";
             this.txtCustomerName.Text = "";
             this.txtProductCode.Text = "";
-            this.txtQuantity.Text = "0";
+            this.txtQuantity.Text = "1";
             this.txtProductName.Text = "";
             this.txtSell.Text = "";
             this.txtPrice.Text = "";
@@ -52,11 +57,14 @@ namespace ConvenientStore
 
             this.flagEnterPhoneNumberField = false;
             this.flagEnterProductCodeField = false;
+            this.FlagDelay = false;
 
             this.productBillDto = null;
             this.customerBillDto = null;
             this.editBillDetailForm = null;
+            this.delayBillForm = null;
             this.productBillDtos = new List<ProductBillDto>();
+            this.saleBillDtos = new List<SaleBillDto>();
 
             this.setSellProgramForCombobox();
             this.dgvListProduct.Rows.Clear();
@@ -76,13 +84,19 @@ namespace ConvenientStore
 
         private void setSellProgramForCombobox()
         {
-            List<String> temp = new List<String>();
-            temp.Add("Tất cả");
-            this.cbbSellProgram.DataSource = temp;
+            this.saleBillDtos.Clear();
 
-            //    comboBox1.DataSource = personList;
-            //comboBox1.DisplayMember = "name";
-            // cbb.DisplayValue="";
+            if("".Equals(txtPhoneNumber.Text.Trim()))
+            {
+                this.saleBillDtos = this.xuLyHoaDonService.GetAllSale(1, true);
+            } else
+            {
+                this.saleBillDtos = this.xuLyHoaDonService.GetAllSale(Convert.ToInt32(this.customerBillDto.Id), false);
+            }
+
+            cbbSellProgram.ValueMember = "Id";
+            cbbSellProgram.DisplayMember = "Name";
+            cbbSellProgram.DataSource = saleBillDtos;
         }
 
         // Xửa lý khi enter sau khi nhập trường [Số điện thoại]
@@ -110,7 +124,7 @@ namespace ConvenientStore
         // Xử lý khi thay đổi [Chương trình khuyến mãi]
         private void changeCbbSellProgram(object sender, EventArgs e)
         {
-
+           //  MessageBox.Show("hello");
         }
 
         // Xử lý khi click vào button [Thông tin khuyến mãi]
@@ -164,13 +178,37 @@ namespace ConvenientStore
         // Xử lý khi click vào button [Hủy hóa đơn]
         private void clickBtnCancel(object sender, EventArgs e)
         {
+            if ("".Equals(txtPhoneNumber.Text.Trim()))
+            {
+                if (this.productBillDtos.Count() <= 0)
+                    return;
+
+                if (this.customerBillDto != null)
+                {
+                    this.customerBillDto.Point = (Convert.ToInt32(this.customerBillDto.Point)
+                        + Convert.ToInt32(System.Text.RegularExpressions.Regex.Replace(this.lbTotal.Text, "[^.0-9]", "")) * 1 / 100).ToString();
+                }
+
+
+                string message = this.xuLyHoaDonService.SubmitBill(this.productBillDtos, this.customerBillDto, this.lbTotal.Text, true);
+
+                if (!"".Equals(message))
+                {
+                    MessageBox.Show(message, MessageTitle.SUBMIT_BILL_ERROR,
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
             this.resetForm();
         }
 
         // Xử lý click vào button [Thanh toán]
         private void clickBtnSubmit(object sender, EventArgs e)
         {
-            submitBill();
+            if(!FlagDelay)
+            {
+                submitBill();
+            }
         }
 
         // Xử lý khi double click vào row của [Danh sách các sản phẩm]
@@ -237,7 +275,7 @@ namespace ConvenientStore
 
             this.txtCustomerName.Text = this.customerBillDto.FullName;
             this.txtProductCode.Focus();
-
+            this.setSellProgramForCombobox();
         }
 
         // Lấy thông tin sản phẩm
@@ -260,7 +298,6 @@ namespace ConvenientStore
             }
 
             this.txtProductName.Text = this.productBillDto.ProductName;
-            this.txtSell.Text = this.productBillDto.SellRate;
             this.txtPrice.Text = this.productBillDto.Price;
 
             byte[] bytes = Convert.FromBase64String(this.productBillDto.ImageUrl);
@@ -280,9 +317,8 @@ namespace ConvenientStore
         {
             this.txtProductCode.Text = "";
             this.txtProductName.Text = "";
-            this.txtSell.Text = "";
             this.txtPrice.Text = "";
-            this.txtQuantity.Text = "0";
+            this.txtQuantity.Text = "1";
 
             this.txtProductCode.Focus();
         }
@@ -301,11 +337,12 @@ namespace ConvenientStore
                 MessageBox.Show(MessageContent.PRODUCT_QUANTITY_IS_EMPTY, MessageTitle.ADD_PRODUCT_ERROR, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
+            this.productBillDto.SellRate = this.txtSell.Text;
             this.productBillDto.Quantity = this.txtQuantity.Text;
             this.productBillDto.Index = (this.productBillDtos.Count() + 1).ToString();
             this.productBillDtos.Add(this.productBillDto);
-            
+     
+
             this.dgvListProduct.Rows.Add(this.productBillDto.Index, this.productBillDto.Barcode, this.productBillDto.ProductName,
                 this.productBillDto.Quantity, this.productBillDto.Price, this.productBillDto.SellRate, this.productBillDto.Unit,
                 this.productBillDto.Total());
@@ -392,5 +429,51 @@ namespace ConvenientStore
 
         }
 
+        private void cbbSellProgram_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if(cbbSellProgram.SelectedValue != null)
+            {
+                foreach(SaleBillDto dto in this.saleBillDtos)
+                {
+                    if(cbbSellProgram.SelectedValue.ToString().Equals(dto.Id))
+                    {
+                        this.txtSell.Text = dto.Value;
+                        break;
+                    }
+                }
+            }
+        }
+
+        private void btnDelayBills_Click(object sender, EventArgs e)
+        {
+            this.delayBillForm = new frm_DelayBill();
+            this.delayBillForm.FormClosing += new FormClosingEventHandler(delayBillFormClosing);
+            this.delayBillForm.Show();
+        }
+
+        private void delayBillFormClosing(object sender, FormClosingEventArgs e)
+        {
+            BillManagementDto dto = this.delayBillForm.BillManagementDto;
+
+            if(dto == null)
+            {
+                return;
+            }
+
+            this.txtBillCode.Text = dto.Code();
+            this.txtProductCode.Text = "";
+            this.txtProductName.Text = "";
+            this.txtPrice.Text = "";
+            this.txtQuantity.Text = "1";
+
+            this.txtPhoneNumber.Text = dto.PhoneNumber;
+            this.setCustomerInfo();
+
+            this.FlagDelay = true;
+
+
+            this.productBillDtos = this.xuLyHoaDonService.GetAllBillDetailByBill(Convert.ToInt32(dto.Id));
+            this.reloadDataGridView();
+        }
     }
 }

@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace ConvenientStore.BUS
 {
-    
+
     public class BillDetailBus
     {
         private IBillDetailRepository billDetailRepository;
@@ -33,7 +33,7 @@ namespace ConvenientStore.BUS
             {
                 List<BillDetail> billDetails = this.billDetailRepository.GetByBill(billId).ToList();
 
-                foreach(BillDetail db in billDetails)
+                foreach (BillDetail db in billDetails)
                 {
                     BillDetailDto dto = new BillDetailDto();
                     dto.Id = db.BillDetailId.ToString();
@@ -50,12 +50,12 @@ namespace ConvenientStore.BUS
                     dto.ProduceName = product.Name;
                     dto.Unit = product.Unit;
 
-                    dto.Total = (Convert.ToInt32(dto.Quantity) * Convert.ToInt32(dto.Price.Replace(",",""))).ToString("#,#", CultureInfo.InvariantCulture);
+                    dto.Total = (Convert.ToInt32(dto.Quantity) * Convert.ToInt32(dto.Price.Replace(",", ""))).ToString("#,#", CultureInfo.InvariantCulture);
 
                     billDetailDtos.Add(dto);
-                   
+
                 }
-        }
+            }
             catch
             {
                 return billDetailDtos;

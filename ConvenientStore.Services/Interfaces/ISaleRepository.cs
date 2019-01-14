@@ -10,5 +10,6 @@ namespace ConvenientStore.Services.Interfaces
     public interface ISaleRepository : IRepository<Sale>
     {
         Sale GetByIdWithDetail(int id);
+        List<Sale> GetByCustomerType(int customerTypeId);
     }
 }

@@ -38,7 +38,7 @@ namespace ConvenientStore
         private void frm_BillDetail_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Display a MsgBox asking the user to save changes or abort.
-            if (MessageBox.Show("Do you want close ?", "Bill Detail Form",
+            if (MessageBox.Show("Bạn có muốn đóng form?", "Xác nhận",
                MessageBoxButtons.YesNo) == DialogResult.No)
             {
                 // Cancel the Closing event from closing the form.

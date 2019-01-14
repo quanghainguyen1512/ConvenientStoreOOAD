@@ -12,8 +12,6 @@ namespace ConvenientStore.Helpers.Message
 
         public static string BREAK_LINE = "\r\n";
 
-       
-
         public static string GET_CUSTOMER_ERROR = "Không tìm thấy thông tin khách hàng";
 
         public static string GET_PRODUCT_ERROR = "Không tìm thấy thông tin sản phẩm";
@@ -57,5 +55,9 @@ namespace ConvenientStore.Helpers.Message
         public static string INVALID_PHONE = "Số điện thoại [{0}] không hợp lệ";
 
         public static string PHONE_IS_EXIST = "Số điện thoại [{0}] đã tồn tại";
+
+        public static string EXPORT_EXCEL_SUCESSFULLY = "Xuất file [{0}] thành công";
+
+        public static string EXPORT_EXCEL_Error = "Lõi khi xuất file [{0}]";
     }
 }

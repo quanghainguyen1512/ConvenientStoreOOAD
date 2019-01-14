@@ -15,6 +15,8 @@ namespace ConvenientStore.DTO
         public string Total { get; set; }
         public string Message { get; set; }
 
+        public string PhoneNumber { get; set; }
+
         public string Code()
         {
             return Convert.ToInt32(Id).ToString("000000");
@@ -35,5 +37,7 @@ namespace ConvenientStore.DTO
         {
             this.Message = message;
         }
+
+
     }
 }

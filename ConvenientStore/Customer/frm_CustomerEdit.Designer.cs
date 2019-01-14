@@ -62,7 +62,7 @@
             this.label10.Location = new System.Drawing.Point(48, 201);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(159, 20);
+            this.label10.Size = new System.Drawing.Size(132, 17);
             this.label10.TabIndex = 17;
             this.label10.Text = "Tên khách hàng";
             // 
@@ -72,7 +72,7 @@
             this.txtCustomerName.Location = new System.Drawing.Point(227, 197);
             this.txtCustomerName.Margin = new System.Windows.Forms.Padding(4);
             this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.Size = new System.Drawing.Size(219, 26);
+            this.txtCustomerName.Size = new System.Drawing.Size(219, 22);
             this.txtCustomerName.TabIndex = 18;
             this.txtCustomerName.Text = "15520027";
             // 
@@ -84,7 +84,7 @@
             this.label1.Location = new System.Drawing.Point(48, 249);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 20);
+            this.label1.Size = new System.Drawing.Size(84, 17);
             this.label1.TabIndex = 20;
             this.label1.Text = "Ngày sinh";
             // 
@@ -96,7 +96,7 @@
             this.dtpDateOfBirth.Location = new System.Drawing.Point(227, 246);
             this.dtpDateOfBirth.Margin = new System.Windows.Forms.Padding(4);
             this.dtpDateOfBirth.Name = "dtpDateOfBirth";
-            this.dtpDateOfBirth.Size = new System.Drawing.Size(219, 27);
+            this.dtpDateOfBirth.Size = new System.Drawing.Size(219, 23);
             this.dtpDateOfBirth.TabIndex = 21;
             // 
             // label2
@@ -107,7 +107,7 @@
             this.label2.Location = new System.Drawing.Point(48, 294);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 20);
+            this.label2.Size = new System.Drawing.Size(110, 17);
             this.label2.TabIndex = 22;
             this.label2.Text = "Số điện thoại";
             // 
@@ -117,7 +117,7 @@
             this.txtPhoneNumber.Location = new System.Drawing.Point(227, 290);
             this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(219, 26);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(219, 22);
             this.txtPhoneNumber.TabIndex = 23;
             this.txtPhoneNumber.Text = "15520027";
             // 
@@ -127,7 +127,7 @@
             this.txtEmail.Location = new System.Drawing.Point(227, 340);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(219, 26);
+            this.txtEmail.Size = new System.Drawing.Size(219, 22);
             this.txtEmail.TabIndex = 25;
             this.txtEmail.Text = "15520027";
             // 
@@ -139,7 +139,7 @@
             this.label3.Location = new System.Drawing.Point(48, 343);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 20);
+            this.label3.Size = new System.Drawing.Size(49, 17);
             this.label3.TabIndex = 24;
             this.label3.Text = "Email";
             // 
@@ -150,7 +150,7 @@
             this.txtCusType.Margin = new System.Windows.Forms.Padding(4);
             this.txtCusType.Name = "txtCusType";
             this.txtCusType.ReadOnly = true;
-            this.txtCusType.Size = new System.Drawing.Size(219, 26);
+            this.txtCusType.Size = new System.Drawing.Size(219, 22);
             this.txtCusType.TabIndex = 27;
             this.txtCusType.Text = "15520027";
             // 
@@ -162,7 +162,7 @@
             this.label4.Location = new System.Drawing.Point(48, 396);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(164, 20);
+            this.label4.Size = new System.Drawing.Size(135, 17);
             this.label4.TabIndex = 26;
             this.label4.Text = "Loại khách hàng";
             // 
@@ -173,7 +173,7 @@
             this.txtGender.Margin = new System.Windows.Forms.Padding(4);
             this.txtGender.Name = "txtGender";
             this.txtGender.ReadOnly = true;
-            this.txtGender.Size = new System.Drawing.Size(219, 26);
+            this.txtGender.Size = new System.Drawing.Size(219, 22);
             this.txtGender.TabIndex = 29;
             this.txtGender.Text = "15520027";
             // 
@@ -185,7 +185,7 @@
             this.label5.Location = new System.Drawing.Point(48, 447);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 20);
+            this.label5.Size = new System.Drawing.Size(72, 17);
             this.label5.TabIndex = 28;
             this.label5.Text = "Giới tính";
             // 
@@ -197,7 +197,7 @@
             this.lbPoint.Location = new System.Drawing.Point(236, 77);
             this.lbPoint.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbPoint.Name = "lbPoint";
-            this.lbPoint.Size = new System.Drawing.Size(86, 40);
+            this.lbPoint.Size = new System.Drawing.Size(72, 32);
             this.lbPoint.TabIndex = 30;
             this.lbPoint.Text = "200";
             // 
@@ -206,10 +206,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Verdana", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(327, 90);
+            this.label6.Location = new System.Drawing.Point(373, 90);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 20);
+            this.label6.Size = new System.Drawing.Size(56, 17);
             this.label6.TabIndex = 31;
             this.label6.Text = "Points";
             // 

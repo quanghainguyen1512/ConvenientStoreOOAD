@@ -7,6 +7,8 @@ using ConvenientStore.Helpers.MappingHelper;
 using ConvenientStore.Helpers.Message;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using System.Globalization;
+using System.Linq;
 
 namespace ConvenientStore.BUS
 {
@@ -17,6 +19,7 @@ namespace ConvenientStore.BUS
         private IProductDetailRepository productDetailRepository;
         private IBillRepository billRepository;
         private IBillDetailRepository billDetailRepository;
+        private ISaleRepository saleRepository;
 
         public XuLyHoaDonBus()
         {
@@ -25,6 +28,7 @@ namespace ConvenientStore.BUS
             this.productDetailRepository = new ProductDetailRepository();
             this.billRepository = new BillRepository();
             this.billDetailRepository = new BillDetailRepository();
+            this.saleRepository = new SaleRepository();
         }
 
         public CustomerBillDto GetCustomerByPhoneNumber(String phoneNumber)
@@ -53,11 +57,14 @@ namespace ConvenientStore.BUS
             return dto;
         }
 
-        private String validatePhoneNumber(String phoneNumber)
+        private String validatePhoneNumber(String phone)
         {
-            String result = "";
+            string result = "";
 
-
+            if (!Regex.IsMatch(phone.Trim(), @"(0[^0][0-9]{8,9})\b"))
+            {
+                result += String.Format(MessageContent.INVALID_PHONE, phone) + MessageContent.BREAK_LINE;
+            }
 
             return result;
         }
@@ -132,15 +139,21 @@ namespace ConvenientStore.BUS
             return dto;
         }
 
-        public string SubmitBill(List<ProductBillDto> productBillDtos, CustomerBillDto customerBillDto, string total)
+        public string SubmitBill(List<ProductBillDto> productBillDtos, CustomerBillDto customerBillDto, string total, bool delayBill = false )
         {
             string result = "";
 
-            result += this.updateCustomerInfo(customerBillDto);
+            if(!delayBill)
+            {
+                result += this.updateCustomerInfo(customerBillDto);
 
-            result += this.updateProductDetail(productBillDtos);
+                result += this.updateProductDetail(productBillDtos);
 
-            result += this.addBill(productBillDtos, customerBillDto, total);
+                result += this.addBill(productBillDtos, customerBillDto, total);
+            }else
+            {
+                result += this.addBill(productBillDtos, customerBillDto, total, true);
+            }
 
             return result;
         }
@@ -159,6 +172,15 @@ namespace ConvenientStore.BUS
                 }
 
                 customer.Point = Convert.ToInt32(customerBillDto.Point);
+
+                if(customer.Point >= 20000 && customer.Point < 40000)
+                {
+                    customer.CusTypeId = 3;
+                }else if(customer.Point >= 40000 && customer.Point < 40000)
+                {
+                    customer.CusTypeId = 4;
+                }
+
                 try
                 {
                     this.customerRepository.Update(customer);
@@ -212,7 +234,7 @@ namespace ConvenientStore.BUS
             return result;
         }
 
-        private string addBill(List<ProductBillDto> productBillDtos, CustomerBillDto customerBillDto, string total)
+        private string addBill(List<ProductBillDto> productBillDtos, CustomerBillDto customerBillDto, string total, bool delayBill = false)
         {
             string result = "";
 
@@ -232,6 +254,8 @@ namespace ConvenientStore.BUS
             bill.CreateDate = DateTime.Now;
             bill.Total = Convert.ToInt32(Regex.Replace(total, "[^.0-9]", ""));
 
+            
+
             bill.BillDetails = new List<BillDetail>();
 
             if(customerBillDto != null)
@@ -245,6 +269,31 @@ namespace ConvenientStore.BUS
                 bill.CustomerId = 5;
                 bill.Customer = customer;
             }
+
+            if (delayBill)
+            {
+                bill.Status = false;
+            } else
+            {
+                bill.Status = true;
+            }
+
+            try
+            {
+                Bill bill1 = this.billRepository.GetById(bill.BillId);
+                if(bill1 != null)
+                {
+                    bill1.Status = true;
+                    this.billRepository.Update(bill1);
+                    return "";
+                }
+            }
+            catch
+            {
+
+            }
+
+
 
             this.billRepository.Add(bill);
 
@@ -276,6 +325,70 @@ namespace ConvenientStore.BUS
 
         }
 
+        public List<SaleBillDto> GetAllSale(int customerId, bool customerTypeId = false)
+        {
+            List<SaleBillDto> dtos = new List<SaleBillDto>();
 
+            List<Sale> sales = new List<Sale>();
+
+            if(customerTypeId)
+            {
+                sales = this.saleRepository.GetByCustomerType(1);
+            }else
+            {
+                Customer customer = this.customerRepository.GetById(customerId);
+                sales = this.saleRepository.GetByCustomerType(customer.CustomerId);
+            }
+
+            foreach(Sale sale in sales)
+            {
+                SaleBillDto dto = new SaleBillDto();
+                dto.Id = sale.SaleId.ToString();
+                dto.Name = sale.ShortName;
+                dto.Type = sale.TypeOfDiscount ? "1" : "0";
+                dto.Value = sale.Value.ToString();
+                dtos.Add(dto);
+            }
+
+            return dtos;
+        }
+
+        public List<ProductBillDto> GetAllBillDetailByBill(int billId)
+        {
+            List<ProductBillDto> dtos = new List<ProductBillDto>();
+
+            try
+            {
+                List<BillDetail> billDetails = billDetailRepository.GetByBill(billId).ToList();
+
+                foreach (BillDetail db in billDetails)
+                {
+                    ProductBillDto dto = new ProductBillDto();
+                    dto.Id = db.BillDetailId.ToString();
+                    dto.Quantity = db.Quantity.ToString();
+                    dto.SellRate = "0";
+
+                    int productDetailId = db.ProductDetailId;
+
+                    ProductDetail productDetail = this.productDetailRepository.GetById(productDetailId);
+                    dto.Barcode = productDetail.GeneratedCode;
+                    dto.Price = productDetail.Price.ToString("#,#", CultureInfo.InvariantCulture);
+
+                    Product product = this.productRepository.GetById(productDetail.ProductId);
+                    dto.ProductName = product.Name;
+                    dto.Unit = product.Unit;
+
+                    dtos.Add(dto);
+
+                }
+            }
+            catch
+            {
+                return dtos;
+            }
+
+            return dtos;
+        }
     }
+    
 }

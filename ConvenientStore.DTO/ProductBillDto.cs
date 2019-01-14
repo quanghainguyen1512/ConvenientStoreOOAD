@@ -25,8 +25,8 @@ namespace ConvenientStore.DTO
 
         public string Total()
         {
-            int sum = (Convert.ToInt32(Quantity) * Convert.ToInt32(Price)) 
-                - (Convert.ToInt32(Quantity) * Convert.ToInt32(Price)) * Convert.ToInt32(SellRate) / 100;
+            int sum = (Convert.ToInt32(Quantity) * Convert.ToInt32(Price.Replace(",",""))) 
+                - (Convert.ToInt32(Quantity) * Convert.ToInt32(Price.Replace(",", ""))) * Convert.ToInt32(SellRate) / 100;
 
             return sum.ToString("#,#", CultureInfo.InvariantCulture);
         }

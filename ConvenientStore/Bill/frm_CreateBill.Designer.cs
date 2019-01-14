@@ -34,7 +34,7 @@
             this.lbTotal = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDelayBills = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.dgvListProduct = new System.Windows.Forms.DataGridView();
@@ -95,7 +95,7 @@
             this.panel1.Controls.Add(this.lbTotal);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnCancel);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnDelayBills);
             this.panel1.Controls.Add(this.btnSubmit);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 480);
@@ -112,7 +112,7 @@
             this.label3.Location = new System.Drawing.Point(313, 25);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 25);
+            this.label3.Size = new System.Drawing.Size(93, 18);
             this.label3.TabIndex = 4;
             this.label3.Text = "Tổng tiền:";
             // 
@@ -124,7 +124,7 @@
             this.lbTotal.Location = new System.Drawing.Point(437, 18);
             this.lbTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTotal.Name = "lbTotal";
-            this.lbTotal.Size = new System.Drawing.Size(121, 39);
+            this.lbTotal.Size = new System.Drawing.Size(97, 31);
             this.lbTotal.TabIndex = 3;
             this.lbTotal.Text = "20,000";
             this.lbTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -138,7 +138,7 @@
             this.label1.Location = new System.Drawing.Point(566, 29);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 20);
+            this.label1.Size = new System.Drawing.Size(41, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "VNĐ";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -163,25 +163,25 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.clickBtnCancel);
             // 
-            // button1
+            // btnDelayBills
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(166)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Image = global::ConvenientStore.Properties.Resources.bill;
-            this.button1.Location = new System.Drawing.Point(10, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(220, 70);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "   Những hóa đơn đang chờ ...";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.clickBtnSubmit);
+            this.btnDelayBills.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelayBills.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(166)))));
+            this.btnDelayBills.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelayBills.FlatAppearance.BorderSize = 0;
+            this.btnDelayBills.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelayBills.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelayBills.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnDelayBills.Image = global::ConvenientStore.Properties.Resources.bill;
+            this.btnDelayBills.Location = new System.Drawing.Point(10, 0);
+            this.btnDelayBills.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelayBills.Name = "btnDelayBills";
+            this.btnDelayBills.Size = new System.Drawing.Size(220, 70);
+            this.btnDelayBills.TabIndex = 0;
+            this.btnDelayBills.Text = "   Những hóa đơn đang chờ ...";
+            this.btnDelayBills.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDelayBills.UseVisualStyleBackColor = false;
+            this.btnDelayBills.Click += new System.EventHandler(this.btnDelayBills_Click);
             // 
             // btnSubmit
             // 
@@ -211,7 +211,7 @@
             this.label4.Location = new System.Drawing.Point(10, 272);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(284, 17);
+            this.label4.Size = new System.Drawing.Size(230, 13);
             this.label4.TabIndex = 5;
             this.label4.Text = "(*) Những thông tin bắt buộc nhập";
             // 
@@ -234,6 +234,7 @@
             this.dgvListProduct.Margin = new System.Windows.Forms.Padding(4);
             this.dgvListProduct.MultiSelect = false;
             this.dgvListProduct.Name = "dgvListProduct";
+            this.dgvListProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListProduct.Size = new System.Drawing.Size(980, 180);
             this.dgvListProduct.TabIndex = 1;
             this.dgvListProduct.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.doubleClickRow);
@@ -343,9 +344,10 @@
             this.cbbSellProgram.Location = new System.Drawing.Point(246, 147);
             this.cbbSellProgram.Margin = new System.Windows.Forms.Padding(4);
             this.cbbSellProgram.Name = "cbbSellProgram";
-            this.cbbSellProgram.Size = new System.Drawing.Size(150, 24);
+            this.cbbSellProgram.Size = new System.Drawing.Size(150, 21);
             this.cbbSellProgram.TabIndex = 11;
             this.cbbSellProgram.ValueMemberChanged += new System.EventHandler(this.changeCbbSellProgram);
+            this.cbbSellProgram.SelectedValueChanged += new System.EventHandler(this.cbbSellProgram_SelectedValueChanged);
             // 
             // label9
             // 
@@ -355,7 +357,7 @@
             this.label9.Location = new System.Drawing.Point(213, 121);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(199, 14);
+            this.label9.Size = new System.Drawing.Size(166, 12);
             this.label9.TabIndex = 10;
             this.label9.Text = "Chương trình khuyến mãi (*)";
             // 
@@ -366,7 +368,7 @@
             this.txtCustomerName.Margin = new System.Windows.Forms.Padding(4);
             this.txtCustomerName.Name = "txtCustomerName";
             this.txtCustomerName.ReadOnly = true;
-            this.txtCustomerName.Size = new System.Drawing.Size(150, 26);
+            this.txtCustomerName.Size = new System.Drawing.Size(150, 22);
             this.txtCustomerName.TabIndex = 9;
             this.txtCustomerName.Text = "15520027";
             // 
@@ -378,7 +380,7 @@
             this.label8.Location = new System.Drawing.Point(213, 70);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(110, 14);
+            this.label8.Size = new System.Drawing.Size(93, 12);
             this.label8.TabIndex = 8;
             this.label8.Text = "Tên khách hàng";
             // 
@@ -388,7 +390,7 @@
             this.txtPhoneNumber.Location = new System.Drawing.Point(246, 41);
             this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(150, 26);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(150, 22);
             this.txtPhoneNumber.TabIndex = 7;
             this.txtPhoneNumber.Text = "15520027";
             this.txtPhoneNumber.KeyDown += new System.Windows.Forms.KeyEventHandler(this.enterTxtPhoneNumber);
@@ -402,7 +404,7 @@
             this.label7.Location = new System.Drawing.Point(213, 17);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(199, 14);
+            this.label7.Size = new System.Drawing.Size(166, 12);
             this.label7.TabIndex = 6;
             this.label7.Text = "Số điện thoại khách hàng (*)";
             // 
@@ -413,9 +415,9 @@
             this.txtStaffName.Margin = new System.Windows.Forms.Padding(4);
             this.txtStaffName.Name = "txtStaffName";
             this.txtStaffName.ReadOnly = true;
-            this.txtStaffName.Size = new System.Drawing.Size(150, 26);
+            this.txtStaffName.Size = new System.Drawing.Size(150, 22);
             this.txtStaffName.TabIndex = 5;
-            this.txtStaffName.Text = "15520027";
+            this.txtStaffName.Text = "OOAD";
             // 
             // label6
             // 
@@ -425,7 +427,7 @@
             this.label6.Location = new System.Drawing.Point(13, 121);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(99, 14);
+            this.label6.Size = new System.Drawing.Size(83, 12);
             this.label6.TabIndex = 4;
             this.label6.Text = "Tên nhân viên";
             // 
@@ -436,7 +438,7 @@
             this.txtDate.Margin = new System.Windows.Forms.Padding(4);
             this.txtDate.Name = "txtDate";
             this.txtDate.ReadOnly = true;
-            this.txtDate.Size = new System.Drawing.Size(150, 26);
+            this.txtDate.Size = new System.Drawing.Size(150, 22);
             this.txtDate.TabIndex = 3;
             this.txtDate.Text = "15520027";
             // 
@@ -448,7 +450,7 @@
             this.label5.Location = new System.Drawing.Point(13, 70);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 14);
+            this.label5.Size = new System.Drawing.Size(58, 12);
             this.label5.TabIndex = 2;
             this.label5.Text = "Ngày bán";
             // 
@@ -459,7 +461,7 @@
             this.txtBillCode.Margin = new System.Windows.Forms.Padding(4);
             this.txtBillCode.Name = "txtBillCode";
             this.txtBillCode.ReadOnly = true;
-            this.txtBillCode.Size = new System.Drawing.Size(150, 26);
+            this.txtBillCode.Size = new System.Drawing.Size(150, 22);
             this.txtBillCode.TabIndex = 1;
             this.txtBillCode.Text = "15520027";
             // 
@@ -471,7 +473,7 @@
             this.label2.Location = new System.Drawing.Point(13, 17);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 14);
+            this.label2.Size = new System.Drawing.Size(69, 12);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã hóa đơn";
             // 
@@ -506,7 +508,7 @@
             this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.ReadOnly = true;
-            this.txtPrice.Size = new System.Drawing.Size(150, 26);
+            this.txtPrice.Size = new System.Drawing.Size(150, 22);
             this.txtPrice.TabIndex = 24;
             this.txtPrice.Text = "15520027";
             // 
@@ -518,7 +520,7 @@
             this.label14.Location = new System.Drawing.Point(11, 174);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(104, 14);
+            this.label14.Size = new System.Drawing.Size(86, 12);
             this.label14.TabIndex = 23;
             this.label14.Text = "Đơn giá (VNĐ)";
             // 
@@ -575,7 +577,7 @@
             this.txtQuantity.Location = new System.Drawing.Point(235, 40);
             this.txtQuantity.Margin = new System.Windows.Forms.Padding(4);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(150, 26);
+            this.txtQuantity.Size = new System.Drawing.Size(150, 22);
             this.txtQuantity.TabIndex = 20;
             this.txtQuantity.Text = "15520027";
             this.txtQuantity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.enterTxtQuantity);
@@ -588,7 +590,7 @@
             this.label13.Location = new System.Drawing.Point(202, 16);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(92, 14);
+            this.label13.Size = new System.Drawing.Size(73, 12);
             this.label13.TabIndex = 19;
             this.label13.Text = "Số lượng (*)";
             // 
@@ -599,7 +601,7 @@
             this.txtSell.Margin = new System.Windows.Forms.Padding(4);
             this.txtSell.Name = "txtSell";
             this.txtSell.ReadOnly = true;
-            this.txtSell.Size = new System.Drawing.Size(150, 26);
+            this.txtSell.Size = new System.Drawing.Size(150, 22);
             this.txtSell.TabIndex = 18;
             this.txtSell.Text = "15520027";
             // 
@@ -611,7 +613,7 @@
             this.label12.Location = new System.Drawing.Point(11, 123);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(98, 14);
+            this.label12.Size = new System.Drawing.Size(80, 12);
             this.label12.TabIndex = 17;
             this.label12.Text = "Giảm giá (%)";
             // 
@@ -622,7 +624,7 @@
             this.txtProductName.Margin = new System.Windows.Forms.Padding(4);
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.ReadOnly = true;
-            this.txtProductName.Size = new System.Drawing.Size(150, 26);
+            this.txtProductName.Size = new System.Drawing.Size(150, 22);
             this.txtProductName.TabIndex = 16;
             this.txtProductName.Text = "15520027";
             // 
@@ -634,7 +636,7 @@
             this.label11.Location = new System.Drawing.Point(11, 68);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(98, 14);
+            this.label11.Size = new System.Drawing.Size(83, 12);
             this.label11.TabIndex = 15;
             this.label11.Text = "Tên sản phẩm";
             // 
@@ -644,7 +646,7 @@
             this.txtProductCode.Location = new System.Drawing.Point(44, 40);
             this.txtProductCode.Margin = new System.Windows.Forms.Padding(4);
             this.txtProductCode.Name = "txtProductCode";
-            this.txtProductCode.Size = new System.Drawing.Size(150, 26);
+            this.txtProductCode.Size = new System.Drawing.Size(150, 22);
             this.txtProductCode.TabIndex = 14;
             this.txtProductCode.Text = "15520027";
             this.txtProductCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.enterTxtProductCode);
@@ -658,7 +660,7 @@
             this.label10.Location = new System.Drawing.Point(11, 16);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(120, 14);
+            this.label10.Size = new System.Drawing.Size(99, 12);
             this.label10.TabIndex = 13;
             this.label10.Text = "Mã sản phẩm (*)";
             // 
@@ -792,6 +794,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDelayBills;
     }
 }
