@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Z.Dapper.Plus;
 
 namespace ConvenientStore.Services.Repositories
 {
@@ -16,7 +17,37 @@ namespace ConvenientStore.Services.Repositories
         {
             using (var con = DbConnection.Instance.Connection)
             {
-                return con.Insert(obj) != 0;
+                //return con.Insert(obj) != 0;
+                con.Open();
+                DapperPlusManager.Entity<Bill>()
+                    .Table("bill")
+                    .Ignore(b => b.Customer)
+                    .Ignore(b => b.BillDetails);
+                DapperPlusManager.Entity<BillDetail>()
+                    .Table("bill_detail")
+                    .Ignore(bd => bd.ProductDetail)
+                    .Ignore(bd => bd.Bill)
+                    .Map(bd => new
+                    {
+                        bd.Bill.BillId,
+                        bd.ProductDetail.ProductDetailId
+                    });
+                using (var tran = con.BeginTransaction())
+                {
+                    try
+                    {
+                        tran.BulkInsert(obj)
+                            .ThenForEach(b => b.BillDetails.ForEach(bd => bd.Bill = b))
+                            .ThenBulkInsert(b => b.BillDetails);
+                    }
+                    catch
+                    {
+                        tran.Rollback();
+                        return false;
+                    }
+                    tran.Commit();
+                    return true;
+                }
             }
         }
 
